@@ -12,18 +12,31 @@ public class SmartHomeIdFactory {
     */
 
     public static synchronized int getNumberOfAvailableIds() {
-        // TODO: Implement this method
-        throw new IllegalStateException("Not implemented yet");
+        if (currentId == INITIAL_ID) {
+            return LAST_ID - FIRST_ID + 1;
+        } else {
+            return LAST_ID - currentId;
+        }
     }
 
     public static synchronized int getNumberOfAssignedIds() {
-        // TODO: Implement this method
-        throw new IllegalStateException("Not implemented yet");
+        if (currentId == INITIAL_ID) {
+            return 0;
+        } else {
+            return currentId;
+        }
     }
 
     public static synchronized int getNextId() {
-        // TODO: Implement this method
-        throw new IllegalStateException("Not implemented yet");
+        if (currentId > LAST_ID) {
+            throw new IllegalStateException("No more IDs available");
+        }
+        if (currentId == INITIAL_ID) {
+            currentId = FIRST_ID;
+        } else {
+            currentId++;
+        }
+        return currentId;
     }
 
 }

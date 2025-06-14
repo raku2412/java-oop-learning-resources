@@ -5,6 +5,8 @@ public class SmartSpeaker {
     static final int MAXIMUM_VOLUME = 100;
 
     private final int id;
+    private final Location manufacturerLocation;
+    private Location installationLocation;
     private String name;
     private int volume;
 
@@ -12,23 +14,39 @@ public class SmartSpeaker {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = "Speaker_" + id;
         this.volume = DEFAULT_VOLUME;
+        this.manufacturerLocation = null;
+        this.installationLocation = null;
     }
 
     public SmartSpeaker(String name) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = name;
         this.volume = DEFAULT_VOLUME;
+        this.manufacturerLocation = null;
+        this.installationLocation = null;
     }
 
     public SmartSpeaker(int volume) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = "Speaker_" + id;
         setVolume(volume);
+        this.manufacturerLocation = null;
+        this.installationLocation = null;
     }
 
-    public SmartSpeaker(String name, int volume) {
+    public SmartSpeaker(Location manufacturerLocation, Location installationLocation) {
+        this.id = SmartHomeIdFactory.getNextId();
+        this.manufacturerLocation = manufacturerLocation;
+        this.installationLocation = installationLocation;
+        this.name = "Speaker_" + id;
+        this.volume = DEFAULT_VOLUME;
+    }
+
+    public SmartSpeaker(String name, int volume, Location manufacturerLocation, Location installationLocation) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = name;
+        this.manufacturerLocation = manufacturerLocation;
+        this.installationLocation = installationLocation;
         setVolume(volume);
     }
 
@@ -63,9 +81,23 @@ public class SmartSpeaker {
         setVolume(Math.round(volume));
     }
 
+    public Location getManufacturerLocation() {
+        return manufacturerLocation;
+    }
+
+    public Location getInstallationLocation() {
+        return installationLocation;
+    }
+
+    public void setInstallationLocation(Location installationLocation) {
+        this.installationLocation = installationLocation;
+    }
+
     @Override
     public String toString() {
-        return "SmartSpeaker [id = " + id + ", name = " + name + ", volume = " + volume + "]";
+        return "SmartSpeaker [id = " + id + ", name = " + name + ", volume = " + volume +
+                ", manufacturerLocation = " + (manufacturerLocation != null ? manufacturerLocation.toString() : "null") +
+                ", installationLocation = " + (installationLocation != null ? installationLocation.toString() : "null") + "]";
     }
 
     @Override

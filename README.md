@@ -1,24 +1,39 @@
-# Exercise: Implementing the SmartHomeIdFactory
+# Exercise 3_2: Working with Composite Objects – The `Location` Class
 
 ## 📘 English
 
 ### 📝 Task Description
 
-In this exercise, you'll implement a static ID factory called `SmartHomeIdFactory`, which generates unique IDs for smart devices — specifically SmartSpeaker devices.
+In this exercise, you will work with **composite objects**. The class `SmartSpeaker` has been extended to include two location references:
 
-The ID values should:
+- `manufacturerLocation` – where the device was produced (immutable)
+- `installationLocation` – where the device is currently installed
 
-- Be positive integers
-- Automatically assigned
-- Fall within a predefined range (from `FIRST_ID` to `LAST_ID`)
+You are given a class diagram of the `Location` class that represents these locations.
 
-The factory tracks the current highest assigned ID and provides methods to:
+### 🧱 The `Location` Class
 
-- Get the number of available IDs
-- Get the number of assigned IDs
-- Get the next available ID
+The `Location` class is described in the following UML diagram:
 
-You need to complete the logic inside these methods to ensure correct behavior.
+![Location Class Diagram](Location.png)
+
+📝 Editable version: [`Location.drawio`](Location.drawio)
+
+The class includes the following attributes, all of which are `final`:
+
+- `ROOM`
+- `STREET`
+- `HOUSE_NUMBER`
+- `CITY`
+- `COUNTRY`
+
+### 🔧 Your Task
+
+- Implement the **final variables** as shown in the diagram.
+- Create a **constructor** to initialize all attributes.
+- Implement **getter methods** for all attributes (e.g., `getRoom()`, `getStreet()`, etc.).
+
+Make sure your implementation matches the class structure shown in the diagram and uses proper naming and visibility (e.g., `private final` for attributes, `public` for methods).
 
 ---
 
@@ -26,18 +41,33 @@ You need to complete the logic inside these methods to ensure correct behavior.
 
 ### 📝 Aufgabenbeschreibung
 
-In dieser Aufgabe soll eine statische ID-Factory namens `SmartHomeIdFactory` implementiert werden, die eindeutige IDs für smarte Geräte — speziell SmartSpeaker — vergibt.
+In dieser Aufgabe arbeitest du mit **zusammengesetzten Objekten**. Die Klasse `SmartSpeaker` wurde so erweitert, dass sie zwei Ortsangaben enthält:
 
-Die IDs sollen:
+- `manufacturerLocation` – der Herstellungsort (unveränderlich)
+- `installationLocation` – der Installationsort (veränderbar)
 
-- Positive ganze Zahlen sein
-- Automatisch vergeben werden
-- Innerhalb eines festgelegten Bereichs (von `FIRST_ID` bis `LAST_ID`) liegen
+Die Klasse `Location`, die diese Ortsinformationen kapselt, ist über ein UML-Diagramm beschrieben.
 
-Die Factory verwaltet die aktuell höchste vergebene ID und stellt Methoden bereit, um:
+### 🧱 Die `Location`-Klasse
 
-- Die Anzahl der verfügbaren IDs abzurufen
-- Die Anzahl der vergebenen IDs abzurufen
-- Die nächste verfügbare ID zu erhalten
+Die Klasse `Location` ist im folgenden Klassendiagramm dargestellt:
 
-Du sollst die Logik in diesen Methoden vervollständigen, damit die Klasse korrekt funktioniert.
+![Location Klassendiagramm](Location.png)
+
+📝 Editierbare Version: [`Location.drawio`](Location.drawio)
+
+Folgende Attribute sind in der Klasse enthalten und alle als `final` deklariert:
+
+- `ROOM`  
+- `STREET`  
+- `HOUSE_NUMBER`  
+- `CITY`  
+- `COUNTRY`
+
+### 🔧 Deine Aufgabe
+
+- Implementiere die **finalen Variablen** entsprechend dem Klassendiagramm.
+- Erstelle einen **Konstruktor**, der alle Attribute initialisiert.
+- Implementiere **Getter-Methoden** für alle Attribute (z. B. `getRoom()`, `getStreet()`, usw.).
+
+Achte darauf, dass deine Implementierung dem dargestellten Klassendiagramm entspricht und die Sichtbarkeiten korrekt gewählt sind (z. B. `private final` für Attribute, `public` für Methoden).
