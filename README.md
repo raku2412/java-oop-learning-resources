@@ -47,7 +47,7 @@ The class diagram should clearly show:
 ![Smart Bulb Class Diagram](SmartBulb.png)
 
 #### 🔧 Diagram Source (draw.io)
-You can open the editable diagram using [https://app.diagrams.net](https://app.diagrams.net) or import the following file:
+You can open the editable diagram using [https://app.diagrams.net](https://app.diagrams.net) and importing the following file:
 
 - [`SmartBulb.drawio`](SmartBulb.drawio)
 
