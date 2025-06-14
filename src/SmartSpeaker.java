@@ -10,6 +10,8 @@ public class SmartSpeaker {
     private String name;
     private int volume;
 
+    // TODO: Integrate the SmartHomeIdFactory as static inner class
+
     public SmartSpeaker() {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = "Speaker_" + id;
