@@ -41,6 +41,18 @@ The class diagram should clearly show:
 
 ---
 
+### ✅ Solution
+
+#### 📷 Diagram (PNG)
+![Smart Bulb Class Diagram](SmartBulb.png)
+
+#### 🔧 Diagram Source (draw.io)
+You can open the editable diagram using [https://app.diagrams.net](https://app.diagrams.net) or import the following file:
+
+- [`SmartBulb.drawio`](SmartBulb.drawio)
+
+---
+
 ## 📙 Deutsch
 
 ### 📝 Aufgabenbeschreibung
@@ -79,4 +91,16 @@ Das Klassendiagramm soll deutlich enthalten:
 - Den Klassennamen
 - Die Attribute mit Sichtbarkeit, Namen und Datentyp
 - Die Methoden (Getter und Setter) mit Sichtbarkeit, Namen und Rückgabetyp
+
+---
+
+### ✅ Lösung
+
+#### 📷 Diagramm (PNG)
+![Klassendiagramm: Smart Bulb](SmartBulb.png)
+
+#### 🔧 Diagrammquelle (draw.io)
+Die editierbare Version des Diagramms kann in [https://app.diagrams.net](https://app.diagrams.net) geöffnet werden. Verwende dazu die folgende Datei:
+
+- [`SmartBulb.drawio`](SmartBulb.drawio)
 
