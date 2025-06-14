@@ -6,6 +6,11 @@
 
 In this exercise, you'll implement a static ID factory called `SmartHomeIdFactory`, which generates unique IDs for smart devices — specifically SmartSpeaker devices.
 
+The class structure and its logic are illustrated in the following UML class diagram:
+
+![SmartHomeIdFactory Class Diagram](SmartHomeIdFactory.png)  
+📝 Editable version: [`SmartHomeIdFactory.drawio`](SmartHomeIdFactory.drawio)
+
 The ID values should:
 
 - Be positive integers
@@ -27,6 +32,11 @@ You need to complete the logic inside these methods to ensure correct behavior.
 ### 📝 Aufgabenbeschreibung
 
 In dieser Aufgabe soll eine statische ID-Factory namens `SmartHomeIdFactory` implementiert werden, die eindeutige IDs für smarte Geräte — speziell SmartSpeaker — vergibt.
+
+Die Struktur der Klasse sowie deren Logik sind im folgenden UML-Klassendiagramm dargestellt:
+
+![SmartHomeIdFactory Klassendiagramm](SmartHomeIdFactory.png)  
+📝 Editierbare Version: [`SmartHomeIdFactory.drawio`](SmartHomeIdFactory.drawio)
 
 Die IDs sollen:
 
