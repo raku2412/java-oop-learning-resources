@@ -1,8 +1,8 @@
 public class SmartSpeaker {
 
-    static final int DEFAULT_VOLUME = 50;
-    static final int MINIMUM_VOLUME = 0;
-    static final int MAXIMUM_VOLUME = 100;
+    private static final int DEFAULT_VOLUME = 50;
+    private static final int MINIMUM_VOLUME = 0;
+    private static final int MAXIMUM_VOLUME = 100;
 
     private final int id;
     private String name;
