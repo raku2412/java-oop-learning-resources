@@ -1,4 +1,4 @@
-# Exercise 3_2: Working with Composite Objects – The `Location` Class
+# Exercise: Working with Composite Objects – The `Location` Class
 
 ## 📘 English
 
