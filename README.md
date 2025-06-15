@@ -1,31 +1,58 @@
-# Exercise: Nesting SmartHomeIdFactory as a Static Inner Class
+# 📦 Exercise: Organize Classes into Packages
 
-## 📘 English
+## 📝 Task Description (English)
 
-### 📝 Task Description
+In this exercise, you will improve the structure of the existing project by organizing Java classes into appropriate **packages**, based on their role and responsibility.
 
-In this exercise, you'll refactor the code from previous tasks by moving the `SmartHomeIdFactory` into the `SmartHomeSpeaker` class as a **static inner class**.
+A well-organized package structure improves **clarity**, **readability**, and **maintainability**.
 
-This design reflects that the ID factory is only relevant in the context of the `SmartHomeSpeaker`.
+### 📦 Classes to be organized
+
+You are given the following classes:
+
+- `Console.java`
+- `JavaApiExamplesApp.java`
+- `Location.java`
+- `SmartHomeApp.java`
+- `SmartHomeIdFactory.java`
+- `SmartSpeaker.java`
 
 ### 🧱 Your Task
 
-- Move the existing `SmartHomeIdFactory` class into the `SmartHomeSpeaker` class.
-- Declare it as a **static inner class**.
-- Ensure that ID assignment and functionality still work correctly.
+1. Create a meaningful **package structure** using the following packages:
+   - `app` – for executable applications with `main()` methods
+   - `model` – for data classes / domain objects
+   - `util` – for utility and helper classes
+2. Assign each class to the most appropriate package.
+3. Update the `package` declarations accordingly in each Java file.
+4. Fix any necessary `import` statements so that the project compiles and runs correctly.
 
 ---
 
-## 📙 Deutsch
+## 📝 Aufgabenbeschreibung (Deutsch)
 
-### 📝 Aufgabenbeschreibung
+In dieser Aufgabe sollst du die bestehende Projektstruktur verbessern, indem du Java-Klassen in **sinnvolle Pakete** einordnest – je nach ihrer Aufgabe und Funktion.
 
-In dieser Aufgabe soll der Code aus den vorherigen Aufgaben so umstrukturiert werden, dass die `SmartHomeIdFactory` als **statische innere Klasse** in die Klasse `SmartHomeSpeaker` integriert wird.
+Eine saubere Paketstruktur sorgt für mehr **Übersichtlichkeit**, **Lesbarkeit** und **Wartbarkeit** des Codes.
 
-Damit wird deutlich, dass die ID-Factory nur im Kontext von `SmartHomeSpeaker` benötigt wird.
+### 📦 Zu organisierende Klassen
+
+Folgende Klassen sollen eingeordnet werden:
+
+- `Console.java`
+- `JavaApiExamplesApp.java`
+- `Location.java`
+- `SmartHomeApp.java`
+- `SmartHomeIdFactory.java`
+- `SmartSpeaker.java`
 
 ### 🧱 Deine Aufgabe
 
-- Verschiebe die bestehende Klasse `SmartHomeIdFactory` in die Klasse `SmartHomeSpeaker`.
-- Deklariere sie als **statische innere Klasse**.
-- Stelle sicher, dass die ID-Vergabe weiterhin korrekt funktioniert.
+1. Lege eine sinnvolle **Package-Struktur** an.
+2. Erstelle dazu die folgenden Pakete:
+   - `app` – für ausführbare Anwendungen mit `main()`-Methoden
+   - `model` – für Datenklassen / Domänenobjekte
+   - `util` – für Hilfsklassen und Werkzeuge
+3. Ordne jede Klasse genau einem dieser Pakete zu – je nachdem, welche Rolle sie im Projekt erfüllt.
+4. Aktualisiere die `package`-Deklarationen in den Java-Dateien.
+5. Passe ggf. Import-Anweisungen an, damit der Code weiterhin korrekt funktioniert.
