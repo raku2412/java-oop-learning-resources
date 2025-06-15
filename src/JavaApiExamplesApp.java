@@ -7,6 +7,9 @@ public class JavaApiExamplesApp {
         stringExamples();
         stringBufferExamples();
         stringTokenizerExamples();
+        wrapperClassExamples();
+        bigIntegerExamples();
+        bigDecimalExamples();
     }
 
     private static void mathExamples() {
@@ -56,6 +59,58 @@ public class JavaApiExamplesApp {
         while (tokenizer.hasMoreTokens()) {
             System.out.println("Token: " + tokenizer.nextToken());
         }
+    }
+
+    @SuppressWarnings({"UnnecessaryBoxing", "UnnecessaryUnboxing", "ConstantValue", "WrapperTypeMayBePrimitive"})
+    private static void wrapperClassExamples() {
+        System.out.println("\nWrapper class examples:");
+        Integer intWrapper = Integer.valueOf(42);
+        Double doubleWrapper = Double.valueOf(3.14);
+        Boolean booleanWrapper = Boolean.valueOf(true);
+        Integer intWrapperFromString = Integer.valueOf("42");
+        Double doubleWrapperFromString = Double.valueOf("3.14");
+        Boolean booleanWrapperFromString = Boolean.valueOf("true");
+        Integer parsedIntWrapper = Integer.parseInt("42");
+        Double parsedDoubleWrapper = Double.parseDouble("3.14");
+        Boolean parsedBooleanWrapper = Boolean.parseBoolean("true");
+
+        System.out.println("Integer value: " + intWrapper);
+        System.out.println("Double value: " + doubleWrapper);
+        System.out.println("Boolean value: " + booleanWrapper);
+        System.out.println("Integer value from string: " + intWrapperFromString);
+        System.out.println("Double value from string: " + doubleWrapperFromString);
+        System.out.println("Boolean value from string: " + booleanWrapperFromString);
+        System.out.println("Parsed Integer: " + parsedIntWrapper);
+        System.out.println("Parsed Double: " + parsedDoubleWrapper);
+        System.out.println("Parsed Boolean: " + parsedBooleanWrapper);
+
+        int intPrimitive = intWrapper.intValue();
+        double doublePrimitive = doubleWrapper.doubleValue();
+        boolean booleanPrimitive = booleanWrapper.booleanValue();
+
+        System.out.println("Unwrapped int: " + intPrimitive);
+        System.out.println("Unwrapped double: " + doublePrimitive);
+        System.out.println("Unwrapped boolean: " + booleanPrimitive);
+    }
+
+    private static void bigIntegerExamples() {
+        System.out.println("\nBigInteger examples:");
+        java.math.BigInteger bigInt1 = new java.math.BigInteger("123456789012345678901234567890");
+        java.math.BigInteger bigInt2 = new java.math.BigInteger("987654321098765432109876543210");
+        java.math.BigInteger sum = bigInt1.add(bigInt2);
+        java.math.BigInteger product = bigInt1.multiply(bigInt2);
+        System.out.println("BigInteger sum: " + sum);
+        System.out.println("BigInteger product: " + product);
+    }
+
+    private static void bigDecimalExamples() {
+        System.out.println("\nBigDecimal examples:");
+        java.math.BigDecimal bigDec1 = new java.math.BigDecimal("12345678901234567890.12345678901234567890");
+        java.math.BigDecimal bigDec2 = new java.math.BigDecimal("98765432109876543210.98765432109876543210");
+        java.math.BigDecimal sum = bigDec1.add(bigDec2);
+        java.math.BigDecimal product = bigDec1.multiply(bigDec2);
+        System.out.println("BigDecimal sum: " + sum);
+        System.out.println("BigDecimal product: " + product);
     }
 
 }
