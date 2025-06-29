@@ -1,8 +1,7 @@
 package app;
 
 import model.SmartBulb;
-import model.SmartHomeRoom;
-import model.SmartSpeaker;
+import model.SmartHome;
 
 public class SmartHomeCollectionApp {
 
@@ -11,18 +10,11 @@ public class SmartHomeCollectionApp {
         SmartBulb kitchenBulb = new SmartBulb("Kitchen Bulb", 60);
         SmartBulb bedroomBulb = new SmartBulb("Bedroom Bulb", 80);
 
-        SmartSpeaker livingRoomSpeaker = new SmartSpeaker("Living Room Speaker", 100);
-        SmartSpeaker kitchenSpeaker = new SmartSpeaker("Kitchen Speaker", 50);
-
-        SmartHomeRoom livingRoom = new SmartHomeRoom(livingRoomBulb, livingRoomSpeaker);
-        SmartHomeRoom kitchen = new SmartHomeRoom(kitchenBulb, kitchenSpeaker);
-        SmartHomeRoom bedroom = new SmartHomeRoom(bedroomBulb, null);
-
         showIntArrayExample();
+        showIntIdValuePairCollectionExample();
 
-        // TODO: Initialize smart home rooms with SmartHomeRoom objects in different ways (see int array example)
-        SmartHomeRoom[] rooms = new SmartHomeRoom[3];
-        System.out.println("The mean brightness of all SmartBulbs is: " + getMeanBrightness(rooms));
+        // TODO: Initialize SmartHome with bulbs and get mean brightness and lowest and highest volume
+        SmartHome smartHome = new SmartHome();
     }
 
     private static void showIntArrayExample() {
@@ -49,6 +41,80 @@ public class SmartHomeCollectionApp {
         }
     }
 
+    @SuppressWarnings("UnnecessaryToStringCall")
+    private static void showIntIdValuePairCollectionExample() {
+        IntArrayCollection collection = new IntArrayCollection(5);
+        IntIdValuePair entry1 = new IntIdValuePair(1, 10);
+        IntIdValuePair entry2 = new IntIdValuePair(2, 20);
+        IntIdValuePair entry3 = new IntIdValuePair(3, 30);
+        IntIdValuePair entry4 = new IntIdValuePair(4, 40);
+        IntIdValuePair entry5 = new IntIdValuePair(5, 50);
+        collection.add(entry1);
+        collection.add(entry2);
+        collection.add(entry3);
+        collection.add(entry4);
+        collection.add(entry5);
+        System.out.println("Current " + collection.toString());
+        collection.remove(entry3);
+        System.out.println("After removing entry3: " + collection.toString());
+    }
+
+    @SuppressWarnings("ClassCanBeRecord")
+    static class IntIdValuePair {
+
+        private final int id;
+        private final int value;
+
+        public IntIdValuePair(int id, int value) {
+            this.id = id;
+            this.value = value;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+    }
+
+    static class IntArrayCollection {
+
+        private final int[] collection;
+
+        public IntArrayCollection(int size) {
+            this.collection = new int[size];
+        }
+
+        public void add(IntIdValuePair entry) {
+            collection[entry.id - 1] = entry.value;
+        }
+
+        public void remove(IntIdValuePair entry) {
+            collection[entry.id] = 0;
+        }
+
+        public int get(int id) {
+            return collection[id - 1];
+        }
+
+        public int[] getAll() {
+            return collection.clone();
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder stringBuilder = new StringBuilder("IntArrayCollection: ");
+            for (int i = 0; i < collection.length; i++) {
+                stringBuilder.append("[").append(i + 1).append(": ").append(collection[i]).append("] ");
+            }
+            return stringBuilder.toString();
+        }
+
+    }
+
     @SuppressWarnings("ManualArrayCopy")
     private static int[] createArray(int... values) {
         int[] array = new int[values.length];
@@ -56,11 +122,6 @@ public class SmartHomeCollectionApp {
             array[i] = values[i];
         }
         return array;
-    }
-
-    private static int getMeanBrightness(SmartHomeRoom[] rooms) {
-        // TODO: Implement mean brightness calculation
-        throw new IllegalStateException("Method not implemented yet");
     }
 
 }
