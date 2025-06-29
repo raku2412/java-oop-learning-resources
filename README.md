@@ -1,106 +1,67 @@
-# 💡 Exercise: Implement `turnOffAt` Method in `SmartBulb`
+# 🏠 Exercise: Initialize Arrays and Calculate Mean Brightness
 
 ## 📝 Task Description (English)
 
-In this task, you will extend the functionality of the `SmartBulb` class by implementing the `turnOffAt` method. This method should allow the smart bulb to automatically turn off at a specific time using Java's `LocalDateTime` API.
+In this task, you'll work with arrays and objects in Java to:
 
-You will also enhance the `SmartHomeApp` class so that it interacts with the user to input a time, using the `Console` helper class.
-
-### 🎯 Goals
-
-- Gain experience with Java's modern **date and time API** (`java.time`).
-- Practice **user interaction** through console input.
-- Learn how to calculate **durations** and delay execution using `Thread.sleep()`.
+- Initialize a `SmartHomeRoom[]` array in multiple ways (inspired by `showIntArrayExample()`).
+- Calculate the **average brightness** of all non-null `SmartBulb` objects.
+- Safely handle **null values** within the array or the `SmartBulb` fields.
+- Practice array traversal, conditionals, and null checks.
 
 ---
 
-## 🔧 Steps to Follow
+## 🔧 What You Need to Do
 
-1. **Review the Documentation**  
-   Read through the official Java documentation for [`LocalDateTime`](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html) to understand how to:
-   - Create a `LocalDateTime` instance.
-   - Compare times and calculate the duration until a given timestamp.
-   - Convert that duration to milliseconds and use `Thread.sleep()` to simulate waiting.
+1. **Review `showIntArrayExample()`**  
+   Study how different arrays are initialized and populated:
+   - via `new` and a loop
+   - via direct literal initialization
+   - via a utility method (`createArray()`)
 
-2. **Update `SmartBulb` Class**  
-   In the class `model.SmartBulb.java`, implement the method:
+2. **Initialize `SmartHomeRoom[] rooms`**  
+   Replace the `// TODO` comment in the `main()` method of `SmartHomeCollectionApp` with code that:
+   - Initializes the `rooms` array in **at least two different ways**, similar to how it's done with the integer arrays.
+   - Fills the array with `SmartHomeRoom` objects (some with `SmartSpeaker`, some without).
 
-   ```java
-   public void turnOffAt(LocalDateTime dateTime)
-   ```
+3. **Handle Null Values**  
+   Ensure the `getMeanBrightness()` method can deal with:
+   - `null` entries in the array.
+   - `SmartHomeRoom` instances where `getSmartBulb()` returns `null`.
 
-   This method should:
-   - Calculate the time difference between `LocalDateTime.now()` and the target `dateTime`.
-   - Use `Thread.sleep()` to wait until the scheduled time.
-   - Then simulate turning off the bulb (e.g. via a print statement).
-
-3. **Enhance `SmartHomeApp` Class**  
-   In `app.SmartHomeApp.java`:
-   - Prompt the user for a date and time input using `util.Console.java`.
-   - Convert the input to a `LocalDateTime` object.
-   - Pass the time to the `SmartBulb` instance’s `turnOffAt()` method.
-
-4. **Reuse Existing Utilities**  
-   Use helper methods from `util.Console` to get user input. You may extend the class to support parsing `LocalDateTime` inputs if needed.
-
----
-
-## ✅ Bonus (English)
-
-- ⏰ Add a check to ensure the entered time is in the **future**. If not, notify the user.
-- 🔄 Display a message showing **how long** the bulb will remain on before it is turned off.
-- 🚫 Handle invalid date/time inputs gracefully and ask the user to try again.
+4. **Print the Mean Brightness**  
+   Call `getMeanBrightness()` on the `rooms` array and output the result.
 
 ---
 
 ## 📝 Aufgabenbeschreibung (Deutsch)
 
-In dieser Aufgabe erweiterst du die Funktionalität der Klasse `SmartBulb`, indem du die Methode `turnOffAt` implementierst. Mit dieser Methode soll die Glühbirne zu einem bestimmten Zeitpunkt automatisch ausgeschaltet werden – unter Verwendung der Java-Zeit-API (`LocalDateTime`).
+In dieser Aufgabe arbeitest du mit Java-Arrays und Objekten, um:
 
-Zusätzlich soll die Klasse `SmartHomeApp` so angepasst werden, dass sie den Benutzer nach einem gewünschten Abschaltzeitpunkt fragt. Die Eingabe erfolgt über die Hilfsklasse `Console`.
-
-### 🎯 Ziele
-
-- Verwendung der modernen **Java-Zeit-API** (`java.time`).
-- Umsetzung einer zeitgesteuerten Aktion mit `Thread.sleep()`.
-- Interaktive **Benutzereingabe** über die Konsole.
-- Wiederverwendung vorhandener **Hilfsklassen**.
+- Ein Array vom Typ `SmartHomeRoom[]` auf unterschiedliche Weisen zu initialisieren (inspiriert von der Methode `showIntArrayExample()`).
+- Die **durchschnittliche Helligkeit** aller enthaltenen (nicht-null) `SmartBulb`-Objekte zu berechnen.
+- Null-Werte im Array sowie in den Objekten korrekt zu behandeln.
 
 ---
 
 ## 🔧 Schritte zur Umsetzung
 
-1. **Dokumentation lesen**  
-   Informiere dich in der [Java-Dokumentation zu `LocalDateTime`](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html) darüber, wie man:
-   - Zeitpunkte erstellt (`LocalDateTime.now()`, `LocalDateTime.of(...)`, etc.)
-   - Zeitdifferenzen berechnet (`Duration.between(...)`)
-   - Die Differenz in Millisekunden umwandelt und mit `Thread.sleep()` wartet.
+1. **`showIntArrayExample()` anschauen**  
+   Die Methode zeigt, wie man Arrays in Java auf verschiedene Arten initialisiert:
+   - mit einer Schleife
+   - mit einer festen Liste (Array-Literal)
+   - mit einer Methode (`createArray()`)
 
-2. **`SmartBulb` erweitern**  
-   In `model.SmartBulb.java` implementierst du:
+2. **Array `rooms` initialisieren**  
+   Ersetze die `// TODO`-Zeile in der `main()`-Methode von `SmartHomeCollectionApp` durch Code, der:
+   - das Array `rooms` auf verschiedene Arten füllt.
+   - mindestens zwei Initialisierungsmethoden aus dem Beispiel überträgt.
+   - `SmartHomeRoom`-Objekte mit und ohne `SmartSpeaker` enthält.
 
-   ```java
-   public void turnOffAt(LocalDateTime dateTime)
-   ```
+3. **Null-Werte berücksichtigen**  
+   Stelle sicher, dass die Methode `getMeanBrightness()`:
+   - mit `null`-Einträgen im Array umgehen kann.
+   - prüft, ob eine `SmartHomeRoom`-Instanz eine `null`-Glühbirne enthält.
 
-   Diese Methode soll:
-   - Die Differenz zur aktuellen Zeit berechnen.
-   - Mit `Thread.sleep()` bis zu diesem Zeitpunkt warten.
-   - Danach das Ausschalten der Glühbirne simulieren (z. B. durch eine Konsolenausgabe).
-
-3. **`SmartHomeApp` erweitern**  
-   In `app.SmartHomeApp.java`:
-   - Fordere den Benutzer auf, Datum und Uhrzeit einzugeben (z. B. `"2025-07-01T18:30"`).
-   - Verarbeite die Eingabe mit `util.Console`.
-   - Übergib den Zeitpunkt an die Methode `turnOffAt()` der `SmartBulb`.
-
-4. **Hilfsklasse `Console` nutzen**  
-   Nutze Methoden aus `util.Console`, um Eingaben zu erhalten und ggf. zu validieren. Du kannst die Klasse bei Bedarf erweitern.
-
----
-
-## ✅ Bonus (Deutsch)
-
-- ⏰ Baue eine Prüfung ein, ob der eingegebene Zeitpunkt in der **Zukunft** liegt. Wenn nicht, gib eine Fehlermeldung aus.
-- 🔄 Gib dem Benutzer eine Nachricht, wie **lange** die Glühbirne noch eingeschaltet bleibt (z. B. „Licht wird in 3 Minuten ausgeschaltet“).
-- 🚫 Behandle **ungültige Eingaben** (z. B. falsches Datumsformat) benutzerfreundlich und frage erneut nach.
+4. **Durchschnitt berechnen und ausgeben**  
+   Rufe die Methode `getMeanBrightness()` mit dem Array `rooms` auf und gib das Ergebnis auf der Konsole aus.

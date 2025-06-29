@@ -2,8 +2,6 @@ package model;
 
 import util.SmartHomeIdFactory;
 
-import java.time.LocalDateTime;
-
 public class SmartBulb {
 
     private static final int DEFAULT_BRIGHTNESS = 50;
@@ -11,8 +9,6 @@ public class SmartBulb {
     private static final int MAXIMUM_BRIGHTNESS = 100;
 
     private final int id;
-    private final Location manufacturerLocation;
-    private Location installationLocation;
     private String name;
     private int brightness;
 
@@ -20,39 +16,23 @@ public class SmartBulb {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = "Bulb_" + id;
         this.brightness = DEFAULT_BRIGHTNESS;
-        this.manufacturerLocation = null;
-        this.installationLocation = null;
     }
 
     public SmartBulb(String name) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = name;
         this.brightness = DEFAULT_BRIGHTNESS;
-        this.manufacturerLocation = null;
-        this.installationLocation = null;
     }
 
     public SmartBulb(int brightness) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = "Bulb_" + id;
         setBrightness(brightness);
-        this.manufacturerLocation = null;
-        this.installationLocation = null;
     }
 
-    public SmartBulb(Location manufacturerLocation, Location installationLocation) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.manufacturerLocation = manufacturerLocation;
-        this.installationLocation = installationLocation;
-        this.name = "Bulb_" + id;
-        this.brightness = DEFAULT_BRIGHTNESS;
-    }
-
-    public SmartBulb(String name, int brightness, Location manufacturerLocation, Location installationLocation) {
+    public SmartBulb(String name, int brightness) {
         this.id = SmartHomeIdFactory.getNextId();
         this.name = name;
-        this.manufacturerLocation = manufacturerLocation;
-        this.installationLocation = installationLocation;
         setBrightness(brightness);
     }
 
@@ -87,41 +67,9 @@ public class SmartBulb {
         setBrightness(Math.round(brightness));
     }
 
-    public Location getManufacturerLocation() {
-        return manufacturerLocation;
-    }
-
-    public Location getInstallationLocation() {
-        return installationLocation;
-    }
-
-    public void setInstallationLocation(Location installationLocation) {
-        this.installationLocation = installationLocation;
-    }
-
-    public void turnOffTimed(int seconds) {
-        System.out.println(name + " will turn off in " + seconds + " seconds.");
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            System.out.println("Sleep interrupted, turning off immediately.");
-        }
-        setBrightness(0);
-        System.out.println(name + " turned off timed.");
-    }
-
-    public void turnOffAt(LocalDateTime dateTime) {
-        // TODO: Read the LocalDateTime documentation and implement the timed turn off method.
-        //       See https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html for reference.
-        throw new IllegalStateException("Not yet implemented");
-    }
-
     @Override
     public String toString() {
-        return "model.SmartBulb [id = " + id + ", name = " + name + ", brightness = " + brightness +
-                ", manufacturerLocation = " + (manufacturerLocation != null ? manufacturerLocation.toString() : "null") +
-                ", installationLocation = " + (installationLocation != null ? installationLocation.toString() : "null") + "]";
+        return "model.SmartBulb [id = " + id + ", name = " + name + ", brightness = " + brightness + "]";
     }
 
     @Override
