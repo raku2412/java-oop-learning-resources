@@ -1,5 +1,7 @@
+package util;
+
 /**
- * Console utility class for reading input and printing output.
+ * util.Console utility class for reading input and printing output.
  */
 public class Console {
 

@@ -1,3 +1,5 @@
+package util;
+
 public class SmartHomeIdFactory {
 
     private static final int INITIAL_ID = -1;

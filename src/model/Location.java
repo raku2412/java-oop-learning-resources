@@ -1,3 +1,5 @@
+package model;
+
 public class Location {
 
     private final String ROOM;
@@ -42,7 +44,7 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
+        return "model.Location{" +
                 "ROOM='" + ROOM + '\'' +
                 ", STREET='" + STREET + '\'' +
                 ", HOUSE_NUMBER='" + HOUSE_NUMBER + '\'' +
