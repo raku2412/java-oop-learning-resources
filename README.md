@@ -16,6 +16,16 @@ This design reflects that the ID factory is only relevant in the context of the 
 
 ---
 
+### ✅ Solution
+
+The solution to this task can be found in the following file:
+
+📄 [`SmartSpeaker.java`](./src/SmartSpeaker.java)
+
+This file includes the `SmartHomeIdFactory` as a static inner class within the `SmartSpeaker` class.
+
+---
+
 ## 📙 Deutsch
 
 ### 📝 Aufgabenbeschreibung
@@ -29,3 +39,13 @@ Damit wird deutlich, dass die ID-Factory nur im Kontext von `SmartHomeSpeaker` b
 - Verschiebe die bestehende Klasse `SmartHomeIdFactory` in die Klasse `SmartHomeSpeaker`.
 - Deklariere sie als **statische innere Klasse**.
 - Stelle sicher, dass die ID-Vergabe weiterhin korrekt funktioniert.
+
+---
+
+### ✅ Lösung
+
+Die Lösung dieser Aufgabe befindet sich in folgender Datei:
+
+📄 [`SmartSpeaker.java`](./src/SmartSpeaker.java)
+
+Dort ist die `SmartHomeIdFactory` als statische innere Klasse innerhalb der `SmartSpeaker`-Klasse implementiert.

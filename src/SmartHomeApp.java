@@ -36,8 +36,8 @@ public class SmartHomeApp {
     }
 
     private static void printIdCount() {
-        System.out.println("The current count of available smart home ids is: " + SmartHomeIdFactory.getNumberOfAvailableIds());
-        System.out.println("The current count of assigned smart home ids is: " + SmartHomeIdFactory.getNumberOfAssignedIds());
+        System.out.println("The current count of available smart home ids is: " + SmartSpeaker.SmartHomeIdFactory.getNumberOfAvailableIds());
+        System.out.println("The current count of assigned smart home ids is: " + SmartSpeaker.SmartHomeIdFactory.getNumberOfAssignedIds());
     }
 
 }
