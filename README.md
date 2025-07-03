@@ -1,81 +1,63 @@
-# Java OOP Learning Resources
+# Exercise: Implementing the SmartHomeIdFactory
 
 ## 📘 English
 
-This repository contains exercises and solutions for learning **object-oriented programming with Java**, designed to accompany the lecture *"Objektorientierte Programmierung mit Java"* (Object-Oriented Programming with Java).
+### 📝 Task Description
 
-The exercises are built around a continuous example — a **SmartHome system** — and aim to convey both foundational and advanced concepts of object-oriented programming.
+In this exercise, you'll implement a static ID factory called `SmartHomeIdFactory`, which generates unique IDs for smart devices — specifically SmartSpeaker devices.
 
-### 🔀 Branch Structure
+The ID values should:
 
-Each exercise and its corresponding solution are provided in separate Git branches:
+- Be positive integers
+- Automatically assigned
+- Fall within a predefined range (from `FIRST_ID` to `LAST_ID`)
 
-- Exercise branches follow the pattern: `exercise_<lecture>_<index>`  
-- Solution branches follow the pattern: `solution_exercise_<lecture>_<index>`
+The factory tracks the current highest assigned ID and provides methods to:
 
-This structure reflects the lecture's timeline and supports incremental learning. Branches are regularly extended throughout the course.
+- Get the number of available IDs
+- Get the number of assigned IDs
+- Get the next available ID
 
-### 📚 Topics Covered
+You need to complete the logic inside these methods to ensure correct behavior.
 
-- Object-oriented principles
-	- Classes and objects
-	- Attributes and methods
-	- Encapsulation
-	- Inheritance and multiple inheritance
-	- Covariance and contravariance
-	- Polymorphism
-- Object-oriented constructs
-	- Namespaces
-	- Interfaces
-	- Libraries and frameworks
-	- Error handling
-	- Advanced data types
-	- Advanced language features
-- Modeling and clean code
-	- Naming conventions
-	- Design principles
-	- Technical debt
-	- Continuous inspection
-	- UML class diagrams
-	- Design patterns
+---
+
+### ✅ Solution
+
+The implementation of this task can be found in the following file:
+
+📄 [SmartHomeIdFactory.java](./src/SmartHomeIdFactory.java)
+
+This file contains the complete solution, including the logic for generating and tracking unique SmartSpeaker IDs.
 
 ---
 
 ## 📙 Deutsch
 
-Dieses Repository enthält Übungen und Lösungen zur **objektorientierten Programmierung mit Java** und wurde begleitend zur Vorlesung *„Objektorientierte Programmierung mit Java“* erstellt.
+### 📝 Aufgabenbeschreibung
 
-Die Aufgaben orientieren sich an einem durchgängigen Beispiel — einem **SmartHome-System** — und vermitteln sowohl grundlegende als auch fortgeschrittene Konzepte der objektorientierten Softwareentwicklung.
+In dieser Aufgabe soll eine statische ID-Factory namens `SmartHomeIdFactory` implementiert werden, die eindeutige IDs für smarte Geräte — speziell SmartSpeaker — vergibt.
 
-### 🔀 Branch-Struktur
+Die IDs sollen:
 
-Jede Übung sowie die zugehörige Lösung befinden sich auf jeweils eigenen Git-Branches:
+- Positive ganze Zahlen sein
+- Automatisch vergeben werden
+- Innerhalb eines festgelegten Bereichs (von `FIRST_ID` bis `LAST_ID`) liegen
 
-- Aufgaben folgen dem Muster: `exercise_<vorlesung>_<nummer>`  
-- Lösungen folgen dem Muster: `solution_exercise_<vorlesung>_<nummer>`
+Die Factory verwaltet die aktuell höchste vergebene ID und stellt Methoden bereit, um:
 
-Diese Struktur orientiert sich an der zeitlichen Gliederung der Vorlesung und ermöglicht eine schrittweise Bearbeitung. Die Branches werden fortlaufend ergänzt.
+- Die Anzahl der verfügbaren IDs abzurufen
+- Die Anzahl der vergebenen IDs abzurufen
+- Die nächste verfügbare ID zu erhalten
 
-### 📚 Abgedeckte Themen
+Du sollst die Logik in diesen Methoden vervollständigen, damit die Klasse korrekt funktioniert.
 
-- Objektorientierte Grundprinzipien  
-	- Klassen und Objekte  
-	- Attribute und Methoden  
-	- Kapselung  
-	- Vererbung und Mehrfachvererbung  
-	- Kovarianz und Kontravarianz  
-	- Polymorphismus  
-- Objektorientierte Konstrukte  
-	- Namespaces  
-	- Interface  
-	- Bibliotheken und Frameworks  
-	- Fehlerbehandlung  
-	- Fortgeschrittene Datentypen  
-	- Fortgeschrittene Sprachkonzepte  
-- Modellierung und Clean Code  
-	- Namenskonventionen  
-	- Entwurfsprinzipien  
-	- Technische Schulden  
-	- Continuous Inspection  
-	- UML-Klassendiagramme  
-	- Designpatterns
+---
+
+### ✅ Lösung
+
+Die Umsetzung dieser Aufgabe befindet sich in folgender Datei:
+
+📄 [SmartHomeIdFactory.java](./src/SmartHomeIdFactory.java)
+
+Diese Datei enthält die vollständige Lösung inklusive der Logik zur Vergabe und Verwaltung eindeutiger SmartSpeaker-IDs.
