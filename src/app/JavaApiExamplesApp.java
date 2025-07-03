@@ -1,3 +1,5 @@
+package app;
+
 import java.util.StringTokenizer;
 
 public class JavaApiExamplesApp {

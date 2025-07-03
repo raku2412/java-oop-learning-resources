@@ -1,3 +1,9 @@
+package app;
+
+import model.Location;
+import model.SmartSpeaker;
+import util.SmartHomeIdFactory;
+
 public class SmartHomeApp {
 
     @SuppressWarnings("UnnecessaryToStringCall")

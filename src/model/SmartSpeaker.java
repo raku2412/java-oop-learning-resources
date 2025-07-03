@@ -1,3 +1,7 @@
+package model;
+
+import util.SmartHomeIdFactory;
+
 public class SmartSpeaker {
 
     private static final int DEFAULT_VOLUME = 50;
@@ -10,7 +14,7 @@ public class SmartSpeaker {
     private String name;
     private int volume;
 
-    // TODO: Integrate the SmartHomeIdFactory as static inner class
+    // TODO: Integrate the util.SmartHomeIdFactory as static inner class
 
     public SmartSpeaker() {
         this.id = SmartHomeIdFactory.getNextId();
@@ -97,7 +101,7 @@ public class SmartSpeaker {
 
     @Override
     public String toString() {
-        return "SmartSpeaker [id = " + id + ", name = " + name + ", volume = " + volume +
+        return "model.SmartSpeaker [id = " + id + ", name = " + name + ", volume = " + volume +
                 ", manufacturerLocation = " + (manufacturerLocation != null ? manufacturerLocation.toString() : "null") +
                 ", installationLocation = " + (installationLocation != null ? installationLocation.toString() : "null") + "]";
     }
