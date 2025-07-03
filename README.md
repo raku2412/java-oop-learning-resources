@@ -37,6 +37,16 @@ Make sure your implementation matches the class structure shown in the diagram a
 
 ---
 
+### ✅ Solution
+
+The implementation of the `Location` class can be found in the following file:
+
+📄 [Location.java](./src/Location.java)
+
+This file contains the complete solution including all final variables, constructor, and getter methods as specified in the UML class diagram.
+
+---
+
 ## 📙 Deutsch
 
 ### 📝 Aufgabenbeschreibung
@@ -71,3 +81,13 @@ Folgende Attribute sind in der Klasse enthalten und alle als `final` deklariert:
 - Implementiere **Getter-Methoden** für alle Attribute (z. B. `getRoom()`, `getStreet()`, usw.).
 
 Achte darauf, dass deine Implementierung dem dargestellten Klassendiagramm entspricht und die Sichtbarkeiten korrekt gewählt sind (z. B. `private final` für Attribute, `public` für Methoden).
+
+---
+
+### ✅ Lösung
+
+Die Umsetzung der `Location`-Klasse findest du in folgender Datei:
+
+📄 [Location.java](./src/Location.java)
+
+Diese Datei enthält die vollständige Lösung mit allen finalen Variablen, dem Konstruktor und den Getter-Methoden entsprechend dem UML-Klassendiagramm.
