@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General -->
+    <string name="app_name">Prüfungsvorbereitung</string>
+    <string name="next">Weiter</string>
+    <string name="previous">Zurück</string>
+    <string name="start">Starten</string>
+    <string name="finish">Beenden</string>
+
+    <!-- Categories -->
+    <string name="categories_title">Kategorien</string>
+    <string name="category_object_classes">Objektklassen</string>
+    <string name="category_program_structure">Programmbausteine und Pakete</string>
+    <string name="category_java_api">Java-API</string>
+    <string name="category_arrays">Felder (Arrays)</string>
+    <string name="category_enumerations">Aufzählungen (Enumerations)</string>
+    <string name="category_inheritance">Vererbung</string>
+    <string name="category_polymorphism">Polymorphismus</string>
+    <string name="category_exception_handling">Ausnahme- und Fehlerbehandlung</string>
+    <string name="category_interfaces">Schnittstellen (Interfaces)</string>
+    <string name="category_generic_programming">Generische Programmierung</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Setup</string>
+    <string name="setup_category_selection_title">Wähle die Kategorien, die in dem Test vorkommen sollen.</string>
+    <string name="setup_select_all_categories_button_title">Alle auswählen</string>
+    <string name="setup_deselect_all_categories_button_title">Alle abwählen</string>
+    <string name="setup_test_solutions_available_title">Lösungen verfügbar</string>
+    <string name="setup_test_solutions_available_description">Zum Lernen können die Lösungen auch während der Probeklausur angezeigt werden. Wenn diese Option deaktiviert ist, werden die Lösungen erst beim Beenden der Probeklausur angezeigt.</string>
+    <string name="setup_start_disabled_hint">Es muss mindestens eine Kategorie ausgewählt sein, um eine Probeklausur zu starten.</string>
+
+    <!-- Examination -->
+    <string name="examination_show_solution_button_title">Lösung anzeigen</string>
+    <string name="examination_hide_solution_button_title">Lösung ausblenden</string>
+    <string name="task_description">Aufgabenbeschreibung</string>
+
+    <!-- Evaluation -->
+    <string name="evaluation_title">Auswertung</string>
+    <string name="evaluation_score">Erreichter Prozentwert</string>
+    <string name="evaluation_correct_answers">Richtige Antworten</string>
+    <string name="evaluation_wrong_answers">Falsche Antworten</string>
+
+    <!-- Tasks -->
+    <string name="object_classes_task_1_description">Was beschreibt ein „Objekt“ im Sinne der objektorientierten Programmierung?</string>
+    <string name="object_classes_task_1_answer_1">Ein Speicherobjekt, welches das Objekt des Anwendungsbereiches darstellt</string>
+    <string name="object_classes_task_1_answer_2">Eine Sammlung von Methoden ohne Daten</string>
+    <string name="object_classes_task_1_answer_3">Ein Konstruktor, der ein Interface implementiert</string>
+    <string name="object_classes_task_1_answer_4">Ein Modul, das Daten in einer Datenbank speichert</string>
+    <string name="object_classes_task_2_description">Was ist eine Objektklasse in Java?</string>
+    <string name="object_classes_task_2_answer_1">Ein Programmbaustein, der Eigenschaften und Fähigkeiten von Objekten des Anwendungsbereichs realisiert</string>
+    <string name="object_classes_task_2_answer_2">Eine spezielle Methode zum Erzeugen von Speicherobjekten</string>
+    <string name="object_classes_task_2_answer_3">Eine Datenbanktabelle zur Speicherung von Objekten</string>
+    <string name="object_classes_task_2_answer_4">Ein Schlüsselwort, das Variablen sichtbar macht</string>
+    <string name="object_classes_task_3_description">Welche Aussage zur Instanzvariable ist korrekt?</string>
+    <string name="object_classes_task_3_answer_1">Sie speichert für jedes Objekt einen aktuellen Attributwert</string>
+    <string name="object_classes_task_3_answer_2">Sie kann nur innerhalb von Methoden verwendet werden</string>
+    <string name="object_classes_task_3_answer_3">Sie ist global und wird für alle Objekte einmalig gespeichert</string>
+    <string name="object_classes_task_3_answer_4">Sie beschreibt eine Methode zur Datenverarbeitung</string>
+    <string name="object_classes_task_4_description">Welche Aussagen zu Modifizierern treffen zu?</string>
+    <string name="object_classes_task_4_answer_1">Modifizierer regeln die Verwendbarkeit von deklarierten Programmgrößen</string>
+    <string name="object_classes_task_4_answer_2">Der Modifizierer private erlaubt den Zugriff nur innerhalb des Programmbausteins</string>
+    <string name="object_classes_task_4_answer_3">public-Methoden dürfen nur in Interfaces definiert werden</string>
+    <string name="object_classes_task_4_answer_4">Modifizierer sind nur für Variablen und nicht für Methoden erlaubt</string>
+    <string name="object_classes_task_5_description">Was ist das Ziel des Geheimnisprinzips?</string>
+    <string name="object_classes_task_5_answer_1">Nur notwendige Informationen und Fähigkeiten einer Klasse nach außen bereitzustellen</string>
+    <string name="object_classes_task_5_answer_2">Jede Methode und Variable standardmäßig öffentlich verfügbar zu machen</string>
+    <string name="object_classes_task_5_answer_3">Vererbung innerhalb von Klassen zu verhindern</string>
+    <string name="object_classes_task_5_answer_4">Die Lesbarkeit des Codes durch viele Kommentare zu erhöhen</string>
+    <string name="object_classes_task_6_description">Was ist eine Instanzmethode?</string>
+    <string name="object_classes_task_6_answer_1">Eine Methode, die auf Objekte der Klasse anwendbar ist</string>
+    <string name="object_classes_task_6_answer_2">Eine Methode, die nur statische Variablen verwendet</string>
+    <string name="object_classes_task_6_answer_3">Eine Methode, die automatisch beim Programmstart aufgerufen wird</string>
+    <string name="object_classes_task_6_answer_4">Ein Schlüsselwort zur Sichtbarkeitsregelung</string>
+    <string name="object_classes_task_7_description">Was beschreibt ein Datentyp in Java?</string>
+    <string name="object_classes_task_7_answer_1">Einen Wertebereich und die darauf anwendbaren Operationen</string>
+    <string name="object_classes_task_7_answer_2">Eine Methode zur Initialisierung von Objekten</string>
+    <string name="object_classes_task_7_answer_3">Ein Programmbaustein zur Steuerung der Sichtbarkeit</string>
+    <string name="object_classes_task_7_answer_4">Einen Container zur Speicherung von Klassen</string>
+    <string name="object_classes_task_8_description">Welche Aussagen zu Datentypen treffen zu?</string>
+    <string name="object_classes_task_8_answer_1">Ein Datentyp definiert einen Wertebereich</string>
+    <string name="object_classes_task_8_answer_2">Ein Datentyp legt fest, welche Operationen auf den Werten erlaubt sind</string>
+    <string name="object_classes_task_8_answer_3">Datentypen lassen sich nicht selbst definieren</string>
+    <string name="object_classes_task_8_answer_4">Es gibt nur Referenzdatentypen in Java</string>
+    <string name="object_classes_task_9_description">Was gehört zum Methodenkopf einer Methode?</string>
+    <string name="object_classes_task_9_answer_1">Modifizierer, Rückgabetyp, Methodenname und Parameterliste</string>
+    <string name="object_classes_task_9_answer_2">Nur der Methodenname und die geschweiften Klammern</string>
+    <string name="object_classes_task_9_answer_3">Nur der Rückgabetyp und die Parameterliste</string>
+    <string name="object_classes_task_9_answer_4">Nur die Anweisungen im Methodenrumpf</string>
+    <string name="object_classes_task_10_description">Was befindet sich im Methodenrumpf?</string>
+    <string name="object_classes_task_10_answer_1">Deklarationen und Anweisungen, eingeschlossen in geschweifte Klammern</string>
+    <string name="object_classes_task_10_answer_2">Nur die Methodenparameter</string>
+    <string name="object_classes_task_10_answer_3">Nur der Rückgabewert der Methode</string>
+    <string name="object_classes_task_10_answer_4">Nur die Zugriffmodifizierer der Methode</string>
+    <string name="object_classes_task_11_description">Wofür werden Methodenparameter verwendet?</string>
+    <string name="object_classes_task_11_answer_1">Zur Übergabe von Werten an eine Methode beim Aufruf</string>
+    <string name="object_classes_task_11_answer_2">Zur Definition von Instanzvariablen</string>
+    <string name="object_classes_task_11_answer_3">Zur Steuerung der Sichtbarkeit der Methode</string>
+    <string name="object_classes_task_11_answer_4">Zur Rückgabe von Werten am Ende der Methode</string>
+    <string name="object_classes_task_12_description">Welche Aussage über lokale Variablen ist korrekt?</string>
+    <string name="object_classes_task_12_answer_1">Sie werden innerhalb von Methoden definiert und besitzen keinen Modifizierer</string>
+    <string name="object_classes_task_12_answer_2">Sie sind außerhalb der Methode dauerhaft verfügbar</string>
+    <string name="object_classes_task_12_answer_3">Sie können nur in Interfaces verwendet werden</string>
+    <string name="object_classes_task_12_answer_4">Sie müssen immer als static deklariert werden</string>
+
+</resources>
