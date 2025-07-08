@@ -18,10 +18,14 @@ public class SmartHomeCollectionApp {
         SmartHomeRoom kitchen = new SmartHomeRoom(kitchenBulb, kitchenSpeaker);
         SmartHomeRoom bedroom = new SmartHomeRoom(bedroomBulb, null);
 
-        showIntArrayExample();
+        //showIntArrayExample();
 
-        // TODO: Initialize smart home rooms with SmartHomeRoom objects in different ways (see int array example)
         SmartHomeRoom[] rooms = new SmartHomeRoom[3];
+        rooms[0] = livingRoom;
+        rooms[1] = kitchen;
+        rooms[2] = bedroom;
+        //SmartHomeRoom[] rooms = { livingRoom, kitchen, bedroom };
+        //SmartHomeRoom[] rooms = createArray(livingRoom, kitchen, bedroom);
         System.out.println("The mean brightness of all SmartBulbs is: " + getMeanBrightness(rooms));
     }
 
@@ -58,9 +62,27 @@ public class SmartHomeCollectionApp {
         return array;
     }
 
+    @SuppressWarnings("ManualArrayCopy")
+    private static SmartHomeRoom[] createArray(SmartHomeRoom... values) {
+        SmartHomeRoom[] array = new SmartHomeRoom[values.length];
+        for (int i = 0; i < values.length; i++) {
+            array[i] = values[i];
+        }
+        return array;
+    }
+
     private static int getMeanBrightness(SmartHomeRoom[] rooms) {
-        // TODO: Implement mean brightness calculation
-        throw new IllegalStateException("Method not implemented yet");
+        int totalBrightness = 0;
+        int bulbCount = 0;
+
+        for (SmartHomeRoom room : rooms) {
+            if (room != null && room.getSmartBulb() != null) {
+                totalBrightness += room.getSmartBulb().getBrightness();
+                bulbCount++;
+            }
+        }
+
+        return bulbCount > 0 ? totalBrightness / bulbCount : 0;
     }
 
 }

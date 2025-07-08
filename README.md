@@ -34,6 +34,17 @@ In this task, you'll work with arrays and objects in Java to:
 
 ---
 
+### ✅ Solution
+
+The solution to this task can be found in the following file:
+
+📄 [`SmartHomeCollectionApp.java`](./src/app/SmartHomeCollectionApp.java)
+
+In this file, the `rooms` array is initialized using different approaches—similar to how arrays are handled in the `showIntArrayExample()` method.  
+The method `getMeanBrightness()` calculates the average brightness of all valid (non-null) `SmartBulb` objects within the array, while safely handling any `null` values.
+
+---
+
 ## 📝 Aufgabenbeschreibung (Deutsch)
 
 In dieser Aufgabe arbeitest du mit Java-Arrays und Objekten, um:
@@ -65,3 +76,14 @@ In dieser Aufgabe arbeitest du mit Java-Arrays und Objekten, um:
 
 4. **Durchschnitt berechnen und ausgeben**  
    Rufe die Methode `getMeanBrightness()` mit dem Array `rooms` auf und gib das Ergebnis auf der Konsole aus.
+
+---
+
+### ✅ Lösung
+
+Die Lösung dieser Aufgabe befindet sich in folgender Datei:
+
+📄 [`SmartHomeCollectionApp.java`](./src/app/SmartHomeCollectionApp.java)
+
+Dort wird das Array `rooms` auf unterschiedliche Arten initialisiert – analog zur Methode `showIntArrayExample()`.  
+Die Methode `getMeanBrightness()` berechnet die durchschnittliche Helligkeit aller gültigen (nicht-null) `SmartBulb`-Objekte im Array, unter Berücksichtigung von null-Werten.
