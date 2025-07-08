@@ -47,60 +47,395 @@
     <string name="object_classes_task_1_answer_2">Eine Sammlung von Methoden ohne Daten</string>
     <string name="object_classes_task_1_answer_3">Ein Konstruktor, der ein Interface implementiert</string>
     <string name="object_classes_task_1_answer_4">Ein Modul, das Daten in einer Datenbank speichert</string>
+
     <string name="object_classes_task_2_description">Was ist eine Objektklasse in Java?</string>
     <string name="object_classes_task_2_answer_1">Ein Programmbaustein, der Eigenschaften und Fähigkeiten von Objekten des Anwendungsbereichs realisiert</string>
     <string name="object_classes_task_2_answer_2">Eine spezielle Methode zum Erzeugen von Speicherobjekten</string>
     <string name="object_classes_task_2_answer_3">Eine Datenbanktabelle zur Speicherung von Objekten</string>
     <string name="object_classes_task_2_answer_4">Ein Schlüsselwort, das Variablen sichtbar macht</string>
+
     <string name="object_classes_task_3_description">Welche Aussage zur Instanzvariable ist korrekt?</string>
     <string name="object_classes_task_3_answer_1">Sie speichert für jedes Objekt einen aktuellen Attributwert</string>
     <string name="object_classes_task_3_answer_2">Sie kann nur innerhalb von Methoden verwendet werden</string>
     <string name="object_classes_task_3_answer_3">Sie ist global und wird für alle Objekte einmalig gespeichert</string>
     <string name="object_classes_task_3_answer_4">Sie beschreibt eine Methode zur Datenverarbeitung</string>
+
     <string name="object_classes_task_4_description">Welche Aussagen zu Modifizierern treffen zu?</string>
     <string name="object_classes_task_4_answer_1">Modifizierer regeln die Verwendbarkeit von deklarierten Programmgrößen</string>
     <string name="object_classes_task_4_answer_2">Der Modifizierer private erlaubt den Zugriff nur innerhalb des Programmbausteins</string>
     <string name="object_classes_task_4_answer_3">public-Methoden dürfen nur in Interfaces definiert werden</string>
     <string name="object_classes_task_4_answer_4">Modifizierer sind nur für Variablen und nicht für Methoden erlaubt</string>
+
     <string name="object_classes_task_5_description">Was ist das Ziel des Geheimnisprinzips?</string>
     <string name="object_classes_task_5_answer_1">Nur notwendige Informationen und Fähigkeiten einer Klasse nach außen bereitzustellen</string>
     <string name="object_classes_task_5_answer_2">Jede Methode und Variable standardmäßig öffentlich verfügbar zu machen</string>
     <string name="object_classes_task_5_answer_3">Vererbung innerhalb von Klassen zu verhindern</string>
     <string name="object_classes_task_5_answer_4">Die Lesbarkeit des Codes durch viele Kommentare zu erhöhen</string>
+
     <string name="object_classes_task_6_description">Was ist eine Instanzmethode?</string>
     <string name="object_classes_task_6_answer_1">Eine Methode, die auf Objekte der Klasse anwendbar ist</string>
     <string name="object_classes_task_6_answer_2">Eine Methode, die nur statische Variablen verwendet</string>
     <string name="object_classes_task_6_answer_3">Eine Methode, die automatisch beim Programmstart aufgerufen wird</string>
     <string name="object_classes_task_6_answer_4">Ein Schlüsselwort zur Sichtbarkeitsregelung</string>
+
     <string name="object_classes_task_7_description">Was beschreibt ein Datentyp in Java?</string>
     <string name="object_classes_task_7_answer_1">Einen Wertebereich und die darauf anwendbaren Operationen</string>
     <string name="object_classes_task_7_answer_2">Eine Methode zur Initialisierung von Objekten</string>
     <string name="object_classes_task_7_answer_3">Ein Programmbaustein zur Steuerung der Sichtbarkeit</string>
     <string name="object_classes_task_7_answer_4">Einen Container zur Speicherung von Klassen</string>
+
     <string name="object_classes_task_8_description">Welche Aussagen zu Datentypen treffen zu?</string>
     <string name="object_classes_task_8_answer_1">Ein Datentyp definiert einen Wertebereich</string>
     <string name="object_classes_task_8_answer_2">Ein Datentyp legt fest, welche Operationen auf den Werten erlaubt sind</string>
     <string name="object_classes_task_8_answer_3">Datentypen lassen sich nicht selbst definieren</string>
     <string name="object_classes_task_8_answer_4">Es gibt nur Referenzdatentypen in Java</string>
+
     <string name="object_classes_task_9_description">Was gehört zum Methodenkopf einer Methode?</string>
     <string name="object_classes_task_9_answer_1">Modifizierer, Rückgabetyp, Methodenname und Parameterliste</string>
     <string name="object_classes_task_9_answer_2">Nur der Methodenname und die geschweiften Klammern</string>
     <string name="object_classes_task_9_answer_3">Nur der Rückgabetyp und die Parameterliste</string>
     <string name="object_classes_task_9_answer_4">Nur die Anweisungen im Methodenrumpf</string>
+
     <string name="object_classes_task_10_description">Was befindet sich im Methodenrumpf?</string>
     <string name="object_classes_task_10_answer_1">Deklarationen und Anweisungen, eingeschlossen in geschweifte Klammern</string>
     <string name="object_classes_task_10_answer_2">Nur die Methodenparameter</string>
     <string name="object_classes_task_10_answer_3">Nur der Rückgabewert der Methode</string>
     <string name="object_classes_task_10_answer_4">Nur die Zugriffmodifizierer der Methode</string>
+
     <string name="object_classes_task_11_description">Wofür werden Methodenparameter verwendet?</string>
     <string name="object_classes_task_11_answer_1">Zur Übergabe von Werten an eine Methode beim Aufruf</string>
     <string name="object_classes_task_11_answer_2">Zur Definition von Instanzvariablen</string>
     <string name="object_classes_task_11_answer_3">Zur Steuerung der Sichtbarkeit der Methode</string>
     <string name="object_classes_task_11_answer_4">Zur Rückgabe von Werten am Ende der Methode</string>
+
     <string name="object_classes_task_12_description">Welche Aussage über lokale Variablen ist korrekt?</string>
     <string name="object_classes_task_12_answer_1">Sie werden innerhalb von Methoden definiert und besitzen keinen Modifizierer</string>
     <string name="object_classes_task_12_answer_2">Sie sind außerhalb der Methode dauerhaft verfügbar</string>
     <string name="object_classes_task_12_answer_3">Sie können nur in Interfaces verwendet werden</string>
     <string name="object_classes_task_12_answer_4">Sie müssen immer als static deklariert werden</string>
+
+    <string name="object_classes_task_13_description">Was beschreibt ein Speicherobjekt in Java am besten?</string>
+    <string name="object_classes_task_13_answer_1">Ein Bereich im RAM, der zur Laufzeit für Methoden reserviert wird</string>
+    <string name="object_classes_task_13_answer_2">Ein zur Programmausführung angeforderter Bereich zur Speicherung von Objektdaten</string>
+    <string name="object_classes_task_13_answer_3">Ein Objekt, das ausschließlich statische Daten enthält</string>
+    <string name="object_classes_task_13_answer_4">Ein Platzhalter für nicht verwendete Variablen</string>
+
+    <string name="object_classes_task_14_description">Was ist eine Referenz in Java?</string>
+    <string name="object_classes_task_14_answer_1">Ein primitiver Datentyp, der Zahlen speichert</string>
+    <string name="object_classes_task_14_answer_2">Ein Zeiger auf ein Speicherobjekt</string>
+    <string name="object_classes_task_14_answer_3">Ein reserviertes Schlüsselwort für Bedingungen</string>
+    <string name="object_classes_task_14_answer_4">Ein Methodenparameter mit festem Wert</string>
+
+    <string name="object_classes_task_15_description">Welche Aussagen über Referenztypen sind korrekt?</string>
+    <string name="object_classes_task_15_answer_1">Referenztypen können nur primitive Werte speichern</string>
+    <string name="object_classes_task_15_answer_2">Referenztypen sind z.B. Klassen, die Objektreferenzen speichern</string>
+    <string name="object_classes_task_15_answer_3">Man kann keine Methoden auf Referenztypen anwenden</string>
+    <string name="object_classes_task_15_answer_4">Referenztypen enthalten direkt die Objektdaten</string>
+
+    <string name="object_classes_task_16_description">Was bedeutet eine Nullreferenz in Java?</string>
+    <string name="object_classes_task_16_answer_1">Ein Objekt ist noch nicht instanziiert</string>
+    <string name="object_classes_task_16_answer_2">Es wird kein Objekt referenziert</string>
+    <string name="object_classes_task_16_answer_3">Ein Objekt wurde mit einem Wert 0 initialisiert</string>
+    <string name="object_classes_task_16_answer_4">Eine Methode gibt eine Ganzzahl zurück</string>
+
+    <string name="object_classes_task_17_description">Welche der folgenden Ausdrücke können Referenzen zurückgeben?</string>
+    <string name="object_classes_task_17_answer_1">Eine Nullreferenz</string>
+    <string name="object_classes_task_17_answer_2">Ein Methodenaufruf, der ein Objekt liefert</string>
+    <string name="object_classes_task_17_answer_3">Eine arithmetische Addition zweier Integer</string>
+    <string name="object_classes_task_17_answer_4">Eine Instanziierung ohne Zuweisung</string>
+
+    <string name="object_classes_task_18_description">Wie erfolgt der Zugriff auf Instanz-Methoden in Java?</string>
+    <string name="object_classes_task_18_answer_1">Durch den Klassennamen direkt</string>
+    <string name="object_classes_task_18_answer_2">Über eine Referenz auf das Objekt</string>
+    <string name="object_classes_task_18_answer_3">Nur über static-Methoden</string>
+    <string name="object_classes_task_18_answer_4">Durch ein Schlüsselwort "this" außerhalb der Klasse</string>
+
+    <string name="object_classes_task_19_description">Was passiert beim Zugriff auf eine Nullreferenz?</string>
+    <string name="object_classes_task_19_answer_1">Das Programm überspringt die Operation</string>
+    <string name="object_classes_task_19_answer_2">Eine Exception wird ausgelöst</string>
+    <string name="object_classes_task_19_answer_3">Der Wert wird automatisch auf 0 gesetzt</string>
+    <string name="object_classes_task_19_answer_4">Das Objekt wird automatisch neu erstellt</string>
+
+    <string name="object_classes_task_20_description">Wie verwaltet die Java-Runtime-Umgebung (JRE) Speicher für Objekte?</string>
+    <string name="object_classes_task_20_answer_1">Durch manuelles Löschen von Objekten im Code</string>
+    <string name="object_classes_task_20_answer_2">Durch Garbage Collection, die nicht mehr referenzierte Objekte entfernt</string>
+    <string name="object_classes_task_20_answer_3">Indem alle Objekte am Ende des Programms gespeichert bleiben</string>
+    <string name="object_classes_task_20_answer_4">Indem sie automatisch alle Objekte in statischen Arrays speichert</string>
+
+    <string name="object_classes_task_21_description">Welche Aussage über das Überladen (Overloading) von Methoden ist korrekt?</string>
+    <string name="object_classes_task_21_answer_1">Methoden können überladen werden, wenn sie denselben Namen und exakt dieselben Parameter haben</string>
+    <string name="object_classes_task_21_answer_2">Überladene Methoden müssen unterschiedliche Rückgabetypen haben</string>
+    <string name="object_classes_task_21_answer_3">Überladen ist nur bei Konstruktoren erlaubt</string>
+    <string name="object_classes_task_21_answer_4">Beim Überladen müssen sich Parameteranzahl oder -typen unterscheiden</string>
+
+    <string name="object_classes_task_22_description">Was ist die Hauptaufgabe eines Konstruktors in Java?</string>
+    <string name="object_classes_task_22_answer_1">Das Löschen von Objekten</string>
+    <string name="object_classes_task_22_answer_2">Das Ausführen aller statischen Methoden beim Programmstart</string>
+    <string name="object_classes_task_22_answer_3">Die Initialisierung eines neu erzeugten Objekts</string>
+    <string name="object_classes_task_22_answer_4">Die Definition von abstrakten Methoden</string>
+
+    <string name="object_classes_task_23_description">Wann wird ein Konstruktor in Java aufgerufen?</string>
+    <string name="object_classes_task_23_answer_1">Wenn ein Objekt mit dem new-Operator erzeugt wird</string>
+    <string name="object_classes_task_23_answer_2">Wenn die Methode finalize() aufgerufen wird</string>
+    <string name="object_classes_task_23_answer_3">Beim Kompilieren des Programms</string>
+    <string name="object_classes_task_23_answer_4">Wenn eine Variable mit null initialisiert wird</string>
+
+    <string name="object_classes_task_24_description">Welche Aussage über den Standard-Konstruktor in Java ist korrekt?</string>
+    <string name="object_classes_task_24_answer_1">Er wird vom Entwickler explizit geschrieben</string>
+    <string name="object_classes_task_24_answer_2">Er enthält immer mindestens einen Parameter</string>
+    <string name="object_classes_task_24_answer_3">Er wird vom Compiler erzeugt, wenn kein anderer Konstruktor vorhanden ist</string>
+    <string name="object_classes_task_24_answer_4">Er darf keine Variablen initialisieren</string>
+
+    <string name="object_classes_task_25_description">Was beschreibt einen einfachen Konstruktor?</string>
+    <string name="object_classes_task_25_answer_1">Ein Konstruktor, der komplexe Logik und Berechnungen durchführt</string>
+    <string name="object_classes_task_25_answer_2">Ein Konstruktor, der Parameter direkt ohne Prüfungen zuweist</string>
+    <string name="object_classes_task_25_answer_3">Ein Konstruktor, der ausschließlich final-Variablen erlaubt</string>
+    <string name="object_classes_task_25_answer_4">Ein Konstruktor, der nur statische Felder verändert</string>
+
+    <string name="object_classes_task_26_description">Was ist ein Merkmal eines intelligenten Konstruktors?</string>
+    <string name="object_classes_task_26_answer_1">Er prüft übergebene Parameter vor der Zuweisung</string>
+    <string name="object_classes_task_26_answer_2">Er enthält keine Initialisierungen von Instanzvariablen</string>
+    <string name="object_classes_task_26_answer_3">Er wird nur bei statischen Methoden verwendet</string>
+    <string name="object_classes_task_26_answer_4">Er kann nur in abstrakten Klassen verwendet werden</string>
+
+    <string name="object_classes_task_27_description">Welche Aussagen über Konstruktoren in Java sind korrekt?</string>
+    <string name="object_classes_task_27_answer_1">Sie haben denselben Namen wie die Klasse</string>
+    <string name="object_classes_task_27_answer_2">Sie können keine Parameter enthalten</string>
+    <string name="object_classes_task_27_answer_3">Sie dürfen keinen Rückgabetyp besitzen</string>
+    <string name="object_classes_task_27_answer_4">Sie können nicht überladen werden</string>
+
+    <string name="object_classes_task_28_description">Welche Vorteile bietet ein intelligenter Konstruktor gegenüber einem einfachen?</string>
+    <string name="object_classes_task_28_answer_1">Er schützt vor ungültigen oder unerwarteten Eingabewerten</string>
+    <string name="object_classes_task_28_answer_2">Er ist kürzer und dadurch immer effizienter</string>
+    <string name="object_classes_task_28_answer_3">Er ersetzt die Verwendung von Settern vollständig</string>
+    <string name="object_classes_task_28_answer_4">Er benötigt keine Objektinstanz zur Ausführung</string>
+
+    <string name="object_classes_task_29_description">Welche Methoden zählen typischerweise zu den Standardmethoden einer Objektklasse?</string>
+    <string name="object_classes_task_29_answer_1">Set- und Get-Methoden</string>
+    <string name="object_classes_task_29_answer_2">main-Methoden</string>
+    <string name="object_classes_task_29_answer_3">toString() und equals()</string>
+    <string name="object_classes_task_29_answer_4">finalize() und static()</string>
+
+    <string name="object_classes_task_30_description">Welche Aussage zur Methode toString() ist korrekt?</string>
+    <string name="object_classes_task_30_answer_1">Sie muss immer Parameter enthalten</string>
+    <string name="object_classes_task_30_answer_2">Sie liefert eine textuelle Darstellung eines Objekts zurück</string>
+    <string name="object_classes_task_30_answer_3">Sie verändert das Objekt intern</string>
+    <string name="object_classes_task_30_answer_4">Sie kann nur innerhalb von abstrakten Klassen verwendet werden</string>
+
+    <string name="object_classes_task_31_description">Was beschreibt das Verhalten der Methode equals() korrekt?</string>
+    <string name="object_classes_task_31_answer_1">Sie vergleicht zwei Objekte auf Referenzgleichheit</string>
+    <string name="object_classes_task_31_answer_2">Sie vergleicht ein Objekt mit einem anderen übergebenen Objekt</string>
+    <string name="object_classes_task_31_answer_3">Sie erzeugt eine Kopie des Objekts</string>
+    <string name="object_classes_task_31_answer_4">Sie muss immer überschrieben werden</string>
+
+    <string name="object_classes_task_32_description">Welche Aussagen über finale Variablen sind korrekt?</string>
+    <string name="object_classes_task_32_answer_1">Sie müssen direkt bei der Deklaration initialisiert werden</string>
+    <string name="object_classes_task_32_answer_2">Sie können später beliebig oft verändert werden</string>
+    <string name="object_classes_task_32_answer_3">Ihr Name wird in der Regel in Großbuchstaben geschrieben</string>
+    <string name="object_classes_task_32_answer_4">Sie dürfen nur in Interfaces verwendet werden</string>
+
+    <string name="object_classes_task_33_description">Was ist eine statische Variable in Java?</string>
+    <string name="object_classes_task_33_answer_1">Eine Variable, die zu einer bestimmten Objektinstanz gehört</string>
+    <string name="object_classes_task_33_answer_2">Eine Variable, die nur während des Programmstarts verwendet wird</string>
+    <string name="object_classes_task_33_answer_3">Eine Klassenvariable, die der Klasse selbst und nicht einzelnen Objekten gehört</string>
+    <string name="object_classes_task_33_answer_4">Eine Variable, die nur innerhalb von Konstruktoren verwendet werden darf</string>
+
+    <string name="object_classes_task_34_description">Welche Eigenschaften treffen auf statische Methoden zu?</string>
+    <string name="object_classes_task_34_answer_1">Sie können auf Klassenvariablen zugreifen</string>
+    <string name="object_classes_task_34_answer_2">Sie dürfen auf Instanzvariablen zugreifen</string>
+    <string name="object_classes_task_34_answer_3">Sie können ohne Objektinstanz aufgerufen werden</string>
+    <string name="object_classes_task_34_answer_4">Sie sind private Methoden, die nur innerhalb von Interfaces erlaubt sind</string>
+
+    <string name="object_classes_task_35_description">Welche Aussage zu statischen Klassen in Java ist korrekt?</string>
+    <string name="object_classes_task_35_answer_1">Statische Klassen dürfen Instanzmethoden enthalten</string>
+    <string name="object_classes_task_35_answer_2">Statische Klassen bestehen nur aus Klassenvariablen und Klassenmethoden</string>
+    <string name="object_classes_task_35_answer_3">Der Modifizierer static darf direkt vor Klassennamen stehen</string>
+    <string name="object_classes_task_35_answer_4">Statische Klassen dürfen nur in Konstruktoren verwendet werden</string>
+
+    <string name="object_classes_task_36_description">Was beschreibt ein zusammengesetztes Objekt in Java?</string>
+    <string name="object_classes_task_36_answer_1">Ein Objekt, das ausschließlich aus primitiven Datentypen besteht</string>
+    <string name="object_classes_task_36_answer_2">Ein Objekt, das aus einem oder mehreren Unterobjekten besteht</string>
+    <string name="object_classes_task_36_answer_3">Ein Objekt, das zur Laufzeit nicht verändert werden kann</string>
+    <string name="object_classes_task_36_answer_4">Ein Objekt, das als final deklariert ist</string>
+
+    <string name="object_classes_task_37_description">Welche Aussagen zu zusammengesetzten Objekten sind korrekt?</string>
+    <string name="object_classes_task_37_answer_1">Sie bestehen aus Unterobjekten, die als Instanzvariablen eingebettet sind</string>
+    <string name="object_classes_task_37_answer_2">Die Referenzen auf Unterobjekte werden im übergeordneten Objekt gespeichert</string>
+    <string name="object_classes_task_37_answer_3">Sie können nur in Interfaces erstellt werden</string>
+    <string name="object_classes_task_37_answer_4">Sie sind nicht zur Wiederverwendung gedacht</string>
+
+    <string name="program_structure_task_1_description">Was ist ein Programmbaustein in Java?</string>
+    <string name="program_structure_task_1_answer_1">Ein Methodenaufruf innerhalb einer Schleife</string>
+    <string name="program_structure_task_1_answer_2">Ein Teil eines Gesamtprogramms mit klarer Aufgabe, z.B. eine Klasse</string>
+    <string name="program_structure_task_1_answer_3">Ein Kommentarbereich am Anfang der Datei</string>
+    <string name="program_structure_task_1_answer_4">Ein importiertes externes Programm</string>
+
+    <string name="program_structure_task_2_description">Was beschreibt eine Bausteindatei in Java am besten?</string>
+    <string name="program_structure_task_2_answer_1">Eine Textdatei mit Java-Dokumentation</string>
+    <string name="program_structure_task_2_answer_2">Eine Datei, die typischerweise einen Programmbaustein enthält und mit .java endet</string>
+    <string name="program_structure_task_2_answer_3">Ein Konfigurationsfile für die IDE</string>
+    <string name="program_structure_task_2_answer_4">Eine .class-Datei mit Bytecode</string>
+
+    <string name="program_structure_task_3_description">Was versteht man unter einem inneren Baustein in Java?</string>
+    <string name="program_structure_task_3_answer_1">Einen separaten Programmbaustein in einer anderen Datei</string>
+    <string name="program_structure_task_3_answer_2">Einen Baustein, der innerhalb eines anderen Bausteins definiert ist</string>
+    <string name="program_structure_task_3_answer_3">Eine Klasse, die im Root-Verzeichnis des Projekts liegt</string>
+    <string name="program_structure_task_3_answer_4">Einen importierten Baustein aus einem Paket</string>
+
+    <string name="program_structure_task_4_description">Welche Aussage zu inneren Klassen ist korrekt?</string>
+    <string name="program_structure_task_4_answer_1">Sie werden ausschließlich außerhalb von Methoden definiert</string>
+    <string name="program_structure_task_4_answer_2">Sie werden in einem eigenen Package gespeichert</string>
+    <string name="program_structure_task_4_answer_3">Sie existieren ausschließlich im Kontext des umgebenden Bausteins</string>
+    <string name="program_structure_task_4_answer_4">Sie dürfen keinen Konstruktor enthalten</string>
+
+    <string name="program_structure_task_5_description">Was ist bei der Definition innerer statischer Klassen zu beachten?</string>
+    <string name="program_structure_task_5_answer_1">Sie müssen mit public final deklariert werden</string>
+    <string name="program_structure_task_5_answer_2">Sie können mit static deklariert werden, im Gegensatz zu Top-Level-Klassen</string>
+    <string name="program_structure_task_5_answer_3">Sie benötigen eine eigene .java-Datei</string>
+    <string name="program_structure_task_5_answer_4">Sie dürfen nur in Interfaces vorkommen</string>
+
+    <string name="program_structure_task_6_description">Was ist ein Paket in Java?</string>
+    <string name="program_structure_task_6_answer_1">Eine Klasse mit vielen Variablen</string>
+    <string name="program_structure_task_6_answer_2">Eine Sammlung von Methoden, die automatisch ausgeführt werden</string>
+    <string name="program_structure_task_6_answer_3">Eine logische Zusammenfassung von Bausteinen und Unterpaketen in hierarchischer Struktur</string>
+    <string name="program_structure_task_6_answer_4">Ein Java-Modul mit mehreren main-Methoden</string>
+
+    <string name="program_structure_task_7_description">Wie werden Paketnamen in Java üblicherweise geschrieben?</string>
+    <string name="program_structure_task_7_answer_1">Mit Großbuchstaben und Zahlen</string>
+    <string name="program_structure_task_7_answer_2">In englischer Sprache und durchgehend kleingeschrieben</string>
+    <string name="program_structure_task_7_answer_3">In CamelCase, z.B. DataBaseTools</string>
+    <string name="program_structure_task_7_answer_4">Mit Leerzeichen und Sonderzeichen erlaubt</string>
+
+    <string name="program_structure_task_8_description">Was bewirkt eine Paketanweisung in einer Java-Datei?</string>
+    <string name="program_structure_task_8_answer_1">Sie definiert die Sichtbarkeit von Variablen</string>
+    <string name="program_structure_task_8_answer_2">Sie weist den enthaltenen Baustein einem bestimmten Paket zu</string>
+    <string name="program_structure_task_8_answer_3">Sie importiert Methoden aus anderen Klassen</string>
+    <string name="program_structure_task_8_answer_4">Sie kompiliert die Datei mit einem bestimmten Compiler</string>
+
+    <string name="program_structure_task_9_description">Was macht die Import-Anweisung in einer Java-Datei?</string>
+    <string name="program_structure_task_9_answer_1">Sie erzeugt ein Backup des Quellcodes</string>
+    <string name="program_structure_task_9_answer_2">Sie erlaubt die Nutzung von Bausteinen aus anderen Paketen</string>
+    <string name="program_structure_task_9_answer_3">Sie entfernt Kommentare aus der Datei</string>
+    <string name="program_structure_task_9_answer_4">Sie komprimiert die Datei zur Ausführung</string>
+
+    <string name="program_structure_task_10_description">Welche Aussage zur Nutzung von * bei Import-Anweisungen ist korrekt?</string>
+    <string name="program_structure_task_10_answer_1">* bedeutet, dass nur die Main-Klasse importiert wird</string>
+    <string name="program_structure_task_10_answer_2">* steht für einen relativen Pfad im Dateisystem</string>
+    <string name="program_structure_task_10_answer_3">* importiert alle öffentlichen Bausteine eines Pakets</string>
+    <string name="program_structure_task_10_answer_4">* wird nur bei statischen Methoden benötigt</string>
+
+    <string name="java_api_task_1_description">Was ist die Java-API (Application Programming Interface)?</string>
+    <string name="java_api_task_1_answer_1">Ein grafisches Tool zur Code-Erstellung</string>
+    <string name="java_api_task_1_answer_2">Ein Compiler für Java-Dateien</string>
+    <string name="java_api_task_1_answer_3">Eine umfangreiche Bibliothek vorgefertigter Klassen und Bausteine</string>
+    <string name="java_api_task_1_answer_4">Eine Sammlung von Hauptmethoden für jedes Java-Programm</string>
+
+    <string name="java_api_task_2_description">Welche Aufgabe hat die Klasse java.lang.Math?</string>
+    <string name="java_api_task_2_answer_1">Verwaltung von Zeichencodierungen</string>
+    <string name="java_api_task_2_answer_2">Verarbeitung von großen Zahlen mit Nachkommastellen</string>
+    <string name="java_api_task_2_answer_3">Bereitstellung mathematischer Basisfunktionen und Konstanten</string>
+    <string name="java_api_task_2_answer_4">Konvertierung von Zahlen in Zeichenketten</string>
+
+    <string name="java_api_task_3_description">Welche Aussage zur Klasse java.lang.Math ist korrekt?</string>
+    <string name="java_api_task_3_answer_1">Sie enthält nur Methoden zur String-Verarbeitung</string>
+    <string name="java_api_task_3_answer_2">Sie besitzt keine Konstruktoren und ist eine statische Klasse</string>
+    <string name="java_api_task_3_answer_3">Sie ist veraltet und sollte nicht mehr verwendet werden</string>
+    <string name="java_api_task_3_answer_4">Sie dient zur Erstellung grafischer Benutzeroberflächen</string>
+
+    <string name="java_api_task_4_description">Wofür wird die Klasse java.lang.String in Java verwendet?</string>
+    <string name="java_api_task_4_answer_1">Zur Darstellung veränderbarer Zeichenketten</string>
+    <string name="java_api_task_4_answer_2">Zur Darstellung unveränderbarer Zeichenketten fester Länge</string>
+    <string name="java_api_task_4_answer_3">Zur Speicherung von numerischen Werten</string>
+    <string name="java_api_task_4_answer_4">Zum Parsen von Token aus einer Zeichenkette</string>
+
+    <string name="java_api_task_5_description">Was beschreibt den sogenannten „String-Pooling“ in Java korrekt?</string>
+    <string name="java_api_task_5_answer_1">Mehrfach vorkommende String-Literale mit gleichem Inhalt werden nur einmal gespeichert</string>
+    <string name="java_api_task_5_answer_2">Strings werden automatisch in Großbuchstaben gespeichert</string>
+    <string name="java_api_task_5_answer_3">Strings werden in separaten .txt-Dateien gespeichert</string>
+    <string name="java_api_task_5_answer_4">Jeder String wird unabhängig gespeichert, um Manipulation zu ermöglichen</string>
+
+    <string name="java_api_task_6_description">Was ist der Zweck der Klasse java.lang.StringBuffer?</string>
+    <string name="java_api_task_6_answer_1">Zur Darstellung statischer mathematischer Konstanten</string>
+    <string name="java_api_task_6_answer_2">Zur Verarbeitung von Zeichenketten, deren Länge sich ändern kann</string>
+    <string name="java_api_task_6_answer_3">Zur Verwaltung von Paketen und Imports</string>
+    <string name="java_api_task_6_answer_4">Zur Darstellung ganzer Zahlen beliebiger Länge</string>
+
+    <string name="java_api_task_7_description">Wofür wird java.lang.StringTokenizer verwendet?</string>
+    <string name="java_api_task_7_answer_1">Zur Umwandlung von Zahlen in Text</string>
+    <string name="java_api_task_7_answer_2">Zum Zerlegen einer Zeichenkette in Einzelbestandteile anhand eines Trennzeichens</string>
+    <string name="java_api_task_7_answer_3">Zur Erzeugung von Zufallszahlen</string>
+    <string name="java_api_task_7_answer_4">Zur Erstellung von neuen Java-Klassen</string>
+
+    <string name="java_api_task_8_description">Was beschreibt eine Wrapper-Klasse in Java?</string>
+    <string name="java_api_task_8_answer_1">Eine Klasse, die mehrere andere Klassen gleichzeitig importiert</string>
+    <string name="java_api_task_8_answer_2">Eine Klasse zur grafischen Darstellung von Objekten</string>
+    <string name="java_api_task_8_answer_3">Eine Klasse, deren Instanz genau einen Wert eines primitiven Datentyps speichert</string>
+    <string name="java_api_task_8_answer_4">Eine Klasse, die Java-Code automatisch verschlüsselt</string>
+
+    <string name="java_api_task_9_description">Welche Aussage zur Klasse java.math.BigInteger ist korrekt?</string>
+    <string name="java_api_task_9_answer_1">Sie wird für die exakte Darstellung und Berechnung von großen Dezimalzahlen verwendet</string>
+    <string name="java_api_task_9_answer_2">Sie speichert mehrere Werte gleichzeitig</string>
+    <string name="java_api_task_9_answer_3">Sie dient zur Verarbeitung sehr großer, ganzer Zahlen</string>
+    <string name="java_api_task_9_answer_4">Sie ersetzt automatisch alle primitiven Datentypen</string>
+
+    <string name="java_api_task_10_description">Wofür wird die Klasse java.math.BigDecimal verwendet?</string>
+    <string name="java_api_task_10_answer_1">Für Berechnungen mit exakter Dezimalgenauigkeit und beliebiger Größe</string>
+    <string name="java_api_task_10_answer_2">Zur Konvertierung von Ganzzahlen in Text</string>
+    <string name="java_api_task_10_answer_3">Zur Verwaltung von Zeichenketten</string>
+    <string name="java_api_task_10_answer_4">Zur Optimierung von Schleifenstrukturen</string>
+
+    <string name="arrays_task_1_description">Was ist ein Array (Feld) in Java?</string>
+    <string name="arrays_task_1_answer_1">Ein Speicherobjekt zur sequentiellen Speicherung von Werten gleichen Datentyps</string>
+    <string name="arrays_task_1_answer_2">Ein Datentyp, der verschiedene Objekttypen gleichzeitig speichern kann</string>
+    <string name="arrays_task_1_answer_3">Eine spezielle Schleife zur Datenverarbeitung</string>
+    <string name="arrays_task_1_answer_4">Ein Interface zur Manipulation von Zeichenketten</string>
+
+    <string name="arrays_task_2_description">Welche der folgenden Aussagen über die Indizierung von Arrays sind korrekt?</string>
+    <string name="arrays_task_2_answer_1">Die Indizierung beginnt bei 1</string>
+    <string name="arrays_task_2_answer_2">Die letzte Position eines Arrays mit Länge n ist n-1</string>
+    <string name="arrays_task_2_answer_3">Ein Array mit Länge 0 hat genau ein Element</string>
+    <string name="arrays_task_2_answer_4">Die Indizierung startet bei 0</string>
+
+    <string name="arrays_task_3_description">Was versteht man unter dem "Feldtyp" eines Arrays?</string>
+    <string name="arrays_task_3_answer_1">Den Datentyp der einzelnen Feldkomponenten</string>
+    <string name="arrays_task_3_answer_2">Den Rückgabewert einer Methode, die ein Array verwendet</string>
+    <string name="arrays_task_3_answer_3">Den Namen der Klasse, in der das Array deklariert ist</string>
+    <string name="arrays_task_3_answer_4">Den primitiven Typ der Indexvariable</string>
+
+    <string name="arrays_task_4_description">Welche Ausdrücke können eine Feldreferenz als Ergebnis liefern?</string>
+    <string name="arrays_task_4_answer_1">new int[5]</string>
+    <string name="arrays_task_4_answer_2">Ein Methodenaufruf, der ein Array zurückgibt</string>
+    <string name="arrays_task_4_answer_3">Eine normale int-Variable</string>
+    <string name="arrays_task_4_answer_4">Die Konstante null</string>
+
+    <string name="arrays_task_5_description">Was passiert bei einem Zugriff auf ein Array mit ungültigem Index?</string>
+    <string name="arrays_task_5_answer_1">Der Wert wird auf 0 zurückgesetzt</string>
+    <string name="arrays_task_5_answer_2">Es wird eine ArrayIndexOutOfBoundsException ausgelöst</string>
+    <string name="arrays_task_5_answer_3">Das Programm kompiliert nicht</string>
+    <string name="arrays_task_5_answer_4">Der Zugriff wird ignoriert</string>
+
+    <string name="arrays_task_6_description">Wie kann man auf die Länge eines Arrays in Java zugreifen?</string>
+    <string name="arrays_task_6_answer_1">array.size()</string>
+    <string name="arrays_task_6_answer_2">array.length</string>
+    <string name="arrays_task_6_answer_3">array.length()</string>
+    <string name="arrays_task_6_answer_4">array.getLength()</string>
+
+    <string name="arrays_task_7_description">Welche Aussagen zum Zugriff auf Array-Elemente sind korrekt?</string>
+    <string name="arrays_task_7_answer_1">Lesender Zugriff erfolgt über den Index</string>
+    <string name="arrays_task_7_answer_2">Schreibender Zugriff erfolgt über eine Methode namens write()</string>
+    <string name="arrays_task_7_answer_3">Man kann Elemente mit array[index] lesen oder beschreiben</string>
+    <string name="arrays_task_7_answer_4">Array-Elemente können nur über Schleifen verändert werden</string>
+
+    <string name="arrays_task_8_description">Was passiert bei der Initialisierung eines Arrays mit dem new-Operator und einer Größenangabe?</string>
+    <string name="arrays_task_8_answer_1">Das Array wird mit den Default-Werten des entsprechenden Datentyps belegt</string>
+    <string name="arrays_task_8_answer_2">Es entsteht ein leerer Zeiger ohne Speicherreservierung</string>
+    <string name="arrays_task_8_answer_3">Alle Werte müssen direkt mit angegeben werden</string>
+    <string name="arrays_task_8_answer_4">Die Array-Größe kann später verändert werden</string>
+
+    <string name="arrays_task_9_description">Was gilt für das Kopieren von Arrays in Java?</string>
+    <string name="arrays_task_9_answer_1">Arrays werden automatisch kopiert, wenn sie übergeben werden</string>
+    <string name="arrays_task_9_answer_2">Arrays können mit der Methode clone() kopiert werden</string>
+    <string name="arrays_task_9_answer_3">Ein =-Operator kopiert den gesamten Inhalt</string>
+    <string name="arrays_task_9_answer_4">Arrays sind grundsätzlich nicht kopierbar</string>
 
 </resources>
