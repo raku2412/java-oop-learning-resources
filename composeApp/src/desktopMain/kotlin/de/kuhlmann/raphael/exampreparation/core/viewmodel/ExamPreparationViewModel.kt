@@ -148,9 +148,13 @@ class ExamPreparationViewModel : ViewModel() {
     private fun startExam() {
         pageIndex.value = 0
         isEvaluated.value = false
-        taskSet.value = getTaskSet()
-        seedSet.value = taskSet.value.map { Random.nextLong() }
-        mode.value = Mode.EXAMINATION
+        getTaskSet().let { tasks ->
+            if (tasks.isNotEmpty()) {
+                taskSet.value = tasks
+                seedSet.value = taskSet.value.map { Random.nextLong() }
+                mode.value = Mode.EXAMINATION
+            }
+        }
     }
 
     private fun getTaskSet(): List<TaskDefinition> =
