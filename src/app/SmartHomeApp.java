@@ -38,9 +38,15 @@ public class SmartHomeApp {
             int newBrightness = Console.readInt("Enter new brightness for the SmartBulb (0-100)", 0, 100);
             smartBulb.setBrightness(newBrightness);
             Console.print("Updated SmartBulb details: " + smartBulb.toString());
-            // TODO: Replace with the turn off at method; receive the local date time from the user via console input beforehand
-            int seconds = Console.readInt("When do you want the speaker to turn off in seconds? (0-120)", 0, 120);
-            smartBulb.turnOffTimed(seconds);
+            Console.print("When do you want the SmartBulb to turn off?");
+            int year = Console.readInt("Enter year (YYYY)");
+            int month = Console.readInt("Enter month (1-12)", 1, 12);
+            int day = Console.readInt("Enter day (1-31)", 1, 31);
+            int hour = Console.readInt("Enter hour (0-23)", 0, 23);
+            int minute = Console.readInt("Enter minute (0-59)", 0, 59);
+            int second = Console.readInt("Enter second (0-59)", 0, 59);
+            LocalDateTime turnOffAt = LocalDateTime.of(year, month, day, hour, minute, second);
+            smartBulb.turnOffAt(turnOffAt);
             Console.print("Current SmartBulb details: " + smartBulb.toString());
         }
 

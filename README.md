@@ -53,6 +53,18 @@ You will also enhance the `SmartHomeApp` class so that it interacts with the use
 
 ---
 
+### ✅ Solution
+
+The solution to this task can be found in the following files:
+
+📄 [`SmartBulb.java`](./src/model/SmartBulb.java)  
+This file contains the implementation of the method `turnOffAt(LocalDateTime dateTime)`. It calculates the remaining time until the target, converts it into milliseconds, and pauses execution using `Thread.sleep()`. After that, it simulates turning off the bulb (e.g. via a console message).
+
+📄 [`SmartHomeApp.java`](./src/app/SmartHomeApp.java)  
+This file handles user input for a date and time, converts it into a `LocalDateTime` object, and passes it to the `turnOffAt()` method of the `SmartBulb` instance.
+
+---
+
 ## 📝 Aufgabenbeschreibung (Deutsch)
 
 In dieser Aufgabe erweiterst du die Funktionalität der Klasse `SmartBulb`, indem du die Methode `turnOffAt` implementierst. Mit dieser Methode soll die Glühbirne zu einem bestimmten Zeitpunkt automatisch ausgeschaltet werden – unter Verwendung der Java-Zeit-API (`LocalDateTime`).
@@ -104,3 +116,15 @@ Zusätzlich soll die Klasse `SmartHomeApp` so angepasst werden, dass sie den Ben
 - ⏰ Baue eine Prüfung ein, ob der eingegebene Zeitpunkt in der **Zukunft** liegt. Wenn nicht, gib eine Fehlermeldung aus.
 - 🔄 Gib dem Benutzer eine Nachricht, wie **lange** die Glühbirne noch eingeschaltet bleibt (z. B. „Licht wird in 3 Minuten ausgeschaltet“).
 - 🚫 Behandle **ungültige Eingaben** (z. B. falsches Datumsformat) benutzerfreundlich und frage erneut nach.
+
+---
+
+### ✅ Lösung
+
+Die Lösung dieser Aufgabe befindet sich in folgenden Dateien:
+
+📄 [`SmartBulb.java`](./src/model/SmartBulb.java)  
+Dort ist die Methode `turnOffAt(LocalDateTime dateTime)` implementiert. Sie berechnet die verbleibende Zeit bis zum Ausschalten, wandelt sie in Millisekunden um und pausiert das Programm mithilfe von `Thread.sleep()`. Danach wird das Ausschalten der Glühbirne simuliert (z. B. durch eine Konsolenausgabe).
+
+📄 [`SmartHomeApp.java`](./src/app/SmartHomeApp.java)  
+Hier wird die Eingabe des Zeitpunkts über die Konsole abgefragt, in ein `LocalDateTime`-Objekt umgewandelt und anschließend an die `SmartBulb`-Instanz übergeben.

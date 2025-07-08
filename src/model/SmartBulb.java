@@ -112,9 +112,21 @@ public class SmartBulb {
     }
 
     public void turnOffAt(LocalDateTime dateTime) {
-        // TODO: Read the LocalDateTime documentation and implement the timed turn off method.
-        //       See https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html for reference.
-        throw new IllegalStateException("Not yet implemented");
+        LocalDateTime now = LocalDateTime.now();
+        long secondsUntilOff = java.time.Duration.between(now, dateTime).getSeconds();
+        if (secondsUntilOff > 0) {
+            System.out.println(name + " will turn off at " + dateTime + ".");
+            try {
+                Thread.sleep(secondsUntilOff * 1000L);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Sleep interrupted, turning off immediately.");
+            }
+            setBrightness(0);
+            System.out.println(name + " turned off at " + dateTime + ".");
+        } else {
+            System.out.println("The specified time is in the past. Cannot turn off.");
+        }
     }
 
     @Override
