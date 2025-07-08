@@ -164,7 +164,7 @@ private fun TaskControlRow(state: ExamPreparationUiState.Task) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Button(
-            enabled = state.isSolutionAvailable,
+            enabled = state.isSolutionAvailable && !state.isEvaluated,
             onClick = state.onToggleSolutionClick
         ) {
             Text(
