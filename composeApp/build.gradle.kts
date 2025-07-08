@@ -1,3 +1,4 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
@@ -5,6 +6,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    alias(libs.plugins.fat.jar)
 }
 
 kotlin {
@@ -44,4 +46,15 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+tasks.register<ShadowJar>("fatJar") {
+    archiveBaseName.set("ExamPreparation")
+    archiveClassifier.set("")
+    archiveVersion.set("1.0.0")
+    manifest {
+        attributes["Main-Class"] = "de.kuhlmann.raphael.exampreparation.MainKt"
+    }
+    from(kotlin.targets.getByName("desktop").compilations.getByName("main").output)
+    configurations = listOf(kotlin.targets.getByName("desktop").compilations.getByName("main").runtimeDependencyFiles)
 }
