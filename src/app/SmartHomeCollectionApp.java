@@ -13,8 +13,14 @@ public class SmartHomeCollectionApp {
         showIntArrayExample();
         showIntIdValuePairCollectionExample();
 
-        // TODO: Initialize SmartHome with bulbs and get mean brightness and lowest and highest volume
-        SmartHome smartHome = new SmartHome();
+        SmartHome smartHome = new SmartHome(3);
+        smartHome.addSmartBulb(livingRoomBulb);
+        smartHome.addSmartBulb(kitchenBulb);
+        smartHome.addSmartBulb(bedroomBulb);
+
+        System.out.println("Mean Brightness: " + smartHome.getMeanBrightness());
+        System.out.println("Minimum Brightness: " + smartHome.getMinimumBrightness());
+        System.out.println("Maximum Brightness: " + smartHome.getMaximumBrightness());
     }
 
     private static void showIntArrayExample() {

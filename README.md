@@ -41,6 +41,18 @@ In this task, you will design a class that represents a **collection of SmartHom
 
 ---
 
+### ✅ Solution
+
+The solution to this task can be found in the following files:
+
+📄 [`SmartHomeCollectionApp.java`](./src/app/SmartHomeCollectionApp.java)  
+This file demonstrates how the `SmartHome` class is used to manage a collection of `SmartBulb` objects. Bulbs are added to the smart home, and the mean, minimum, and maximum brightness values are calculated and printed to the console.
+
+📄 [`SmartHome.java`](./src/model/SmartHome.java)  
+This class implements the internal logic of the smart home. It uses an array of `SmartBulb` objects and provides methods to add and remove bulbs, as well as to calculate average, minimum, and maximum brightness values. The logic follows a similar structure to the `IntArrayCollection` example and handles `null` values gracefully.
+
+---
+
 ## 📝 Aufgabenbeschreibung (Deutsch)
 
 In dieser Aufgabe soll eine Klasse erstellt werden, die eine **Sammlung von SmartHome-Geräten** darstellt – konkret von `SmartBulb`-Objekten. Die Umsetzung orientiert sich an der Beispielklasse `IntArrayCollection`.
@@ -78,3 +90,15 @@ In dieser Aufgabe soll eine Klasse erstellt werden, die eine **Sammlung von Smar
 
 3. **Am Beispiel `IntArrayCollection` orientieren**  
    Nutze den Aufbau und die Methoden von `IntArrayCollection` als Vorlage für das Speichern, Abrufen und Entfernen von Werten.
+
+---
+
+### ✅ Lösung
+
+Die Lösung dieser Aufgabe befindet sich in den folgenden Dateien:
+
+📄 [`SmartHomeCollectionApp.java`](./src/app/SmartHomeCollectionApp.java)  
+In dieser Datei wird gezeigt, wie die Klasse `SmartHome` verwendet wird, um eine Sammlung von `SmartBulb`-Objekten zu verwalten. Es werden Leuchtmittel hinzugefügt und anschließend die durchschnittliche, minimale und maximale Helligkeit berechnet und auf der Konsole ausgegeben.
+
+📄 [`SmartHome.java`](./src/model/SmartHome.java)  
+Diese Klasse implementiert die interne Logik des Smart Homes. Sie verwendet ein Array von `SmartBulb`-Objekten und stellt Methoden zum Hinzufügen und Entfernen von Leuchtmitteln sowie zur Berechnung von durchschnittlicher, minimaler und maximaler Helligkeit bereit. Die Struktur orientiert sich am Beispiel der `IntArrayCollection` und berücksichtigt dabei auch mögliche `null`-Werte.
