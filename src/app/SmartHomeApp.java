@@ -23,6 +23,7 @@ public class SmartHomeApp {
                     device, device.equals(livingRoomSpeaker) ? 100 : 50
             );
             Console.print("Current SmartSpeaker details: " + smartSpeaker.toString());
+            Console.print(smartSpeaker.getDefaultActionByCategory());
             int newVolume = Console.readInt("Enter new volume for the SmartSpeaker (0-100)", 0, 100);
             smartSpeaker.setVolume(newVolume);
             Console.print("Updated SmartSpeaker details: " + smartSpeaker.toString());
@@ -32,6 +33,7 @@ public class SmartHomeApp {
                     device, device.equals(livingRoomBulb) ? 50 : 100
             );
             Console.print("Current SmartBulb details: " + smartBulb.toString());
+            Console.print(smartBulb.getDefaultActionByCategory());
             int newBrightness = Console.readInt("Enter new brightness for the SmartBulb (0-100)", 0, 100);
             smartBulb.setBrightness(newBrightness);
             Console.print("Updated SmartBulb details: " + smartBulb.toString());

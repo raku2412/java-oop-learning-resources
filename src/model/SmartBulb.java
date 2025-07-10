@@ -1,52 +1,31 @@
 package model;
 
-import util.SmartHomeIdFactory;
-
-public class SmartBulb {
+public class SmartBulb extends  SmartHomeDevice {
 
     private static final int DEFAULT_BRIGHTNESS = 50;
     private static final int MINIMUM_BRIGHTNESS = 0;
     private static final int MAXIMUM_BRIGHTNESS = 100;
 
-    private final int id;
-    private String name;
     private int brightness;
-    private final SmartHomeDeviceCategory category = SmartHomeDeviceCategory.LIGHTING;
 
     public SmartBulb() {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = "Bulb_" + id;
+        super(SmartHomeDeviceCategory.LIGHTING);
         this.brightness = DEFAULT_BRIGHTNESS;
     }
 
     public SmartBulb(String name) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = name;
+        super(SmartHomeDeviceCategory.LIGHTING, name);
         this.brightness = DEFAULT_BRIGHTNESS;
     }
 
     public SmartBulb(int brightness) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = "Bulb_" + id;
+        super(SmartHomeDeviceCategory.LIGHTING);
         setBrightness(brightness);
     }
 
     public SmartBulb(String name, int brightness) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = name;
+        super(SmartHomeDeviceCategory.LIGHTING, name);
         setBrightness(brightness);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getBrightness() {
@@ -70,7 +49,7 @@ public class SmartBulb {
 
     @Override
     public String toString() {
-        return "model.SmartBulb [id = " + id + "category = " + category + ", name = " + name + ", brightness = " + brightness + "]";
+        return "model.SmartBulb [id = " + getId() + "category = " + getCategory() + ", name = " + getName() + ", brightness = " + brightness + "]";
     }
 
     @Override
@@ -78,7 +57,7 @@ public class SmartBulb {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         SmartBulb that = (SmartBulb) obj;
-        return id == that.id && brightness == that.brightness && name.equals(that.name);
+        return getId() == that.getId() && brightness == that.brightness && getName().equals(that.getName());
     }
 
 }

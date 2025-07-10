@@ -1,52 +1,31 @@
 package model;
 
-import util.SmartHomeIdFactory;
-
-public class SmartSpeaker {
+public class SmartSpeaker extends SmartHomeDevice {
 
     private static final int DEFAULT_VOLUME = 50;
     private static final int MINIMUM_VOLUME = 0;
     private static final int MAXIMUM_VOLUME = 100;
 
-    private final int id;
-    private final SmartHomeDeviceCategory category = SmartHomeDeviceCategory.ENTERTAINMENT;
-    private String name;
     private int volume;
 
     public SmartSpeaker() {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = "Speaker_" + id;
+        super(SmartHomeDeviceCategory.ENTERTAINMENT);
         this.volume = DEFAULT_VOLUME;
     }
 
     public SmartSpeaker(String name) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = name;
+        super(SmartHomeDeviceCategory.ENTERTAINMENT, name);
         this.volume = DEFAULT_VOLUME;
     }
 
     public SmartSpeaker(int volume) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = "Speaker_" + id;
+        super(SmartHomeDeviceCategory.ENTERTAINMENT);
         setVolume(volume);
     }
 
     public SmartSpeaker(String name, int volume) {
-        this.id = SmartHomeIdFactory.getNextId();
-        this.name = name;
+        super(SmartHomeDeviceCategory.ENTERTAINMENT, name);
         setVolume(volume);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getVolume() {
@@ -70,7 +49,7 @@ public class SmartSpeaker {
 
     @Override
     public String toString() {
-        return "model.SmartSpeaker [id = " + id + "category = " + category + ", name = " + name + ", volume = " + volume + "]";
+        return "model.SmartSpeaker [id = " + getId() + "category = " + getCategory() + ", name = " + getName() + ", volume = " + volume + "]";
     }
 
     @Override
@@ -78,7 +57,7 @@ public class SmartSpeaker {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         SmartSpeaker that = (SmartSpeaker) obj;
-        return id == that.id && volume == that.volume && name.equals(that.name);
+        return getId() == that.getId() && volume == that.volume && getName().equals(that.getName());
     }
 
 }
