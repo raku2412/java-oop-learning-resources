@@ -1,4 +1,4 @@
-# 🧠 SmartHome: Switch-Case mit Vererbung und Enums
+# 🧠 Exercise: Switch-Case mit Vererbung und Enums
 
 ---
 
