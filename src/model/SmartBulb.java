@@ -11,6 +11,7 @@ public class SmartBulb {
     private final int id;
     private String name;
     private int brightness;
+    private final SmartHomeDeviceCategory category = SmartHomeDeviceCategory.LIGHTING;
 
     public SmartBulb() {
         this.id = SmartHomeIdFactory.getNextId();
@@ -69,7 +70,7 @@ public class SmartBulb {
 
     @Override
     public String toString() {
-        return "model.SmartBulb [id = " + id + ", name = " + name + ", brightness = " + brightness + "]";
+        return "model.SmartBulb [id = " + id + "category = " + category + ", name = " + name + ", brightness = " + brightness + "]";
     }
 
     @Override

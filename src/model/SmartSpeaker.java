@@ -9,6 +9,7 @@ public class SmartSpeaker {
     private static final int MAXIMUM_VOLUME = 100;
 
     private final int id;
+    private final SmartHomeDeviceCategory category = SmartHomeDeviceCategory.ENTERTAINMENT;
     private String name;
     private int volume;
 
@@ -69,7 +70,7 @@ public class SmartSpeaker {
 
     @Override
     public String toString() {
-        return "model.SmartSpeaker [id = " + id + ", name = " + name + ", volume = " + volume + "]";
+        return "model.SmartSpeaker [id = " + id + "category = " + category + ", name = " + name + ", volume = " + volume + "]";
     }
 
     @Override

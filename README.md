@@ -27,6 +27,25 @@ You should:
 
 ---
 
+## ✅ Solution
+
+In this solution, Enums are used to classify smart home devices into well-defined categories, each with metadata like description and optional priority.
+
+- [`src/model/SmartHomeDeviceCategory.java`](src/model/SmartHomeDeviceCategory.java)  
+  Defines the enum `SmartHomeDeviceCategory` with constants such as `LIGHTING`, `ENTERTAINMENT`, etc.  
+  Each constant includes a `description`, and some also define an optional `priority`, set directly at declaration.
+
+- [`src/model/SmartBulb.java`](src/model/SmartBulb.java)  
+  Now includes a field of type `SmartHomeDeviceCategory`. The constructor and `toString()` method have been updated accordingly.
+
+- [`src/model/SmartSpeaker.java`](src/model/SmartSpeaker.java)  
+  Also includes a `category` field and prints its description and priority in the `toString()` output.
+
+- [`src/app/SmartHomeDeviceCategoryApp.java`](src/app/SmartHomeDeviceCategoryApp.java)  
+  Demonstrates how to create devices with categories and display their full information.
+
+---
+
 ## 📝 Aufgabenstellung (Deutsch)
 
 In dieser Aufgabe wirst du Java Enums verwenden, um Smart-Home-Geräte in Kategorien einzuteilen. Dazu definierst du ein Enum namens `SmartHomeDeviceCategory` und ordnest Geräte wie Smart Speaker oder Smart Bulbs einer passenden Kategorie zu.
@@ -51,3 +70,22 @@ In dieser Aufgabe wirst du Java Enums verwenden, um Smart-Home-Geräte in Katego
    - Gib sie mit `toString()` in der Konsole aus
 
 > 💡 **Hinweis:** Wenn du dir unsicher bist, wie Enums funktionieren, schau dir das Beispiel in [`src/model/EnumExample.java`](src/model/EnumExample.java) an.
+
+---
+
+## ✅ Lösung
+
+In dieser Lösung werden Enums verwendet, um Smart-Home-Geräte in bestimmte Kategorien einzuordnen. Jede Kategorie enthält eine Beschreibung und optional eine Priorität, die direkt bei der Deklaration gesetzt wird.
+
+- [`src/model/SmartHomeDeviceCategory.java`](src/model/SmartHomeDeviceCategory.java)  
+  Das Enum `SmartHomeDeviceCategory` enthält Konstanten wie `LIGHTING`, `ENTERTAINMENT` usw.  
+  Jede Konstante besitzt eine Beschreibung, einige zusätzlich eine Priorität – beides direkt im Enum definiert.
+
+- [`src/model/SmartBulb.java`](src/model/SmartBulb.java)  
+  Das Feld `category` wurde hinzugefügt. Konstruktor und `toString()`-Methode wurden erweitert, um die Kategorie anzuzeigen.
+
+- [`src/model/SmartSpeaker.java`](src/model/SmartSpeaker.java)  
+  Auch hier wurde das Feld `category` ergänzt, und die Ausgabe zeigt Beschreibung und Priorität der Kategorie.
+
+- [`src/app/SmartHomeDeviceCategoryApp.java`](src/app/SmartHomeDeviceCategoryApp.java)  
+  Zeigt, wie Geräte mit ihrer jeweiligen Kategorie erstellt und vollständig ausgegeben werden.
