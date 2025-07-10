@@ -438,4 +438,112 @@
     <string name="arrays_task_9_answer_3">Ein =-Operator kopiert den gesamten Inhalt</string>
     <string name="arrays_task_9_answer_4">Arrays sind grundsätzlich nicht kopierbar</string>
 
+    <string name="enumerations_task_1_description">Was ist eine Java-Aufzählung (Enum) im Wesentlichen?</string>
+    <string name="enumerations_task_1_answer_1">Eine Klasse mit festen, vordefinierten Objekten</string>
+    <string name="enumerations_task_1_answer_2">Ein Interface zur Definition von Konstanten</string>
+    <string name="enumerations_task_1_answer_3">Eine abstrakte Klasse mit nur statischen Methoden</string>
+    <string name="enumerations_task_1_answer_4">Ein Array mit festen Werten</string>
+
+    <string name="enumerations_task_2_description">Welche Aussage zu Aufzählungskonstanten in Java ist korrekt?</string>
+    <string name="enumerations_task_2_answer_1">Sie sind automatisch `static` und `public`</string>
+    <string name="enumerations_task_2_answer_2">Sie können nur innerhalb von Interfaces verwendet werden</string>
+    <string name="enumerations_task_2_answer_3">Sie sind automatisch `private` und `final`</string>
+    <string name="enumerations_task_2_answer_4">Sie müssen als `new` instanziiert werden</string>
+
+    <string name="enumerations_task_3_description">Wie werden Aufzählungsobjekte in Java erzeugt?</string>
+    <string name="enumerations_task_3_answer_1">Sie werden automatisch durch die JRE erzeugt</string>
+    <string name="enumerations_task_3_answer_2">Sie müssen manuell mit `new` erstellt werden</string>
+    <string name="enumerations_task_3_answer_3">Sie sind nur zur Laufzeit dynamisch erzeugbar</string>
+    <string name="enumerations_task_3_answer_4">Nur über spezielle Factory-Methoden</string>
+
+    <string name="enumerations_task_4_description">Welche Informationen speichern Aufzählungsobjekte standardmäßig?</string>
+    <string name="enumerations_task_4_answer_1">Bezeichnung der Aufzählungskonstanten</string>
+    <string name="enumerations_task_4_answer_2">Ordinalzahl (Position in der Deklaration)</string>
+    <string name="enumerations_task_4_answer_3">Klassenname der Superklasse</string>
+    <string name="enumerations_task_4_answer_4">Anzahl der Methoden in der Aufzählung</string>
+
+    <string name="enumerations_task_5_description">Welche Möglichkeiten zur Verwendung von Aufzählungen gibt es in Java?</string>
+    <string name="enumerations_task_5_answer_1">Als Rückgabetyp in Methoden</string>
+    <string name="enumerations_task_5_answer_2">In `switch-case`-Anweisungen</string>
+    <string name="enumerations_task_5_answer_3">Zum Initialisieren von Arrays ohne Typangabe</string>
+    <string name="enumerations_task_5_answer_4">Zum dynamischen Erzeugen von Klassenmethoden</string>
+
+    <string name="enumerations_task_6_description">Was liefert der Methodenaufruf `values()` bei einer Enum?</string>
+    <string name="enumerations_task_6_answer_1">Ein Array mit allen Aufzählungsobjekten</string>
+    <string name="enumerations_task_6_answer_2">Die Anzahl aller Enum-Konstruktoren</string>
+    <string name="enumerations_task_6_answer_3">Den Standardwert der Aufzählung</string>
+    <string name="enumerations_task_6_answer_4">Die Namen aller enthaltenen Methoden</string>
+
+    <string name="enumerations_task_7_description">Was trifft auf Konstruktoren in Aufzählungstypen zu?</string>
+    <string name="enumerations_task_7_answer_1">Sie sind grundsätzlich `private`</string>
+    <string name="enumerations_task_7_answer_2">Sie dürfen nur innerhalb der Enum selbst verwendet werden</string>
+    <string name="enumerations_task_7_answer_3">Sie können öffentlich sein, um neue Objekte zu erzeugen</string>
+    <string name="enumerations_task_7_answer_4">Sie sind nicht erlaubt</string>
+
+    <string name="enumerations_task_8_description">Welche Aussagen zur Erweiterung von Enums in Java sind korrekt?</string>
+    <string name="enumerations_task_8_answer_1">Enums können Methoden und Felder enthalten</string>
+    <string name="enumerations_task_8_answer_2">Enums können Konstruktoren definieren</string>
+    <string name="enumerations_task_8_answer_3">Enums dürfen keine Instanzmethoden besitzen</string>
+    <string name="enumerations_task_8_answer_4">Enums können beliebige andere Klassen erweitern</string>
+
+    <string name="enumerations_task_9_description">Was passiert, wenn man in einer Enum-Klasse mehrere Konstruktoren definiert?</string>
+    <string name="enumerations_task_9_answer_1">Jede Aufzählungskonstante muss zu einem dieser Konstruktoren passen</string>
+    <string name="enumerations_task_9_answer_2">Die JRE wählt den Konstruktor zur Laufzeit zufällig</string>
+    <string name="enumerations_task_9_answer_3">Der Compiler erlaubt nur genau einen Konstruktor in Enums</string>
+    <string name="enumerations_task_9_answer_4">Aufzählungskonstanten dürfen keine Parameter erhalten</string>
+
+    <string name="inheritance_task_1_description">Was bedeutet das Schlüsselwort <code>extends</code> in einer Klassendeklaration?</string>
+    <string name="inheritance_task_1_answer_1">Die Klasse erweitert eine andere Klasse</string>
+    <string name="inheritance_task_1_answer_2">Die Klasse verwendet eine andere Klasse nur als Attribut</string>
+    <string name="inheritance_task_1_answer_3">Die Klasse importiert Methoden aus einer Interface</string>
+    <string name="inheritance_task_1_answer_4">Die Klasse wird als abstrakt markiert</string>
+
+    <string name="inheritance_task_2_description">Wie nennt man eine Klasse, die von einer anderen Klasse erbt?</string>
+    <string name="inheritance_task_2_answer_1">Unterklasse</string>
+    <string name="inheritance_task_2_answer_2">Oberklasse</string>
+    <string name="inheritance_task_2_answer_3">Superklasse</string>
+    <string name="inheritance_task_2_answer_4">Abstrakte Klasse</string>
+
+    <string name="inheritance_task_3_description">Welche Aussage zu Konstruktoren bei Vererbung ist korrekt?</string>
+    <string name="inheritance_task_3_answer_1">Ein Unterklassenkonstruktor muss zuerst den Konstruktor der Oberklasse aufrufen</string>
+    <string name="inheritance_task_3_answer_2">Der Konstruktor der Oberklasse wird automatisch nach dem Unterklassenkonstruktor aufgerufen</string>
+    <string name="inheritance_task_3_answer_3">Der Aufruf von <code>super(...)</code> kann beliebig in der Methode platziert werden</string>
+    <string name="inheritance_task_3_answer_4">Oberklassenkonstruktoren werden bei Vererbung ignoriert</string>
+
+    <string name="inheritance_task_4_description">Was bezeichnet man als indirekte Unterklasse?</string>
+    <string name="inheritance_task_4_answer_1">Eine Klasse, die von einer Unterklasse erbt</string>
+    <string name="inheritance_task_4_answer_2">Eine Klasse, die keine Methoden überschreibt</string>
+    <string name="inheritance_task_4_answer_3">Eine Klasse ohne Konstruktor</string>
+    <string name="inheritance_task_4_answer_4">Eine Oberklasse mit finalen Methoden</string>
+
+    <string name="inheritance_task_5_description">Welche Aussagen über das Überschreiben von Methoden sind korrekt?</string>
+    <string name="inheritance_task_5_answer_1">Die Methode muss denselben Methodenkopf wie in der Oberklasse haben</string>
+    <string name="inheritance_task_5_answer_2">Die Annotation <code>@Override</code> sollte verwendet werden</string>
+    <string name="inheritance_task_5_answer_3">Überschreiben ist nur mit dem Schlüsselwort <code>super</code> möglich</string>
+    <string name="inheritance_task_5_answer_4">Überschriebene Methoden dürfen beliebige Rückgabetypen haben</string>
+
+    <string name="inheritance_task_6_description">Welche Funktion erfüllt das Schlüsselwort <code>super</code>?</string>
+    <string name="inheritance_task_6_answer_1">Es verweist auf Methoden und Variablen der Oberklasse</string>
+    <string name="inheritance_task_6_answer_2">Es ersetzt das Schlüsselwort <code>this</code></string>
+    <string name="inheritance_task_6_answer_3">Es definiert finale Methoden</string>
+    <string name="inheritance_task_6_answer_4">Es erzeugt neue Instanzen der Oberklasse</string>
+
+    <string name="inheritance_task_7_description">Welche Aussagen über finale Klassen in Java sind korrekt?</string>
+    <string name="inheritance_task_7_answer_1">Finale Klassen können nicht erweitert werden</string>
+    <string name="inheritance_task_7_answer_2">Finale Klassen können keine Unterklassen haben</string>
+    <string name="inheritance_task_7_answer_3">Finale Klassen müssen abstrakt sein</string>
+    <string name="inheritance_task_7_answer_4">Finale Klassen dürfen keine Methoden enthalten</string>
+
+    <string name="inheritance_task_8_description">Was ist eine finale Methode?</string>
+    <string name="inheritance_task_8_answer_1">Eine Methode, die in Unterklassen nicht überschrieben werden darf</string>
+    <string name="inheritance_task_8_answer_2">Eine Methode, die nur innerhalb ihrer eigenen Klasse aufgerufen werden kann</string>
+    <string name="inheritance_task_8_answer_3">Eine Methode, die automatisch in jeder Unterklasse enthalten ist</string>
+    <string name="inheritance_task_8_answer_4">Eine Methode ohne Rückgabewert</string>
+
+    <string name="inheritance_task_9_description">Wie kann eine Methode der Oberklasse aus der Unterklasse heraus explizit aufgerufen werden?</string>
+    <string name="inheritance_task_9_answer_1">Mit <code>super.methodName()</code></string>
+    <string name="inheritance_task_9_answer_2">Mit <code>this.methodName()</code></string>
+    <string name="inheritance_task_9_answer_3">Mit <code>base.methodName()</code></string>
+    <string name="inheritance_task_9_answer_4">Mit <code>superclass.methodName()</code></string>
+
 </resources>
