@@ -804,7 +804,7 @@ object TaskConfiguration {
 
         // region inheritance
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_1_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_1_answer_1),
             answers = listOf(
@@ -814,7 +814,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_2_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_2_answer_1),
             answers = listOf(
@@ -824,7 +824,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_3_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_3_answer_1),
             answers = listOf(
@@ -834,7 +834,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_4_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_4_answer_1),
             answers = listOf(
@@ -844,7 +844,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.MultipleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_5_description),
             correctAnswers = listOf(
                 TaskElement.Text(value = Res.string.inheritance_task_5_answer_1),
@@ -856,7 +856,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_6_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_6_answer_1),
             answers = listOf(
@@ -866,7 +866,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.MultipleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_7_description),
             correctAnswers = listOf(
                 TaskElement.Text(value = Res.string.inheritance_task_7_answer_1),
@@ -878,7 +878,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_8_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_8_answer_1),
             answers = listOf(
@@ -888,7 +888,7 @@ object TaskConfiguration {
             )
         ),
         TaskDefinition.SingleChoice(
-            category = Category.ENUMERATIONS,
+            category = Category.INHERITANCE,
             description = TaskElement.Text(value = Res.string.inheritance_task_9_description),
             correctAnswer = TaskElement.Text(value = Res.string.inheritance_task_9_answer_1),
             answers = listOf(
