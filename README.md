@@ -1,50 +1,51 @@
-# 🧠 Exercise: Polymorphic Behavior with Smart Home Devices
+# 🧠 Exercise: Refactor SmartHomeDevice to an Abstract Class with Abstract Method
 
 ---
 
 ## 📝 Task Description (English)
 
-In this task, you will explore polymorphism by using the already implemented `getDefaultActionByCategory()` method in the base class `SmartHomeDevice` and its subclasses `SmartBulb` and `SmartSpeaker`.
+In this task, you will refactor the existing `SmartHomeDevice` class by declaring it as abstract and changing the existing `getDefaultActionByCategory()` method into an abstract method. This forces all subclasses to provide their own implementation of this method.
 
-You will create several smart home devices and treat them uniformly using the base class type. The goal is to observe how method calls are dispatched to the correct subclass implementation at runtime (dynamic dispatch).
+Afterwards, you will update the `PolymorphSmartHomeApp` so it can be executed without errors, considering that `SmartHomeDevice` can no longer be instantiated directly.
 
 ---
 
 ### ✅ Your Goals
 
-1. **Create devices using base class references**  
-   In [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), instantiate several objects of type `SmartHomeDevice`, including `SmartBulb` and `SmartSpeaker`.
+1. **Make `SmartHomeDevice` Abstract**  
+   Modify [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) to declare the class as `abstract`.
 
-2. **Call the overridden method polymorphically**  
-   Call the method `getDefaultActionByCategory()` on each object and print the results.  
-   All method calls should resolve correctly according to the actual object type.
+2. **Convert `getDefaultActionByCategory()` to an Abstract Method**  
+   Change the existing `getDefaultActionByCategory()` method to be abstract by removing its implementation and adding the `abstract` keyword.
 
-3. **Understand dynamic dispatch**  
-   Review the output and understand how Java determines which method to execute during runtime based on the object's actual class.
+3. **Implement the Abstract Method in Subclasses**  
+   Ensure that the subclasses [`SmartBulb.java`](src/model/SmartBulb.java) and [`SmartSpeaker.java`](src/model/SmartSpeaker.java) override and implement the abstract method, providing device-specific behavior.
 
-📎 See also: [`PolymorphismExample.java`](src/model/PolymorphismExample.java) for a basic example of inheritance and runtime method resolution.
+4. **Adjust the `PolymorphSmartHomeApp`**  
+   Since `SmartHomeDevice` is now abstract, you can no longer instantiate it directly.  
+   Update the `main` method in [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) accordingly to avoid instantiating `SmartHomeDevice` and maintain correct program execution.
 
 ---
 
 ## 📝 Aufgabenstellung (Deutsch)
 
-In dieser Aufgabe wendest du Polymorphie an, indem du die bereits implementierte Methode `getDefaultActionByCategory()` in der Oberklasse `SmartHomeDevice` und den Unterklassen `SmartBulb` und `SmartSpeaker` verwendest.
+In dieser Aufgabe soll die Klasse `SmartHomeDevice` zu einer abstrakten Klasse gemacht werden, indem sie als `abstract` deklariert wird. Die vorhandene Methode `getDefaultActionByCategory()` soll zu einer abstrakten Methode umgewandelt werden, indem ihre Implementierung entfernt und das `abstract`-Schlüsselwort hinzugefügt wird.
 
-Du erstellst mehrere Geräteinstanzen und nutzt ausschließlich Referenzen vom Typ der Oberklasse, um das Verhalten zur Laufzeit zu beobachten.
+Anschließend passt du die Klasse `PolymorphSmartHomeApp` so an, dass keine Instanz von `SmartHomeDevice` mehr direkt erzeugt wird, da dies aufgrund der Abstraktion nicht mehr möglich ist.
 
 ---
 
 ### ✅ Deine Aufgaben
 
-1. **Erzeuge Geräte über Oberklassenreferenzen**  
-   In [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java)  
-   erstellst du Instanzen von `SmartHomeDevice`, `SmartBulb` und `SmartSpeaker`, aber speicherst sie in Variablen vom Typ `SmartHomeDevice`.
+1. **Mache `SmartHomeDevice` abstrakt**  
+   Deklariere die Klasse [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) als `abstract`.
 
-2. **Rufe die Methode polymorph auf**  
-   Rufe für jedes Gerät die Methode `getDefaultActionByCategory()` auf und gib das Ergebnis aus.  
-   Die korrekte Methode wird abhängig vom tatsächlichen Objekttyp aufgerufen.
+2. **Wandle `getDefaultActionByCategory()` in eine abstrakte Methode um**  
+   Entferne die Implementierung der Methode und ergänze stattdessen das Schlüsselwort `abstract` in der Methodensignatur.
 
-3. **Verstehe dynamische Bindung**  
-   Beobachte die Ausgabe und erkenne, wie Java zur Laufzeit entscheidet, welche Methode aufgerufen wird.
+3. **Implementiere die abstrakte Methode in den Unterklassen**  
+   Stelle sicher, dass [`SmartBulb.java`](src/model/SmartBulb.java) und [`SmartSpeaker.java`](src/model/SmartSpeaker.java) die Methode `getDefaultActionByCategory()` überschreiben und eigene Implementierungen bereitstellen.
 
-📎 Siehe auch: [`PolymorphismExample.java`](src/model/PolymorphismExample.java) für ein weiteres Beispiel zur Vererbung und Laufzeitbindung.
+4. **Passe die `PolymorphSmartHomeApp` an**  
+   Da `SmartHomeDevice` jetzt abstrakt ist, darf kein Objekt davon direkt instanziiert werden.  
+   Entferne oder ersetze daher die direkte Instanziierung in der `main`-Methode von [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), sodass die App ohne Fehler ausgeführt werden kann.
