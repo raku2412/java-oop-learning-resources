@@ -48,6 +48,11 @@ public class SmartSpeaker extends SmartHomeDevice {
     }
 
     @Override
+    public String getDefaultActionByCategory() {
+        return super.getDefaultActionByCategory() + " Current volume is " + volume + ".";
+    }
+
+    @Override
     public String toString() {
         return "model.SmartSpeaker [id = " + getId() + "category = " + getCategory() + ", name = " + getName() + ", volume = " + volume + "]";
     }

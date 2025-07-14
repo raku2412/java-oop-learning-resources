@@ -36,7 +36,18 @@ public class SmartHomeDevice {
 
     @SuppressWarnings("EnhancedSwitchMigration")
     public String getDefaultActionByCategory() {
-        // TODO: Implement default actions based on device category
+        switch (category) {
+            case LIGHTING:
+                return "Turn on/off lighting";
+            case ENTERTAINMENT:
+                return "Play/pause music or video";
+            case SECURITY:
+                return "Arm/disarm security system";
+            case CLIMATE_CONTROL:
+                return "Adjust temperature settings";
+            case UTILITY:
+                return "Manage utility settings";
+        }
         return "No default action defined for this category";
     }
 

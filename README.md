@@ -1,71 +1,50 @@
-# 🧠 Exercise: Switch-Case mit Vererbung und Enums
+# 🧠 Exercise: Polymorphic Behavior with Smart Home Devices
 
 ---
 
 ## 📝 Task Description (English)
 
-In this task, you will extend your existing class hierarchy using a `switch`-statement and Enum values. You will define behavior in the base class depending on the category, and refine it in subclasses.
+In this task, you will explore polymorphism by using the already implemented `getDefaultActionByCategory()` method in the base class `SmartHomeDevice` and its subclasses `SmartBulb` and `SmartSpeaker`.
+
+You will create several smart home devices and treat them uniformly using the base class type. The goal is to observe how method calls are dispatched to the correct subclass implementation at runtime (dynamic dispatch).
 
 ---
 
 ### ✅ Your Goals
 
-1. **Extend `SmartHomeDevice`**  
-   In [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java), implement the method:
+1. **Create devices using base class references**  
+   In [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), instantiate several objects of type `SmartHomeDevice`, including `SmartBulb` and `SmartSpeaker`.
 
-   ```java
-   public String getDefaultActionByCategory()
-   ```
+2. **Call the overridden method polymorphically**  
+   Call the method `getDefaultActionByCategory()` on each object and print the results.  
+   All method calls should resolve correctly according to the actual object type.
 
-   Use a `switch`-statement on the `SmartHomeDeviceCategory` to return a string describing the device's default behavior. For example:
+3. **Understand dynamic dispatch**  
+   Review the output and understand how Java determines which method to execute during runtime based on the object's actual class.
 
-   - `LIGHTING` → "Turning on/off lights."
-   - `ENTERTAINMENT` → "Playing media."
-   - etc.
-
-2. **Override the method in subclasses**
-
-   In:
-   - [`SmartBulb.java`](src/model/SmartBulb.java)
-   - [`SmartSpeaker.java`](src/model/SmartSpeaker.java)
-
-   Override the `getDefaultActionByCategory()` method and **add device-specific behavior**, e.g., include brightness or volume in the returned string.
-
-3. **Test the behavior**
-   - Create a few devices and print the result of `getDefaultActionByCategory()`.
-   - This step can be done optionally in your app or a test class.
+📎 See also: [`PolymorphismExample.java`](src/model/PolymorphismExample.java) for a basic example of inheritance and runtime method resolution.
 
 ---
 
 ## 📝 Aufgabenstellung (Deutsch)
 
-In dieser Aufgabe wirst du deine bestehende Klassenhierarchie erweitern, indem du eine Methode mit der `switch`-Anweisung implementierst. Diese Methode reagiert auf die Kategorie des Geräts (Enum) und gibt eine Standardaktion zurück. In den Unterklassen wird die Methode überschrieben und ergänzt.
+In dieser Aufgabe wendest du Polymorphie an, indem du die bereits implementierte Methode `getDefaultActionByCategory()` in der Oberklasse `SmartHomeDevice` und den Unterklassen `SmartBulb` und `SmartSpeaker` verwendest.
+
+Du erstellst mehrere Geräteinstanzen und nutzt ausschließlich Referenzen vom Typ der Oberklasse, um das Verhalten zur Laufzeit zu beobachten.
 
 ---
 
 ### ✅ Deine Aufgaben
 
-1. **Erweitere `SmartHomeDevice`**  
-   Implementiere in [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) die Methode:
+1. **Erzeuge Geräte über Oberklassenreferenzen**  
+   In [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java)  
+   erstellst du Instanzen von `SmartHomeDevice`, `SmartBulb` und `SmartSpeaker`, aber speicherst sie in Variablen vom Typ `SmartHomeDevice`.
 
-   ```java
-   public String getDefaultActionByCategory()
-   ```
+2. **Rufe die Methode polymorph auf**  
+   Rufe für jedes Gerät die Methode `getDefaultActionByCategory()` auf und gib das Ergebnis aus.  
+   Die korrekte Methode wird abhängig vom tatsächlichen Objekttyp aufgerufen.
 
-   Verwende innerhalb der Methode eine `switch`-Anweisung über das Enum [`SmartHomeDeviceCategory`](src/model/SmartHomeDeviceCategory.java), um eine passende Beschreibung für die Gerätekategorie zurückzugeben. Beispiele:
+3. **Verstehe dynamische Bindung**  
+   Beobachte die Ausgabe und erkenne, wie Java zur Laufzeit entscheidet, welche Methode aufgerufen wird.
 
-   - `LIGHTING` → „Licht wird ein-/ausgeschaltet.“
-   - `ENTERTAINMENT` → „Medien werden abgespielt.“
-   - usw.
-
-2. **Überschreibe die Methode in den Unterklassen**
-
-   In:
-   - [`SmartBulb.java`](src/model/SmartBulb.java)
-   - [`SmartSpeaker.java`](src/model/SmartSpeaker.java)
-
-   Überschreibe die Methode `getDefaultActionByCategory()` und **ergänze sie mit gerätespezifischen Informationen**, z. B. Helligkeit oder Lautstärke.
-
-3. **Teste das Verhalten**  
-   - Erstelle mehrere Geräteobjekte und gib die Rückgabe der Methode `getDefaultActionByCategory()` aus.
-   - Dies kann optional in einer bestehenden App oder Testklasse erfolgen.
+📎 Siehe auch: [`PolymorphismExample.java`](src/model/PolymorphismExample.java) für ein weiteres Beispiel zur Vererbung und Laufzeitbindung.
