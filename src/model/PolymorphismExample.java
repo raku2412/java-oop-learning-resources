@@ -23,6 +23,14 @@ public class PolymorphismExample {
             actualChild.setName("UpdatedName");
             System.out.println(actualChild.getName());
         }
+
+        try {
+            child.performAction();
+            parent.performAction();
+        } catch (UnsupportedActionException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
 
@@ -42,6 +50,10 @@ class Parent {
         this.name = name;
     }
 
+    public void performAction() throws UnsupportedActionException {
+        throw new UnsupportedActionException("This action is not supported by Parent class.");
+    }
+
 }
 
 class Child extends Parent {
@@ -58,4 +70,10 @@ class Child extends Parent {
     public void setName(String name) {
         super.setName(name);
     }
+
+    @Override
+    public void performAction() {
+        System.out.println("Child is performing an action.");
+    }
+
 }

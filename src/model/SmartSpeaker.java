@@ -49,7 +49,7 @@ public class SmartSpeaker extends SmartHomeDevice {
 
     @Override
     public String getDefaultActionByCategory() {
-        return super.getDefaultActionByCategory() + " Current volume is " + volume + ".";
+        return "Play/pause music or video" + " Current volume is " + volume + ".";
     }
 
     @Override

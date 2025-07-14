@@ -49,7 +49,7 @@ public class SmartBulb extends  SmartHomeDevice {
 
     @Override
     public String getDefaultActionByCategory() {
-        return super.getDefaultActionByCategory() + " Brightness is " + brightness + "%.";
+        return"Turn on/off lighting" + " Brightness is " + brightness + "%.";
     }
 
     @Override

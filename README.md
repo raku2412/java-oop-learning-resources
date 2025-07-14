@@ -1,51 +1,39 @@
-# 🧠 Exercise: Refactor SmartHomeDevice to an Abstract Class with Abstract Method
+# 🧠 Exercise: Exception Handling in Smart Home Devices
 
 ---
 
 ## 📝 Task Description (English)
 
-In this task, you will refactor the existing `SmartHomeDevice` class by declaring it as abstract and changing the existing `getDefaultActionByCategory()` method into an abstract method. This forces all subclasses to provide their own implementation of this method.
-
-Afterwards, you will update the `PolymorphSmartHomeApp` so it can be executed without errors, considering that `SmartHomeDevice` can no longer be instantiated directly.
+In this exercise, you will enhance the Smart Home device classes by adding exception handling for unsupported actions using the existing [`UnsupportedActionException`](src/model/UnsupportedActionException.java).
 
 ---
 
 ### ✅ Your Goals
 
-1. **Make `SmartHomeDevice` Abstract**  
-   Modify [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) to declare the class as `abstract`.
+1. **Implement the `performAction` method in `SmartBulb`**  
+   In the file [`SmartBulb.java`](src/model/SmartBulb.java), implement a method named `performAction` that accepts a `String` parameter called `action` and throws `UnsupportedActionException`. The method should handle at least two specific actions: `"turnOn"` and `"turnOff"`. For these actions, simulate switching the bulb on or off (e.g., by printing a message or updating internal state). For any other action, the method should throw `UnsupportedActionException`.
 
-2. **Convert `getDefaultActionByCategory()` to an Abstract Method**  
-   Change the existing `getDefaultActionByCategory()` method to be abstract by removing its implementation and adding the `abstract` keyword.
+2. **Extend the main application to demonstrate exception handling**  
+   In the file [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), modify the `main` method to create a `SmartBulb` instance and invoke its `performAction` method with supported actions (`"turnOn"`, `"turnOff"`) and at least one unsupported action. Each call must be wrapped in a try-catch block to catch the `UnsupportedActionException` and print an appropriate message when an unsupported action is attempted.
 
-3. **Implement the Abstract Method in Subclasses**  
-   Ensure that the subclasses [`SmartBulb.java`](src/model/SmartBulb.java) and [`SmartSpeaker.java`](src/model/SmartSpeaker.java) override and implement the abstract method, providing device-specific behavior.
-
-4. **Adjust the `PolymorphSmartHomeApp`**  
-   Since `SmartHomeDevice` is now abstract, you can no longer instantiate it directly.  
-   Update the `main` method in [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) accordingly to avoid instantiating `SmartHomeDevice` and maintain correct program execution.
+3. **Reference example for guidance**  
+   Consult the file [`PolymorphismExample.java`](src/model/PolymorphismExample.java) to see examples of polymorphic usage and exception handling that are relevant to this task.
 
 ---
 
 ## 📝 Aufgabenstellung (Deutsch)
 
-In dieser Aufgabe soll die Klasse `SmartHomeDevice` zu einer abstrakten Klasse gemacht werden, indem sie als `abstract` deklariert wird. Die vorhandene Methode `getDefaultActionByCategory()` soll zu einer abstrakten Methode umgewandelt werden, indem ihre Implementierung entfernt und das `abstract`-Schlüsselwort hinzugefügt wird.
-
-Anschließend passt du die Klasse `PolymorphSmartHomeApp` so an, dass keine Instanz von `SmartHomeDevice` mehr direkt erzeugt wird, da dies aufgrund der Abstraktion nicht mehr möglich ist.
+In dieser Aufgabe erweiterst du die Smart-Home-Geräteklassen um eine Ausnahmebehandlung für nicht unterstützte Aktionen unter Verwendung der bereits vorhandenen [`UnsupportedActionException`](src/model/UnsupportedActionException.java).
 
 ---
 
 ### ✅ Deine Aufgaben
 
-1. **Mache `SmartHomeDevice` abstrakt**  
-   Deklariere die Klasse [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) als `abstract`.
+1. **Implementiere die Methode `performAction` in `SmartBulb`**  
+   Implementiere in der Datei [`SmartBulb.java`](src/model/SmartBulb.java) eine Methode `performAction`, die einen Parameter vom Typ `String` namens `action` entgegennimmt und die Ausnahme `UnsupportedActionException` wirft. Die Methode soll mindestens die Aktionen `"turnOn"` und `"turnOff"` unterstützen und für diese Aktionen das Ein- und Ausschalten der Lampe simulieren (z. B. durch Ausgabe einer Nachricht oder Änderung eines internen Zustands). Für alle anderen Aktionen soll die Methode die `UnsupportedActionException` auslösen.
 
-2. **Wandle `getDefaultActionByCategory()` in eine abstrakte Methode um**  
-   Entferne die Implementierung der Methode und ergänze stattdessen das Schlüsselwort `abstract` in der Methodensignatur.
+2. **Erweitere die Hauptanwendung zur Demonstration der Ausnahmebehandlung**  
+   Passe in der Datei [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) die `main`-Methode so an, dass ein `SmartBulb`-Objekt erzeugt wird und die Methode `performAction` mit den unterstützten Aktionen (`"turnOn"`, `"turnOff"`) sowie mindestens einer nicht unterstützten Aktion aufgerufen wird. Diese Aufrufe sind jeweils in `try-catch`-Blöcke zu kapseln, um die `UnsupportedActionException` abzufangen und eine passende Meldung auszugeben.
 
-3. **Implementiere die abstrakte Methode in den Unterklassen**  
-   Stelle sicher, dass [`SmartBulb.java`](src/model/SmartBulb.java) und [`SmartSpeaker.java`](src/model/SmartSpeaker.java) die Methode `getDefaultActionByCategory()` überschreiben und eigene Implementierungen bereitstellen.
-
-4. **Passe die `PolymorphSmartHomeApp` an**  
-   Da `SmartHomeDevice` jetzt abstrakt ist, darf kein Objekt davon direkt instanziiert werden.  
-   Entferne oder ersetze daher die direkte Instanziierung in der `main`-Methode von [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), sodass die App ohne Fehler ausgeführt werden kann.
+3. **Beispiel zur Orientierung**  
+   Schaue dir die Datei [`PolymorphismExample.java`](src/model/PolymorphismExample.java) an, um Beispiele für polymorphe Verwendung und den Umgang mit Ausnahmen zu sehen, die für diese Aufgabe hilfreich sind.
