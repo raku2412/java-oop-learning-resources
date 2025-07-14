@@ -899,6 +899,130 @@ object TaskConfiguration {
         ),
         // endregion
 
+        // region polymorphism
+        TaskDefinition.MultipleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_1_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_1_answer_1),
+                TaskElement.Text(value = Res.string.polymorphism_task_1_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_1_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_1_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_2_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_2_answer_1),
+                TaskElement.Text(value = Res.string.polymorphism_task_2_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_2_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_2_answer_4)
+            )
+        ),
+        TaskDefinition.SingleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_3_description),
+            correctAnswer = TaskElement.Text(value = Res.string.polymorphism_task_3_answer_1),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_3_answer_2),
+                TaskElement.Text(value = Res.string.polymorphism_task_3_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_3_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_4_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_4_answer_1),
+                TaskElement.Text(value = Res.string.polymorphism_task_4_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_4_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_4_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_5_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_5_answer_1),
+                TaskElement.Text(value = Res.string.polymorphism_task_5_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_5_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_5_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.POLYMORPHISM,
+            description = TaskElement.Text(value = Res.string.polymorphism_task_6_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_6_answer_1),
+                TaskElement.Text(value = Res.string.polymorphism_task_6_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.polymorphism_task_6_answer_3),
+                TaskElement.Text(value = Res.string.polymorphism_task_6_answer_4)
+            )
+        ),
+        // endregion
+
+        // region exception handling
+        TaskDefinition.MultipleChoice(
+            category = Category.EXCEPTION_HANDLING,
+            description = TaskElement.Text(value = Res.string.exception_handling_task_1_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_1_answer_1),
+                TaskElement.Text(value = Res.string.exception_handling_task_1_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_1_answer_3),
+                TaskElement.Text(value = Res.string.exception_handling_task_1_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.EXCEPTION_HANDLING,
+            description = TaskElement.Text(value = Res.string.exception_handling_task_2_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_2_answer_1),
+                TaskElement.Text(value = Res.string.exception_handling_task_2_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_2_answer_3),
+                TaskElement.Text(value = Res.string.exception_handling_task_2_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.EXCEPTION_HANDLING,
+            description = TaskElement.Text(value = Res.string.exception_handling_task_3_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_3_answer_1),
+                TaskElement.Text(value = Res.string.exception_handling_task_3_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_3_answer_3),
+                TaskElement.Text(value = Res.string.exception_handling_task_3_answer_4)
+            )
+        ),
+        TaskDefinition.MultipleChoice(
+            category = Category.EXCEPTION_HANDLING,
+            description = TaskElement.Text(value = Res.string.exception_handling_task_4_description),
+            correctAnswers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_4_answer_1),
+                TaskElement.Text(value = Res.string.exception_handling_task_4_answer_2)
+            ),
+            answers = listOf(
+                TaskElement.Text(value = Res.string.exception_handling_task_4_answer_3),
+                TaskElement.Text(value = Res.string.exception_handling_task_4_answer_4)
+            )
+        ),
+        // endregion
+
     )
 
 }

@@ -1,6 +1,7 @@
 package de.kuhlmann.raphael.exampreparation.feature.task.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -125,6 +126,10 @@ private fun ChoiceContent(
                     } else {
                         Color.Transparent
                     }
+                )
+                .clickable(
+                    enabled = !isEvaluated,
+                    onClick = { onAnswerClick(answer) }
                 ),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),

@@ -546,4 +546,64 @@
     <string name="inheritance_task_9_answer_3">Mit <code>base.methodName()</code></string>
     <string name="inheritance_task_9_answer_4">Mit <code>superclass.methodName()</code></string>
 
+    <string name="polymorphism_task_1_description">Was trifft auf die Verwendung von Referenzen bei Polymorphie zu?</string>
+    <string name="polymorphism_task_1_answer_1">Referenzen einer Oberklasse können Objekte einer Unterklasse referenzieren</string>
+    <string name="polymorphism_task_1_answer_2">An allen Stellen, an denen ein Objekt einer Klasse erwartet wird, kann auch ein Unterklassenobjekt stehen</string>
+    <string name="polymorphism_task_1_answer_3">Nur primitive Datentypen unterstützen Polymorphie</string>
+    <string name="polymorphism_task_1_answer_4">Unterklassenreferenzen können Objekte einer Oberklasse referenzieren</string>
+
+    <string name="polymorphism_task_2_description">Was bedeutet „dynamische Bindung“?</string>
+    <string name="polymorphism_task_2_answer_1">Die zur Ausführung kommende Methode wird erst zur Laufzeit anhand des tatsächlichen Objekttyps bestimmt</string>
+    <string name="polymorphism_task_2_answer_2">Die Methode kann auch von einer Oberklasse geerbt sein</string>
+    <string name="polymorphism_task_2_answer_3">Die Methode wird zur Kompilierzeit basierend auf dem Referenztyp gebunden</string>
+    <string name="polymorphism_task_2_answer_4">Nur Konstruktoren werden dynamisch gebunden</string>
+
+    <string name="polymorphism_task_3_description">Wozu dient der Operator <code>instanceof</code> in Java?</string>
+    <string name="polymorphism_task_3_answer_1">Zur Laufzeitprüfung, ob eine Objektreferenz zu einem bestimmten Typ gehört</string>
+    <string name="polymorphism_task_3_answer_2">Zur automatischen Typanpassung</string>
+    <string name="polymorphism_task_3_answer_3">Zur Erstellung neuer Objekte</string>
+    <string name="polymorphism_task_3_answer_4">Zum Deklarieren von Instanzvariablen</string>
+
+    <string name="polymorphism_task_4_description">Was muss bei einer Typanpassung (Casting) beachtet werden?</string>
+    <string name="polymorphism_task_4_answer_1">Ohne vorherige Prüfung kann eine Typanpassung zum Programmabsturz führen</string>
+    <string name="polymorphism_task_4_answer_2">Der Typ kann durch Klammerausdruck angepasst werden</string>
+    <string name="polymorphism_task_4_answer_3">Ein Objekt verändert durch Casting dauerhaft seinen Typ</string>
+    <string name="polymorphism_task_4_answer_4">Casting ist nur mit finalen Klassen erlaubt</string>
+
+    <string name="polymorphism_task_5_description">Welche Aussagen über abstrakte Klassen sind korrekt?</string>
+    <string name="polymorphism_task_5_answer_1">Von abstrakten Klassen können keine Instanzen erzeugt werden</string>
+    <string name="polymorphism_task_5_answer_2">Abstrakte Klassen können als Datentyp verwendet werden</string>
+    <string name="polymorphism_task_5_answer_3">Abstrakte Klassen dürfen keine konkreten Methoden enthalten</string>
+    <string name="polymorphism_task_5_answer_4">Abstrakte Klassen dürfen nicht vererbt werden</string>
+
+    <string name="polymorphism_task_6_description">Welche Aussagen zu abstrakten Methoden sind korrekt?</string>
+    <string name="polymorphism_task_6_answer_1">Abstrakte Methoden haben keinen Methodenrumpf</string>
+    <string name="polymorphism_task_6_answer_2">Abstrakte Methoden müssen durch Unterklassen implementiert werden</string>
+    <string name="polymorphism_task_6_answer_3">Abstrakte Methoden dürfen nicht überschrieben werden</string>
+    <string name="polymorphism_task_6_answer_4">Abstrakte Methoden sind automatisch static</string>
+
+    <string name="exception_handling_task_1_description">Welche Aussagen zu Ausnahmen (Exceptions) in Java sind korrekt?</string>
+    <string name="exception_handling_task_1_answer_1">Exceptions sind Objekte, die direkt oder indirekt von <code>Exception</code> erben</string>
+    <string name="exception_handling_task_1_answer_2">Exceptions können mit <code>throw</code> geworfen werden</string>
+    <string name="exception_handling_task_1_answer_3">Exceptions sind primitive Datentypen</string>
+    <string name="exception_handling_task_1_answer_4">Exceptions enthalten keine Informationen über den Fehler</string>
+
+    <string name="exception_handling_task_2_description">Wie funktioniert die Behandlung von Ausnahmen mit try-catch-Blöcken?</string>
+    <string name="exception_handling_task_2_answer_1">Im try-Block steht der abzusichernde Code</string>
+    <string name="exception_handling_task_2_answer_2">Jeder catch-Abschnitt kann eine bestimmte Ausnahme behandeln</string>
+    <string name="exception_handling_task_2_answer_3">catch-Blöcke sind nur zur Deko da und haben keine Funktion</string>
+    <string name="exception_handling_task_2_answer_4">Im catch-Block ist keine Referenz auf die Ausnahme möglich</string>
+
+    <string name="exception_handling_task_3_description">Wie kann mit geworfenen Ausnahmen umgegangen werden?</string>
+    <string name="exception_handling_task_3_answer_1">Die Ausnahme kann in der Methode behandelt werden</string>
+    <string name="exception_handling_task_3_answer_2">Die Ausnahme kann an die aufrufende Methode weitergegeben werden</string>
+    <string name="exception_handling_task_3_answer_3">Die Ausnahme wird ignoriert und automatisch gelöst</string>
+    <string name="exception_handling_task_3_answer_4">Nur die JVM darf Ausnahmen weitergeben</string>
+
+    <string name="exception_handling_task_4_description">Wozu dient eine <code>assert</code>-Anweisung in Java?</string>
+    <string name="exception_handling_task_4_answer_1">Zur Definition einer Annahme mit booleschem Ausdruck</string>
+    <string name="exception_handling_task_4_answer_2">Sie wirft bei Nichterfüllung einen <code>AssertionError</code></string>
+    <string name="exception_handling_task_4_answer_3">Sie dient zur Laufzeit immer zur Fehlerbehandlung</string>
+    <string name="exception_handling_task_4_answer_4">assert ist ein Ersatz für try-catch</string>
+
 </resources>
