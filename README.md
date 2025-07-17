@@ -27,6 +27,15 @@ Afterwards, you will update the `PolymorphSmartHomeApp` so it can be executed wi
 
 ---
 
+## ✅ Solution Overview
+
+- The class `SmartHomeDevice` is declared abstract in [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java).
+- The method `getDefaultActionByCategory()` is declared as abstract and no longer has an implementation in the abstract class.
+- Subclasses [`SmartBulb.java`](src/model/SmartBulb.java) and [`SmartSpeaker.java`](src/model/SmartSpeaker.java) implement `getDefaultActionByCategory()` with their specific behavior.
+- The [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) is updated to instantiate only concrete subclasses, avoiding direct instantiation of `SmartHomeDevice`.
+
+---
+
 ## 📝 Aufgabenstellung (Deutsch)
 
 In dieser Aufgabe soll die Klasse `SmartHomeDevice` zu einer abstrakten Klasse gemacht werden, indem sie als `abstract` deklariert wird. Die vorhandene Methode `getDefaultActionByCategory()` soll zu einer abstrakten Methode umgewandelt werden, indem ihre Implementierung entfernt und das `abstract`-Schlüsselwort hinzugefügt wird.
@@ -49,3 +58,12 @@ Anschließend passt du die Klasse `PolymorphSmartHomeApp` so an, dass keine Inst
 4. **Passe die `PolymorphSmartHomeApp` an**  
    Da `SmartHomeDevice` jetzt abstrakt ist, darf kein Objekt davon direkt instanziiert werden.  
    Entferne oder ersetze daher die direkte Instanziierung in der `main`-Methode von [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java), sodass die App ohne Fehler ausgeführt werden kann.
+
+---
+
+## ✅ Lösung
+
+- `SmartHomeDevice` ist in [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) als abstrakte Klasse deklariert.
+- Die Methode `getDefaultActionByCategory()` ist abstrakt und enthält keine Implementierung mehr.
+- `SmartBulb` und `SmartSpeaker` implementieren diese Methode jeweils mit gerätespezifischem Verhalten.
+- In [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) wird die direkte Instanzierung von `SmartHomeDevice` entfernt oder durch konkrete Subklassen ersetzt, damit die Anwendung weiterhin ausgeführt werden kann.

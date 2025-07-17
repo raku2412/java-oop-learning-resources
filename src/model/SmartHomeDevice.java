@@ -2,7 +2,7 @@ package model;
 
 import util.SmartHomeIdFactory;
 
-public class SmartHomeDevice {
+public abstract class SmartHomeDevice {
 
     private final int id;
     private final SmartHomeDeviceCategory category;
@@ -34,21 +34,6 @@ public class SmartHomeDevice {
         this.name = name;
     }
 
-    @SuppressWarnings("EnhancedSwitchMigration")
-    public String getDefaultActionByCategory() {
-        switch (category) {
-            case LIGHTING:
-                return "Turn on/off lighting";
-            case ENTERTAINMENT:
-                return "Play/pause music or video";
-            case SECURITY:
-                return "Arm/disarm security system";
-            case CLIMATE_CONTROL:
-                return "Adjust temperature settings";
-            case UTILITY:
-                return "Manage utility settings";
-        }
-        return "No default action defined for this category";
-    }
+    public abstract String getDefaultActionByCategory();
 
 }
