@@ -48,6 +48,11 @@ public class SmartBulb extends  SmartHomeDevice {
     }
 
     @Override
+    public String getDefaultActionByCategory() {
+        return super.getDefaultActionByCategory() + " Brightness is " + brightness + "%.";
+    }
+
+    @Override
     public String toString() {
         return "model.SmartBulb [id = " + getId() + "category = " + getCategory() + ", name = " + getName() + ", brightness = " + brightness + "]";
     }
