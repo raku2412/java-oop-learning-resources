@@ -47,6 +47,16 @@ public class SmartBulb extends  SmartHomeDevice {
         setBrightness(Math.round(brightness));
     }
 
+    public void performAction(String action) throws UnsupportedActionException {
+        if ("turnOn".equalsIgnoreCase(action)) {
+            System.out.println(getName() + ": Light turned on.");
+        } else if ("turnOff".equalsIgnoreCase(action)) {
+            System.out.println(getName() + ": Light turned off.");
+        } else {
+            throw new UnsupportedActionException("Action '" + action + "' is not supported by " + getName());
+        }
+    }
+
     @Override
     public String getDefaultActionByCategory() {
         return"Turn on/off lighting" + " Brightness is " + brightness + "%.";

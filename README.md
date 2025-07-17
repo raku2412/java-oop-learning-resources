@@ -21,6 +21,14 @@ In this exercise, you will enhance the Smart Home device classes by adding excep
 
 ---
 
+## ✅ Solution
+
+- The [`performAction`](src/model/SmartBulb.java) method in `SmartBulb.java` correctly handles `"turnOn"` and `"turnOff"` actions by simulating switching the device state. It throws [`UnsupportedActionException`](src/model/UnsupportedActionException.java) for all other actions.
+- The [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) demonstrates invoking `performAction` on a `SmartBulb` instance with both supported and unsupported actions, handling exceptions using try-catch blocks.
+- The file [`PolymorphismExample.java`](src/model/PolymorphismExample.java) provides reference code illustrating polymorphism and exception handling concepts.
+
+---
+
 ## 📝 Aufgabenstellung (Deutsch)
 
 In dieser Aufgabe erweiterst du die Smart-Home-Geräteklassen um eine Ausnahmebehandlung für nicht unterstützte Aktionen unter Verwendung der bereits vorhandenen [`UnsupportedActionException`](src/model/UnsupportedActionException.java).
@@ -37,3 +45,11 @@ In dieser Aufgabe erweiterst du die Smart-Home-Geräteklassen um eine Ausnahmebe
 
 3. **Beispiel zur Orientierung**  
    Schaue dir die Datei [`PolymorphismExample.java`](src/model/PolymorphismExample.java) an, um Beispiele für polymorphe Verwendung und den Umgang mit Ausnahmen zu sehen, die für diese Aufgabe hilfreich sind.
+
+---
+
+## ✅ Lösung
+
+- Die Methode [`performAction`](src/model/SmartBulb.java) in `SmartBulb.java` unterstützt die Aktionen `"turnOn"` und `"turnOff"` durch eine entsprechende Simulation des Gerätezustands und wirft bei anderen Aktionen die [`UnsupportedActionException`](src/model/UnsupportedActionException.java).
+- Die Datei [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) zeigt den Aufruf von `performAction` mit verschiedenen Aktions-Strings und behandelt dabei die Ausnahme mittels `try-catch`.
+- Die Datei [`PolymorphismExample.java`](src/model/PolymorphismExample.java) dient als Beispiel für den Einsatz von Polymorphie und Exception Handling.
