@@ -1,75 +1,89 @@
-# 🧠 Exercise: SmartDevice Interface in a Smart Home System
+# 🧠 Exercise: Maintainable Smart Devices in a Smart Home
 
 ---
 
 ## 📝 Task Description (English)
 
-In this task, you will define and use interfaces to build a flexible and extensible Smart Home system. You will define core functionality via interfaces and implement them in different device classes.
+In this exercise, you will model different types of smart home components using interfaces, abstract classes, and enumerations. The system supports maintainability tracking, classification of device types, and polymorphic behavior across device categories.
 
 ---
 
 ### 🛠️ Your Tasks
 
-Use the class [InterfaceApp.java](app/InterfaceApp.java) to exceute the completion of the given tasks.
+1. **Define the interface `Maintainable`**  
+   The interface declares the method:
+   - `int getMaintenanceIntervalInDays()`
 
-1. **Define the `SmartDevice` interface**  
-   Extend the interface [SmartDevice.java](model/SmartDevice.java) with the following abstract methods:
-   - `void turnOn()`
-   - `void turnOff()`
-   - `boolean isOn()`
+   It can be implemented by any smart home component that requires regular maintenance.
 
-   Additionally, add a default method `togglePower()` that turns the device on if it is off, and off if it is on.
+2. **Create the base class `SmartHomeComponent`**  
+   This class implements `Maintainable` and provides:
+   - `String manufacturer`
+   - `int yearOfInstallation`
 
-2. **Implement two device classes**  
-   Implement the `SmartDevice` interface in the following two classes:
-   - `SmartLamp` with an additional method `void setBrightness(int level)`
-   - `SmartSpeaker` with an additional method `void playMusic(String song)`
+   Add constructors, getters, `toString()`, and implement `getMaintenanceIntervalInDays()` based on the installation year (e.g., older devices need more frequent maintenance).
 
-3. **Use the interface as a reference type**  
-   - Declare an array of `SmartDevice` that contains instances of `SmartLamp` and `SmartSpeaker`.
-   - Write a method `activateAll(SmartDevice[] devices)` that turns on all devices in the array.
+3. **Define an abstract class `SmartDevice`**  
+   This class extends `SmartHomeComponent` and declares:
+   - `boolean isOperational()`
 
-4. **Use `instanceof` and casting**  
-   - Iterate through the `SmartDevice` array.
-   - Use `instanceof` and casting to call `setBrightness()` for lamps and `playMusic()` for speakers.
+   This represents all smart devices (sensors, actuators, etc.) and their online status.
 
-5. **Extend the interface using another interface**  
-   - Define a second interface `Controllable` with the method `void togglePower()`.
-   - Let `SmartDevice` extend `Controllable`.
+4. **Create two enums `SensorType` and `ActuatorType`**  
+   - `SensorType`: `TEMPERATURE`, `MOTION`, `HUMIDITY`  
+   - `ActuatorType`: `LIGHT`, `HEATER`, `DOORLOCK`  
+
+   Each enum should implement:
+   - a method `String getUsageArea()` returning a description (e.g., "Security", "Climate Control", etc.)
+
+5. **Implement the following classes extending `SmartDevice`**  
+   - `SensorDevice` with attribute `SensorType sensorType`
+   - `ActuatorDevice` with attribute `ActuatorType actuatorType`
+
+6. **Create the class `SmartHomeApp` with `main` method**  
+   - a) Declare a `Maintainable` variable and assign it a `SensorDevice` or `ActuatorDevice`. Print information about maintenance.
+   - b) Declare a `SmartDevice` variable, assign various device instances, and print their type, operational status, and purpose.
 
 ---
 
 ## 📝 Aufgabenstellung (Deutsch)
 
-In dieser Aufgabe definierst und verwendest du Schnittstellen, um ein flexibles und erweiterbares Smart-Home-System zu gestalten. Die Kernfunktionalität wird über Schnittstellen definiert und in verschiedenen Geräteklassen implementiert.
+In dieser Übung modellierst du verschiedene Arten von Smart-Home-Komponenten mithilfe von Schnittstellen, abstrakten Klassen und Aufzählungstypen. Das System unterstützt die Nachverfolgbarkeit von Wartungsintervallen, die Klassifizierung von Gerätetypen sowie polymorphes Verhalten.
 
 ---
 
 ### 🛠️ Deine Aufgaben
 
-Nutze die Klasse [InterfaceApp.java](app/InterfaceApp.java), um die Lösung der gegebenen Aufgaben auszuführen.
+1. **Definiere die Schnittstelle `Maintainable`**  
+   Die Schnittstelle enthält die Methode:
+   - `int getMaintenanceIntervalInDays()`
 
-1. **Definiere die Schnittstelle `SmartDevice`**  
-   Erweitere die Schnittstelle [SmartDevice.java](model/SmartDevice.java) mit den folgenden abstrakten Methoden:
-   - `void turnOn()`
-   - `void turnOff()`
-   - `boolean isOn()`
+   Sie kann von Komponenten implementiert werden, die regelmäßig gewartet werden müssen.
 
-   Ergänze außerdem eine Default-Methode `togglePower()`, die das Gerät einschaltet, wenn es aus ist, und ausschaltet, wenn es an ist.
+2. **Erstelle die Basisklasse `SmartHomeComponent`**  
+   Diese Klasse implementiert `Maintainable` und enthält:
+   - `String manufacturer`
+   - `int yearOfInstallation`
 
-2. **Implementiere zwei Gerätekategorien**  
-   Implementiere die Schnittstelle `SmartDevice` in den folgenden beiden Klassen:
-   - `SmartLamp` mit einer zusätzlichen Methode `void setBrightness(int level)`
-   - `SmartSpeaker` mit einer zusätzlichen Methode `void playMusic(String song)`
+   Implementiere Konstruktor, Getter, `toString()` und die Methode `getMaintenanceIntervalInDays()` (z. B. ältere Geräte = kürzere Wartungsintervalle).
 
-3. **Verwende die Schnittstelle als Referenztyp**  
-   - Deklariere ein Array vom Typ `SmartDevice`, das Instanzen von `SmartLamp` und `SmartSpeaker` enthält.
-   - Schreibe eine Methode `activateAll(SmartDevice[] devices)`, die alle Geräte im Array einschaltet.
+3. **Definiere eine abstrakte Klasse `SmartDevice`**  
+   Diese Klasse erweitert `SmartHomeComponent` und deklariert:
+   - `boolean isOperational()`
 
-4. **Verwende `instanceof` und Type-Casting**  
-   - Iteriere über das `SmartDevice`-Array.
-   - Verwende `instanceof` und Type-Casting, um bei Lampen `setBrightness()` und bei Lautsprechern `playMusic()` aufzurufen.
+   Sie steht für alle smarten Geräte wie Sensoren oder Aktoren.
 
-5. **Erweitere die Schnittstelle durch eine weitere Schnittstelle**  
-   - Definiere eine zweite Schnittstelle `Controllable` mit der Methode `void togglePower()`.
-   - Lasse `SmartDevice` die Schnittstelle `Controllable` erweitern.
+4. **Erstelle die Enums `SensorType` und `ActuatorType`**  
+   - `SensorType`: `TEMPERATURE`, `MOTION`, `HUMIDITY`  
+   - `ActuatorType`: `LIGHT`, `HEATER`, `DOORLOCK`  
+
+   Jeder Enum-Wert soll eine Methode `String getUsageArea()` besitzen, die den Einsatzbereich beschreibt (z. B. "Sicherheit", "Raumklima", etc.).
+
+5. **Implementiere folgende Klassen, die `SmartDevice` erweitern**  
+   - `SensorDevice` mit Attribut `SensorType sensorType`
+   - `ActuatorDevice` mit Attribut `ActuatorType actuatorType`
+
+6. **Erstelle die Klasse `SmartHomeApp` mit einer `main`-Methode**  
+   - a) Lege eine `Maintainable`-Variable an und weise ihr ein Sensor- oder Aktor-Gerät zu. Gib Informationen zur Wartung aus.
+   - b) Lege eine `SmartDevice`-Variable an, weise verschiedene Geräte zu und gib Typ, Funktionsstatus und Einsatzzweck aus.
+
