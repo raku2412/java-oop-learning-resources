@@ -47,6 +47,7 @@ public class SmartBulb extends  SmartHomeDevice {
         setBrightness(Math.round(brightness));
     }
 
+    @Override
     public void performAction(String action) throws UnsupportedActionException {
         if ("turnOn".equalsIgnoreCase(action)) {
             System.out.println(getName() + ": Light turned on.");

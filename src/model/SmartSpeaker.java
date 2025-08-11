@@ -53,6 +53,17 @@ public class SmartSpeaker extends SmartHomeDevice {
     }
 
     @Override
+    public void performAction(String action) throws UnsupportedActionException {
+        if ("playMusic".equalsIgnoreCase(action)) {
+            System.out.println(getName() + ": Now playing music.");
+        } else if ("pause".equalsIgnoreCase(action)) {
+            System.out.println(getName() + ": Playback is paused.");
+        } else {
+            throw new UnsupportedActionException("Action '" + action + "' is not supported by " + getName());
+        }
+    }
+
+    @Override
     public String toString() {
         return "model.SmartSpeaker [id = " + getId() + "category = " + getCategory() + ", name = " + getName() + ", volume = " + volume + "]";
     }

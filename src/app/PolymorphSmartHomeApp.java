@@ -7,11 +7,7 @@ import model.UnsupportedActionException;
 
 public class PolymorphSmartHomeApp {
 
-    @SuppressWarnings({"ConstantValue", "CastCanBeRemovedNarrowingVariableType"})
     public static void main(String[] arguments) {
-
-        // TODO: Make performAction an abstract method in SmartHomeDevice and implement it in subclasses.
-        //       Use performAction for both devices.
 
         SmartHomeDevice device1 = new SmartBulb();
         SmartHomeDevice device2 = new SmartSpeaker();
@@ -20,11 +16,17 @@ public class PolymorphSmartHomeApp {
         System.out.println("Default action for device2: " + device2.getDefaultActionByCategory());
 
         try {
-            if (device1 instanceof SmartBulb) {
-                ((SmartBulb) device1).performAction("turnOn");
-                ((SmartBulb) device1).performAction("turnOff");
-                ((SmartBulb) device1).performAction("playMusic");
-            }
+            device1.performAction("turnOn");
+            device1.performAction("turnOff");
+            device1.performAction("playMusic");
+        } catch (UnsupportedActionException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            device2.performAction("playMusic");
+            device2.performAction("pause");
+            device2.performAction("turnOff");
         } catch (UnsupportedActionException e) {
             System.out.println(e.getMessage());
         }

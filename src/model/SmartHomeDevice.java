@@ -36,4 +36,6 @@ public abstract class SmartHomeDevice {
 
     public abstract String getDefaultActionByCategory();
 
+    public abstract void performAction(String action) throws UnsupportedActionException;
+
 }

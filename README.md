@@ -28,6 +28,14 @@ In this task, you will complete a polymorphic setup by turning an existing metho
 
 ---
 
+## ✅ Solution
+
+- The method `performAction` has been made abstract in [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java), and the class itself was updated to be abstract.
+- The subclasses [`SmartBulb.java`](src/model/SmartBulb.java) and [`SmartSpeaker.java`](src/model/SmartSpeaker.java) implement the method, each handling their respective action logic and throwing [`UnsupportedActionException`](src/model/UnsupportedActionException.java) when needed.
+- The main app [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) uses polymorphic device references to call `getDefaultActionByCategory` and test `performAction`. It checks device types using `instanceof`, performs safe casts, and handles unsupported actions gracefully using try-catch blocks.
+
+---
+
 ## 📝 Aufgabenstellung (Deutsch)
 
 In dieser Aufgabe sollst du eine polymorphe Struktur vervollständigen, indem du eine bestehende Methode in der Basisklasse als abstrakte Methode deklarierst und in den jeweiligen Unterklassen implementierst.
@@ -51,3 +59,11 @@ In dieser Aufgabe sollst du eine polymorphe Struktur vervollständigen, indem du
 
 4. **Verwende `instanceof` und Type-Casting bei Bedarf**  
    Stelle bei den Aufrufen sicher, dass du mittels `instanceof` überprüfst, ob der Gerätetyp korrekt ist, bevor du eine Typumwandlung (Cast) vornimmst.
+
+---
+
+## ✅ Lösung
+
+- Die Methode `performAction` wurde in [`SmartHomeDevice.java`](src/model/SmartHomeDevice.java) als abstrakte Methode deklariert, und die Klasse selbst wurde zu einer abstrakten Klasse gemacht.
+- Die Unterklassen [`SmartBulb.java`](src/model/SmartBulb.java) und [`SmartSpeaker.java`](src/model/SmartSpeaker.java) implementieren `performAction` jeweils mit gerätespezifischer Logik und werfen bei nicht unterstützten Aktionen eine [`UnsupportedActionException`](src/model/UnsupportedActionException.java).
+- Die Datei [`PolymorphSmartHomeApp.java`](src/model/PolymorphSmartHomeApp.java) zeigt polymorphe Aufrufe und behandelt Ausnahmen durch `try-catch`-Blöcke unter Verwendung von `instanceof` und sicherem Casting.
