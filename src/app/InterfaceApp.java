@@ -1,35 +1,35 @@
 package app;
 
-import model.ExampleProgram;
-import model.Programmable;
-import util.Console;
+import model.SmartDevice;
+import model.SmartLamp;
+import model.SmartSpeaker;
 
 public class InterfaceApp {
 
+    public static void activateAll(SmartDevice[] devices) {
+        for (SmartDevice device : devices) {
+            device.turnOn();
+        }
+    }
+
     public static void main(String[] arguments) {
+        SmartDevice lamp = new SmartLamp();
+        SmartDevice speaker = new SmartSpeaker();
 
-        // TODO: Remove after testing the example.
-        showExample();
+        SmartDevice[] devices = { lamp, speaker };
 
-        // TODO: Implement according to the readme.
+        activateAll(devices);
 
-    }
+        for (SmartDevice device : devices) {
 
-    private static void showExample() {
-        Programmable exampleProgram = new ExampleProgram();
-        exampleProgram.setProgram("Morning Routine", "Wake up, brush teeth, have breakfast");
+            if (device instanceof SmartLamp lampDevice) {
+                lampDevice.setBrightness(80);
+            }
 
-        if (exampleProgram.hasProgram("Morning Routine")) {
-            Console.println("Program found: " + exampleProgram.getProgram("Morning Routine"));
-        } else {
-            Console.println("No such program.");
-        }
+            if (device instanceof SmartSpeaker speakerDevice) {
+                speakerDevice.playMusic("Ludwig van Beethoven – Ode to Joy");
+            }
 
-        exampleProgram.removeProgram("Morning Routine");
-
-        if (!exampleProgram.hasProgram("Morning Routine")) {
-            Console.println("Program removed successfully.");
         }
     }
-
 }

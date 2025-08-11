@@ -1,7 +1,15 @@
 package model;
 
-public interface SmartDevice {
+public interface SmartDevice extends Controllable {
+    void turnOn();
+    void turnOff();
+    boolean isOn();
 
-    // TODO: Define the methods that all smart devices should implement according to the readme.
-
+    default void togglePower() {
+        if (isOn()) {
+            turnOff();
+        } else {
+            turnOn();
+        }
+    }
 }

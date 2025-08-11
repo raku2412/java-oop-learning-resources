@@ -39,6 +39,19 @@ Use the class [InterfaceApp.java](app/InterfaceApp.java) to exceute the completi
 
 ---
 
+### ✅ Solution
+
+The implementation can be found in the following files:
+- [Controllable.java](model/Controllable.java)
+- [SmartDevice.java](model/SmartDevice.java)
+- [SmartLamp.java](model/SmartLamp.java)
+- [SmartSpeaker.java](model/SmartSpeaker.java)
+- [InterfaceApp.java](app/InterfaceApp.java)
+
+These files show the complete implementation of the tasks.
+
+---
+
 ## 📝 Aufgabenstellung (Deutsch)
 
 In dieser Aufgabe definierst und verwendest du Schnittstellen, um ein flexibles und erweiterbares Smart-Home-System zu gestalten. Die Kernfunktionalität wird über Schnittstellen definiert und in verschiedenen Geräteklassen implementiert.
@@ -73,3 +86,16 @@ Nutze die Klasse [InterfaceApp.java](app/InterfaceApp.java), um die Lösung der 
 5. **Erweitere die Schnittstelle durch eine weitere Schnittstelle**  
    - Definiere eine zweite Schnittstelle `Controllable` mit der Methode `void togglePower()`.
    - Lasse `SmartDevice` die Schnittstelle `Controllable` erweitern.
+
+---
+
+### ✅ Lösung
+
+Die Implementierung befindet sich in folgenden Dateien:
+- [Controllable.java](model/Controllable.java)
+- [SmartDevice.java](model/SmartDevice.java)
+- [SmartLamp.java](model/SmartLamp.java)
+- [SmartSpeaker.java](model/SmartSpeaker.java)
+- [InterfaceApp.java](app/InterfaceApp.java)
+
+Diese Dateien zeigen die vollständige Umsetzung der Aufgabenstellung.
