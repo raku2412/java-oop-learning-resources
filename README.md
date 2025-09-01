@@ -1,60 +1,62 @@
-# 🧪 Exercise: Testing with JUnit like test framework  
+# 🐞 Debugging Task: Unexpected Light Activation in Smart Home
 
 ## 📘 Task Description (English)
 
-This exercise introduces a minimal custom test framework inspired by **JUnit 5**, using only core Java functionality. The goal is to help you understand the core mechanisms behind automated testing.
+In this exercise, you'll analyze a Smart Home application where smart lights are controlled based on a time-based schedule.
 
-You are **not allowed to use the JUnit library** – instead, a custom annotation `@Test` and a test runner are provided.
+The application [`DebuggingApp.java`](app/DebuggingApp.java) appears to run without errors, but **all lights are being turned on**, even though the logic was intended to be more selective.
+
+Your task is **not to fix the bug**, but to use the debugger to **understand why this is happening**.
 
 ---
 
-### 🎯 Your Task – Understand and Run the Tests
+### 🧭 Debugging Instructions (IntelliJ IDEA)
 
-Explore the existing project and test setup. Then, run the test and observe the behavior.
+1. Open the file [`DebuggingApp.java`](app/DebuggingApp.java) in IntelliJ IDEA.
+2. Set a **breakpoint** inside the method `simulateEveningSchedule(...)`, for example on the line:
+   ```java
+   if (shouldActivateLightAt(timeSlot)) {
+   ```
+3. Right-click the `main` method and choose **“Debug 'DebuggingApp.main()'”**.
+4. When execution stops at your breakpoint:
+   - Inspect the variable `timeSlot`
+   - Step into the method `shouldActivateLightAt(...)`
+   - Observe the logic and return values
+   - Check which branch of the condition is executed
+5. Try to answer:
+   - Why are **all** lights turned on?
+   - What is the method `shouldActivateLightAt(...)` actually doing?
 
-#### What you need to do:
-
-1. **Study the following components**:
-   - [`SmartLight.java`](model/SmartLight.java): a simple smart home light with `turnOn`, `turnOff`, and `isOn()`.
-   - [`Test.java`](test/Test.java): defines the custom `@Test` annotation.
-   - [`Assertions.java`](test/Assertions.java): provides an `assertTrue(...)` method similar to JUnit.
-   - [`SmartLightTest.java`](test/SmartLightTest.java): contains test methods annotated with `@Test`.
-   - [`JUnitLikeTestRunner.java`](test/JUnitLikeTestRunner.java): finds and runs test methods.
-   - [`TestApp.java`](app/TestApp.java): main class to run the tests.
-
-2. **Run the test suite** using the main method in [`TestApp.java`](app/TestApp.java).
+> 🧠 You do **not** need to fix the bug – the goal is to detect and explain it using the debugger.
 
 ---
 
 ## 📙 Aufgabenbeschreibung (Deutsch)
 
-Diese Übung zeigt ein minimalistisches Test-Framework, das an **JUnit 5** angelehnt ist – jedoch ohne externe Bibliotheken.  
-Ziel ist es, die grundlegenden Mechanismen automatisierten Testens in Java besser zu verstehen.
+In dieser Übung analysierst du eine Smart-Home-Anwendung, bei der Lampen zeitgesteuert ein- oder ausgeschaltet werden.
 
-Es wird **nicht** die JUnit-Bibliothek verwendet – stattdessen stehen eine eigene Annotation `@Test` und ein einfacher Test-Runner zur Verfügung.
+Die Anwendung [`DebuggingApp.java`](app/DebuggingApp.java) läuft fehlerfrei durch, aber **alle Lampen werden eingeschaltet** – obwohl die zugrundeliegende Logik eigentlich selektiver sein sollte.
+
+Deine Aufgabe ist es, **den Fehler durch Debugging zu erkennen und zu verstehen** – **nicht**, ihn zu beheben.
 
 ---
 
-### 🎯 Deine Aufgabe – Tests verstehen und ausführen
+### 🧭 Anleitung zum Debugging (IntelliJ IDEA)
 
-Schau dir die bestehende Projektstruktur an und führe die Tests aus, um das Verhalten zu analysieren.
+1. Öffne die Datei [`DebuggingApp.java`](app/DebuggingApp.java) in IntelliJ IDEA.
+2. Setze einen **Breakpoint** in der Methode `simulateEveningSchedule(...)`, z. B. auf der Zeile:
+   ```java
+   if (shouldActivateLightAt(timeSlot)) {
+   ```
+3. Klicke mit der rechten Maustaste auf die `main`-Methode und wähle **„Debug 'DebuggingApp.main()'“**.
+4. Wenn die Ausführung am Breakpoint stoppt:
+   - Beobachte den Wert der Variablen `timeSlot`
+   - Springe in die Methode `shouldActivateLightAt(...)`
+   - Untersuche die Logik und Rückgabewerte
+   - Prüfe, welcher Zweig der Bedingung ausgeführt wird
+5. Beantworte für dich:
+   - Warum werden **alle** Lampen eingeschaltet?
+   - Was macht die Methode `shouldActivateLightAt(...)` tatsächlich?
 
-#### Folgende Bestandteile solltest du dir ansehen:
+> 🧠 Du sollst den Fehler **nicht beheben** – Ziel ist es, ihn mit dem Debugger zu erkennen und zu verstehen.
 
-1. [`SmartLight.java`](model/SmartLight.java)  
-   - Eine einfache Smart-Home-Leuchte mit den Methoden `turnOn()`, `turnOff()` und `isOn()`.
-
-2. [`Test.java`](test/Test.java)  
-   - Eine eigene Annotation `@Test`, um Testmethoden zu markieren.
-
-3. [`Assertions.java`](test/Assertions.java)  
-   - Eine Methode `assertTrue(...)`, die einen Test fehlschlagen lässt, wenn die Bedingung nicht erfüllt ist.
-
-4. [`SmartLightTest.java`](test/SmartLightTest.java)  
-   - Enthält Beispiel-Testmethoden mit der Annotation `@Test`.
-
-5. [`JUnitLikeTestRunner.java`](test/JUnitLikeTestRunner.java)  
-   - Der Test-Runner, der alle mit `@Test` annotierten Methoden findet und ausführt.
-
-6. [`TestApp.java`](app/TestApp.java)  
-   - Hauptklasse mit der `main()`-Methode zur Ausführung der Tests.

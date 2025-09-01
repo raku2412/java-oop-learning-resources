@@ -1,7 +1,13 @@
 package model;
 
 public class SmartLight {
-    private boolean isOn = false;
+    private final String name;
+    private boolean isOn;
+
+    public SmartLight(String name) {
+        this.name = name;
+        this.isOn = false;
+    }
 
     public void turnOn() {
         isOn = true;
@@ -13,5 +19,9 @@ public class SmartLight {
 
     public boolean isOn() {
         return isOn;
+    }
+
+    public String getName() {
+        return name;
     }
 }
