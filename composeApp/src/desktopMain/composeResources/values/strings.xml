@@ -548,9 +548,9 @@
 
     <string name="polymorphism_task_1_description">Was trifft auf die Verwendung von Referenzen bei Polymorphie zu?</string>
     <string name="polymorphism_task_1_answer_1">Referenzen einer Oberklasse können Objekte einer Unterklasse referenzieren</string>
-    <string name="polymorphism_task_1_answer_2">An allen Stellen, an denen ein Objekt einer Klasse erwartet wird, kann auch ein Unterklassenobjekt stehen</string>
-    <string name="polymorphism_task_1_answer_3">Nur primitive Datentypen unterstützen Polymorphie</string>
-    <string name="polymorphism_task_1_answer_4">Unterklassenreferenzen können Objekte einer Oberklasse referenzieren</string>
+    <string name="polymorphism_task_1_answer_2">An allen Stellen, an denen ein Objekt einer Klasse erwartet wird, kann auch ein Objekt einer Unterklasse verwendet werden</string>
+    <string name="polymorphism_task_1_answer_3">Polymorphie ist nur bei primitiven Datentypen wie int oder boolean möglich</string>
+    <string name="polymorphism_task_1_answer_4">Unterklassenreferenzen können ohne Einschränkung Objekte beliebiger Oberklassen referenzieren</string>
 
     <string name="polymorphism_task_2_description">Was bedeutet „dynamische Bindung“?</string>
     <string name="polymorphism_task_2_answer_1">Die zur Ausführung kommende Methode wird erst zur Laufzeit anhand des tatsächlichen Objekttyps bestimmt</string>
@@ -605,5 +605,150 @@
     <string name="exception_handling_task_4_answer_2">Sie wirft bei Nichterfüllung einen <code>AssertionError</code></string>
     <string name="exception_handling_task_4_answer_3">Sie dient zur Laufzeit immer zur Fehlerbehandlung</string>
     <string name="exception_handling_task_4_answer_4">assert ist ein Ersatz für try-catch</string>
+
+    <string name="interfaces_task_1_description">Was beschreibt ein Interface in Java und was bedeutet „Programming by contract“?</string>
+    <string name="interfaces_task_1_answer_1">Definition von Methoden, die alle implementierenden Klassen enthalten müssen; dient als Vertrag zwischen Entwicklern</string>
+    <string name="interfaces_task_1_answer_2">Abstrakte Klasse mit konkreten Methoden; stellt eine Lizenzvereinbarung dar</string>
+    <string name="interfaces_task_1_answer_3">Klasse mit Konstruktoren; erzwingt Singleton-Muster</string>
+    <string name="interfaces_task_1_answer_4">Interface als Testsuite; automatische Implementierung</string>
+
+    <string name="interfaces_task_2_description">Welche Eigenschaften haben abstrakte und Default-Methoden in Schnittstellen?</string>
+    <string name="interfaces_task_2_answer_1">Abstrakte Methoden sind methodenköpfe ohne Rumpf, ohne abstract-Schlüsselwort; Default-Methoden sind implementiert mit default-Schlüsselwort</string>
+    <string name="interfaces_task_2_answer_2">Abstrakte Methoden haben leere Implementierung; Default-Methoden sind final</string>
+    <string name="interfaces_task_2_answer_3">Beide Methodentypen sind final und dürfen nicht überschrieben werden</string>
+    <string name="interfaces_task_2_answer_4">Default-Methoden sind abstrakt; abstrakte Methoden haben Implementierung</string>
+
+    <string name="interfaces_task_3_description">Wie erfolgt die Implementierung von Schnittstellen in Klassen und was ist dabei verpflichtend?</string>
+    <string name="interfaces_task_3_answer_1">Mit implements im Klassenkopf; Klasse muss alle abstrakten Methoden implementieren</string>
+    <string name="interfaces_task_3_answer_2">Mit extends; Klasse muss nur Default-Methoden implementieren</string>
+    <string name="interfaces_task_3_answer_3">Klasse wird automatisch abstrakt; darf keine eigenen Methoden haben</string>
+    <string name="interfaces_task_3_answer_4">Klasse kann Konstruktoren in Interfaces definieren</string>
+
+    <string name="interfaces_task_4_description">Welche Aussagen über Konstruktoren und Default-Methoden in Schnittstellen sind korrekt?</string>
+    <string name="interfaces_task_4_answer_1">Schnittstellen erlauben keine Konstruktoren; Default-Methoden können überschrieben werden</string>
+    <string name="interfaces_task_4_answer_2">Schnittstellen müssen Konstruktoren haben; Default-Methoden sind final</string>
+    <string name="interfaces_task_4_answer_3">Konstruktoren sind optional; Default-Methoden können nicht überschrieben werden</string>
+    <string name="interfaces_task_4_answer_4">Schnittstellen haben private Konstruktoren; Default-Methoden sind abstrakt</string>
+
+    <string name="interfaces_task_5_description">In welchen Kontexten können Schnittstellen als Datentyp verwendet werden?</string>
+    <string name="interfaces_task_5_answer_1">Variablendeklaration, Rückgabetyp, Methodenparameter, Komponententyp von Arrays</string>
+    <string name="interfaces_task_5_answer_2">Nur als Rückgabetyp von Methoden</string>
+    <string name="interfaces_task_5_answer_3">Nur als lokale Variablen</string>
+    <string name="interfaces_task_5_answer_4">Nur als statische Variablen</string>
+
+    <string name="interfaces_task_6_description">Zu welchem Datentyp gehören Schnittstellen und welche Werte sind für Variablen dieses Typs zulässig?</string>
+    <string name="interfaces_task_6_answer_1">Referenzdatentypen; Referenzen auf Instanzen von Klassen, die das Interface implementieren</string>
+    <string name="interfaces_task_6_answer_2">Primitive Datentypen; primitive Werte wie int oder boolean</string>
+    <string name="interfaces_task_6_answer_3">Werttypen; Referenzen auf abstrakte Klassen</string>
+    <string name="interfaces_task_6_answer_4">Immutable Datentypen; Referenzen auf Interfaces selbst</string>
+
+    <string name="interfaces_task_7_description">Welche Operationen sind bei Variablen vom Schnittstellentyp anwendbar und funktioniert instanceof damit?</string>
+    <string name="interfaces_task_7_answer_1">Abstrakte und Default-Methoden der Schnittstelle; instanceof funktioniert auch mit Schnittstellen</string>
+    <string name="interfaces_task_7_answer_2">Nur statische Methoden; instanceof funktioniert nicht mit Schnittstellen</string>
+    <string name="interfaces_task_7_answer_3">Nur Methoden der Object-Klasse; instanceof nur bei Klassen</string>
+    <string name="interfaces_task_7_answer_4">Nur private Methoden; instanceof nur bei abstrakten Klassen</string>
+
+    <string name="interfaces_task_8_description">Was versteht man unter Schnittstellenerweiterung und welchen Vorteil hat sie?</string>
+    <string name="interfaces_task_8_answer_1">Eine Schnittstelle erweitert eine oder mehrere Schnittstellen und übernimmt deren Methoden; ermöglicht Wiederverwendung von Programmgrößen</string>
+    <string name="interfaces_task_8_answer_2">Eine Klasse implementiert mehrere Schnittstellen; verhindert Methodenimplementierung</string>
+    <string name="interfaces_task_8_answer_3">Eine Schnittstelle kann nur eine andere Schnittstelle erweitern; erzwingt final Methoden</string>
+    <string name="interfaces_task_8_answer_4">Schnittstellenerweiterung führt zu primitiven Typparametern</string>
+
+    <string name="generics_task_1_description">Was ist eine generische Klasse?</string>
+    <string name="generics_task_1_answer_1">Eine Klasse mit einem oder mehreren Typparametern</string>
+    <string name="generics_task_1_answer_2">Eine Klasse ohne Methoden</string>
+    <string name="generics_task_1_answer_3">Eine Klasse, die nur primitive Datentypen verwendet</string>
+    <string name="generics_task_1_answer_4">Eine Klasse, die ausschließlich Interfaces implementiert</string>
+
+    <string name="generics_task_2_description">Welche Datentypen können als Typparameter in generischen Klassen verwendet werden?</string>
+    <string name="generics_task_2_answer_1">Beliebige Referenztypen wie Klassen, Feldtypen, Aufzählungen, Schnittstellen</string>
+    <string name="generics_task_2_answer_2">Primitive Datentypen wie int oder boolean</string>
+    <string name="generics_task_2_answer_3">Nur primitive Datentypen</string>
+    <string name="generics_task_2_answer_4">Nur abstrakte Klassen</string>
+
+    <string name="generics_task_3_description">Warum können primitive Datentypen nicht direkt als Typparameter verwendet werden?</string>
+    <string name="generics_task_3_answer_1">Weil Typparameter nur Referenztypen akzeptieren</string>
+    <string name="generics_task_3_answer_2">Weil primitive Datentypen keine Methoden besitzen</string>
+    <string name="generics_task_3_answer_3">Weil primitive Datentypen bei der Kompilierung ignoriert werden</string>
+    <string name="generics_task_3_answer_4">Weil sie nicht vererbt werden können</string>
+
+    <string name="generics_task_4_description">Was ist eine generische Methode?</string>
+    <string name="generics_task_4_answer_1">Eine Methode mit einem oder mehreren Typparametern im Methodenkopf</string>
+    <string name="generics_task_4_answer_2">Eine Methode ohne Rückgabewert</string>
+    <string name="generics_task_4_answer_3">Eine Methode, die nur primitive Datentypen verarbeitet</string>
+    <string name="generics_task_4_answer_4">Eine Methode ohne Parameter</string>
+
+    <string name="generics_task_5_description">Was ist bei der Verwendung generischer Methoden im Aufruf zu beachten?</string>
+    <string name="generics_task_5_answer_1">Es müssen konkrete Datentypen anstelle von Typparametern eingesetzt werden</string>
+    <string name="generics_task_5_answer_2">Typparameter können leer gelassen werden</string>
+    <string name="generics_task_5_answer_3">Nur primitive Datentypen sind erlaubt</string>
+    <string name="generics_task_5_answer_4">Generische Methoden dürfen nur in generischen Klassen verwendet werden</string>
+
+    <string name="generics_task_6_description">Was ist eine generische Schnittstelle?</string>
+    <string name="generics_task_6_answer_1">Eine Schnittstelle mit einem oder mehreren Typparametern</string>
+    <string name="generics_task_6_answer_2">Eine Schnittstelle ohne Methoden</string>
+    <string name="generics_task_6_answer_3">Eine Schnittstelle ohne Typparameter</string>
+    <string name="generics_task_6_answer_4">Eine Schnittstelle, die nur primitive Datentypen verwendet</string>
+
+    <string name="generics_task_7_description">Welche Schnittstellen und Klassen enthält das Paket java.util für Sammlungen?</string>
+    <string name="generics_task_7_answer_1">Schnittstellen: Collection, List, Set, SortedSet; Klassen: ArrayList, LinkedList, HashSet, TreeSet</string>
+    <string name="generics_task_7_answer_2">Nur Schnittstellen zur Dateiverwaltung</string>
+    <string name="generics_task_7_answer_3">Nur Klassen für Thread-Synchronisation</string>
+    <string name="generics_task_7_answer_4">Nur abstrakte Klassen für Sammlungen</string>
+
+    <string name="generics_task_8_description">Welche Aufgabe hat die Schnittstelle Collection?</string>
+    <string name="generics_task_8_answer_1">Sie definiert gemeinsame Methoden für alle Sammlungen</string>
+    <string name="generics_task_8_answer_2">Sie speichert ausschließlich primitive Datentypen</string>
+    <string name="generics_task_8_answer_3">Sie ist eine konkrete Klasse zur Verwaltung von Listen</string>
+    <string name="generics_task_8_answer_4">Sie implementiert Sortierfunktionen</string>
+
+    <string name="generics_task_9_description">Was beschreibt die Schnittstelle List?</string>
+    <string name="generics_task_9_answer_1">Eine Erweiterung von Collection für sequenziell geordnete Objektsammlungen</string>
+    <string name="generics_task_9_answer_2">Eine ungeordnete Sammlung ohne Duplikate</string>
+    <string name="generics_task_9_answer_3">Eine Klasse mit verketteten Strukturen</string>
+    <string name="generics_task_9_answer_4">Eine Schnittstelle für sortierte Mengen</string>
+
+    <string name="generics_task_10_description">Was ist charakteristisch für die Klasse ArrayList?</string>
+    <string name="generics_task_10_answer_1">Implementierung von List mit feldorientierter Speicherung</string>
+    <string name="generics_task_10_answer_2">Implementierung von Set mit Hashing</string>
+    <string name="generics_task_10_answer_3">Verwendung verketteter Strukturen</string>
+    <string name="generics_task_10_answer_4">Implementierung von SortedSet</string>
+
+    <string name="generics_task_11_description">Wie speichert die Klasse LinkedList Listen?</string>
+    <string name="generics_task_11_answer_1">Mit verketteten Strukturen und Verweisen auf vorheriges und nachfolgendes Element</string>
+    <string name="generics_task_11_answer_2">Mit feldorientierter Speicherung</string>
+    <string name="generics_task_11_answer_3">Mit Hashing</string>
+    <string name="generics_task_11_answer_4">In einem selbstausgleichenden Binärbaum</string>
+
+    <string name="generics_task_12_description">Welche Eigenschaften hat die Schnittstelle Set?</string>
+    <string name="generics_task_12_answer_1">Erweiterung von Collection für ungeordnete Sammlungen ohne Duplikate</string>
+    <string name="generics_task_12_answer_2">Erlaubt mehrfaches Vorkommen desselben Objekts</string>
+    <string name="generics_task_12_answer_3">Ist eine konkrete Klasse</string>
+    <string name="generics_task_12_answer_4">Erweiterung von List für geordnete Sammlungen</string>
+
+    <string name="generics_task_13_description">Wie funktioniert die Klasse HashSet bei der Speicherung?</string>
+    <string name="generics_task_13_answer_1">Feldorientiert mit Hashing zur schnellen Positionsbestimmung</string>
+    <string name="generics_task_13_answer_2">Mit verketteten Strukturen</string>
+    <string name="generics_task_13_answer_3">In einem selbstausgleichenden Binärbaum</string>
+    <string name="generics_task_13_answer_4">Mit sequenzieller Speicherung</string>
+
+    <string name="generics_task_14_description">Was zeichnet die Schnittstelle SortedSet aus?</string>
+    <string name="generics_task_14_answer_1">Erweiterung von Set für sortierte Mengen</string>
+    <string name="generics_task_14_answer_2">Sie erlaubt Duplikate</string>
+    <string name="generics_task_14_answer_3">Sortierung basiert auf der Instanzmethode compareTo()</string>
+    <string name="generics_task_14_answer_4">Verwendet Hashing zur Sortierung</string>
+
+    <string name="generics_task_15_description">Wie speichert die Klasse TreeSet die enthaltenen Objekte?</string>
+    <string name="generics_task_15_answer_1">In einem selbstausgleichenden Binärbaum</string>
+    <string name="generics_task_15_answer_2">In einem einfachen Array</string>
+    <string name="generics_task_15_answer_3">Mit verketteten Strukturen</string>
+    <string name="generics_task_15_answer_4">In einer Hashtable</string>
+
+    <string name="generics_task_16_description">Wie ist die erweiterte for-Schleife aufgebaut?</string>
+    <string name="generics_task_16_answer_1">for (&lt;Datentyp&gt; &lt;Variable&gt; : &lt;Ausdruck&gt;) { … }</string>
+    <string name="generics_task_16_answer_2">for (int i=0; i&lt;10; i++) { … }</string>
+    <string name="generics_task_16_answer_3">while (true) { … }</string>
+    <string name="generics_task_16_answer_4">do { … } while(false);</string>
+
 
 </resources>
