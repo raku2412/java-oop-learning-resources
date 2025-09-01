@@ -1,71 +1,60 @@
-# 🧠 Exercise: Collections in a Smart Home with Generics
+# 🧪 Exercise: Testing with JUnit like test framework  
 
 ## 📘 Task Description (English)
 
-This task builds upon your existing implementation of a generic sensor system in a Smart Home environment.  
-You are now required to extend the system using Java Collection types: **`ArrayList`** and **`HashSet`**.
+This exercise introduces a minimal custom test framework inspired by **JUnit 5**, using only core Java functionality. The goal is to help you understand the core mechanisms behind automated testing.
 
-Refer to your previous solution, which includes:
-- [Sensor.java](model/Sensor.java)
-- [DataProcessor.java](model/DataProcessor.java)
-- [TemperatureProcessor.java](model/TemperatureProcessor.java)
-- [MotionProcessor.java](model/MotionProcessor.java)
-- [SensorUtils.java](util/SensorUtils.java)
-- [GenericsApp.java](app/GenericsApp.java)
+You are **not allowed to use the JUnit library** – instead, a custom annotation `@Test` and a test runner are provided.
 
 ---
 
-### 🎯 Your Task – Extend with Collections
+### 🎯 Your Task – Understand and Run the Tests
 
-Extend the existing solution by introducing collection types to manage and validate sensors.
+Explore the existing project and test setup. Then, run the test and observe the behavior.
 
 #### What you need to do:
 
-1. **Use `ArrayList<Sensor<?>>`** to store all sensors, regardless of type.
-   - Add all created sensor objects (e.g. temperature, motion) to the list.
-   - Iterate through the list and use your generic method `logSensorValue(...)` to display the sensor values.
+1. **Study the following components**:
+   - [`SmartLight.java`](model/SmartLight.java): a simple smart home light with `turnOn`, `turnOff`, and `isOn()`.
+   - [`Test.java`](test/Test.java): defines the custom `@Test` annotation.
+   - [`Assertions.java`](test/Assertions.java): provides an `assertTrue(...)` method similar to JUnit.
+   - [`SmartLightTest.java`](test/SmartLightTest.java): contains test methods annotated with `@Test`.
+   - [`JUnitLikeTestRunner.java`](test/JUnitLikeTestRunner.java): finds and runs test methods.
+   - [`TestApp.java`](app/TestApp.java): main class to run the tests.
 
-2. **Use a `HashSet<String>`** to track all sensor IDs.
-   - Before adding a sensor to the list, check whether its ID already exists in the set.
-   - If a duplicate ID is detected, print a warning and skip adding the sensor.
-
-3. **Adjust the main class [`GenericsApp.java`](app/GenericsApp.java)** accordingly to demonstrate this new behavior.
-
-Keep the code generic and type-safe. Reuse existing classes and methods where possible.
+2. **Run the test suite** using the main method in [`TestApp.java`](app/TestApp.java).
 
 ---
 
-## 📙 Erweiterungsaufgabe: Collections im generischen Smart Home
+## 📙 Aufgabenbeschreibung (Deutsch)
 
-Diese Aufgabe baut auf deiner bestehenden Lösung eines generischen Sensorsystems im Smart-Home-Kontext auf.  
-Nun soll das System um die Verwendung von Java-Collections erweitert werden: **`ArrayList`** und **`HashSet`**.
+Diese Übung zeigt ein minimalistisches Test-Framework, das an **JUnit 5** angelehnt ist – jedoch ohne externe Bibliotheken.  
+Ziel ist es, die grundlegenden Mechanismen automatisierten Testens in Java besser zu verstehen.
 
-Verweise auf deine bisherige Lösung:
-- [Sensor.java](model/Sensor.java)
-- [DataProcessor.java](model/DataProcessor.java)
-- [TemperatureProcessor.java](model/TemperatureProcessor.java)
-- [MotionProcessor.java](model/MotionProcessor.java)
-- [SensorUtils.java](util/SensorUtils.java)
-- [GenericsApp.java](app/GenericsApp.java)
+Es wird **nicht** die JUnit-Bibliothek verwendet – stattdessen stehen eine eigene Annotation `@Test` und ein einfacher Test-Runner zur Verfügung.
 
 ---
 
-### 🎯 Deine Aufgabe – Erweiterung mit Collections
+### 🎯 Deine Aufgabe – Tests verstehen und ausführen
 
-Erweitere die bestehende Lösung durch den Einsatz von Collection-Typen zur Verwaltung und Überprüfung von Sensoren.
+Schau dir die bestehende Projektstruktur an und führe die Tests aus, um das Verhalten zu analysieren.
 
-#### Folgende Punkte sind umzusetzen:
+#### Folgende Bestandteile solltest du dir ansehen:
 
-1. **Verwende eine `ArrayList<Sensor<?>>`**, um alle Sensoren zu speichern – unabhängig vom Datentyp.
-   - Füge alle erzeugten Sensoren (z. B. Temperatur, Bewegung) der Liste hinzu.
-   - Iteriere durch die Liste und gib die Sensorwerte mithilfe deiner generischen Methode `logSensorValue(...)` aus.
+1. [`SmartLight.java`](model/SmartLight.java)  
+   - Eine einfache Smart-Home-Leuchte mit den Methoden `turnOn()`, `turnOff()` und `isOn()`.
 
-2. **Nutze ein `HashSet<String>`**, um alle vergebenen Sensor-IDs zu speichern.
-   - Bevor ein Sensor zur Liste hinzugefügt wird, überprüfe, ob dessen ID bereits im Set vorhanden ist.
-   - Wenn ein Duplikat gefunden wird, gib eine Warnung aus und füge den Sensor **nicht** zur Liste hinzu.
+2. [`Test.java`](test/Test.java)  
+   - Eine eigene Annotation `@Test`, um Testmethoden zu markieren.
 
-3. **Passe die Hauptklasse [`GenericsApp.java`](app/GenericsApp.java)** entsprechend an, um das neue Verhalten zu demonstrieren.
+3. [`Assertions.java`](test/Assertions.java)  
+   - Eine Methode `assertTrue(...)`, die einen Test fehlschlagen lässt, wenn die Bedingung nicht erfüllt ist.
 
-Achte weiterhin auf **Generizität und Typsicherheit**. Wiederverwendung bestehender Klassen und Methoden ist ausdrücklich erwünscht.
+4. [`SmartLightTest.java`](test/SmartLightTest.java)  
+   - Enthält Beispiel-Testmethoden mit der Annotation `@Test`.
 
----
+5. [`JUnitLikeTestRunner.java`](test/JUnitLikeTestRunner.java)  
+   - Der Test-Runner, der alle mit `@Test` annotierten Methoden findet und ausführt.
+
+6. [`TestApp.java`](app/TestApp.java)  
+   - Hauptklasse mit der `main()`-Methode zur Ausführung der Tests.
