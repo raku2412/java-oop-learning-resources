@@ -1,101 +1,99 @@
-# 🧠 Exercise: SmartDevice Interface in a Smart Home System
+# 🧠 Exercise: Smart Home with Generics
+
+## 📘 Task Description (English)
+
+In this assignment, you will apply the principles of **generic programming** in Java within the context of a **Smart Home system**. The focus lies on understanding and implementing:
+
+- Generic classes
+- Generic interfaces
+- Type parameters
+- Generic methods
+
+### 🧭 Step 1: Understand the basic example
+
+Before you begin designing your own solution, start by reviewing the provided introductory example.
+
+Open the file [`model/GenericsExample.java`](model/GenericsExample.java). It contains a simple use of a generic interface and a generic class (`Storage<T>`) to store different types of Smart Home components, such as `Light` and `DoorLock`. The file demonstrates the use of type parameters and a generic method to display stored content.
+
+Then, run or review [`app/GenericsApp.java`](app/GenericsApp.java), which shows how the generic structure is used in practice.
+
+This example serves as a foundation for the task that follows.
 
 ---
 
-## 📝 Task Description (English)
+### 🎯 Step 2: Your Task – Build a generic sensor processing system
 
-In this task, you will define and use interfaces to build a flexible and extensible Smart Home system. You will define core functionality via interfaces and implement them in different device classes.
+Design a generic system that allows Smart Home sensors to report and process data in a **type-safe** and **flexible** way.
 
----
+#### Your task includes the following:
 
-### 🛠️ Your Tasks
+1. **Create a generic class `Sensor<T>`**, where `T` is a type parameter representing the sensor value (e.g., `Double`, `Boolean`, `String`).
+   - The sensor should store a value, an ID, and a timestamp.
+   - Include appropriate accessors and string representation.
 
-Use the class [InterfaceApp.java](app/InterfaceApp.java) to exceute the completion of the given tasks.
+2. **Define a generic interface `DataProcessor<T>`** with a method `process(T value)`.
+   - This interface will represent any kind of logic applied to sensor values.
 
-1. **Define the `SmartDevice` interface**  
-   Extend the interface [SmartDevice.java](model/SmartDevice.java) with the following abstract methods:
-   - `void turnOn()`
-   - `void turnOff()`
-   - `boolean isOn()`
+3. **Implement at least two concrete `DataProcessor` classes**:
+   - One for temperature data (`Double`)
+   - One for motion detection (`Boolean`)
 
-   Additionally, add a default method `togglePower()` that turns the device on if it is off, and off if it is on.
+4. **Create a generic method `logSensorValue<T>(Sensor<T> sensor)`**:
+   - It should print or log the current sensor value in a formatted output.
 
-2. **Implement two device classes**  
-   Implement the `SmartDevice` interface in the following two classes:
-   - `SmartLamp` with an additional method `void setBrightness(int level)`
-   - `SmartSpeaker` with an additional method `void playMusic(String song)`
+5. **Demonstrate the system** in a main application:
+   - Instantiate at least two sensors with different types.
+   - Apply the correct processor for each sensor.
+   - Log the values using your generic method.
 
-3. **Use the interface as a reference type**  
-   - Declare an array of `SmartDevice` that contains instances of `SmartLamp` and `SmartSpeaker`.
-   - Write a method `activateAll(SmartDevice[] devices)` that turns on all devices in the array.
-
-4. **Use `instanceof` and casting**  
-   - Iterate through the `SmartDevice` array.
-   - Use `instanceof` and casting to call `setBrightness()` for lamps and `playMusic()` for speakers.
-
-5. **Extend the interface using another interface**  
-   - Define a second interface `Controllable` with the method `void togglePower()`.
-   - Let `SmartDevice` extend `Controllable`.
+Focus on designing **clean, reusable, and type-safe** code using generics. Avoid casting or raw types.
 
 ---
 
-### ✅ Solution
+## 📙 Aufgabenbeschreibung (Deutsch)
 
-The implementation can be found in the following files:
-- [Controllable.java](model/Controllable.java)
-- [SmartDevice.java](model/SmartDevice.java)
-- [SmartLamp.java](model/SmartLamp.java)
-- [SmartSpeaker.java](model/SmartSpeaker.java)
-- [InterfaceApp.java](app/InterfaceApp.java)
+In dieser Aufgabe sollst du die Konzepte der **generischen Programmierung in Java** im Kontext eines **Smart Home Systems** anwenden. Dabei liegt der Fokus auf:
 
-These files show the complete implementation of the tasks.
+- Generischen Klassen
+- Generischen Schnittstellen
+- Typparametern
+- Generischen Methoden
 
----
+### 🧭 Schritt 1: Verstehe das Einstiegsbeispiel
 
-## 📝 Aufgabenstellung (Deutsch)
+Bevor du deine eigene Lösung entwickelst, beginne mit dem bereitgestellten einfachen Beispiel.
 
-In dieser Aufgabe definierst und verwendest du Schnittstellen, um ein flexibles und erweiterbares Smart-Home-System zu gestalten. Die Kernfunktionalität wird über Schnittstellen definiert und in verschiedenen Geräteklassen implementiert.
+Öffne dazu die Datei [`model/GenericsExample.java`](model/GenericsExample.java). Sie zeigt, wie eine generische Schnittstelle und eine generische Klasse (`Storage<T>`) zur Speicherung unterschiedlicher Smart-Home-Komponenten wie `Light` und `DoorLock` verwendet werden. Es kommen Typparameter sowie eine generische Methode zum Einsatz.
 
----
+Anschließend kannst du dir die Anwendung in [`app/GenericsApp.java`](app/GenericsApp.java) ansehen, in der diese generischen Strukturen verwendet werden.
 
-### 🛠️ Deine Aufgaben
-
-Nutze die Klasse [InterfaceApp.java](app/InterfaceApp.java), um die Lösung der gegebenen Aufgaben auszuführen.
-
-1. **Definiere die Schnittstelle `SmartDevice`**  
-   Erweitere die Schnittstelle [SmartDevice.java](model/SmartDevice.java) mit den folgenden abstrakten Methoden:
-   - `void turnOn()`
-   - `void turnOff()`
-   - `boolean isOn()`
-
-   Ergänze außerdem eine Default-Methode `togglePower()`, die das Gerät einschaltet, wenn es aus ist, und ausschaltet, wenn es an ist.
-
-2. **Implementiere zwei Gerätekategorien**  
-   Implementiere die Schnittstelle `SmartDevice` in den folgenden beiden Klassen:
-   - `SmartLamp` mit einer zusätzlichen Methode `void setBrightness(int level)`
-   - `SmartSpeaker` mit einer zusätzlichen Methode `void playMusic(String song)`
-
-3. **Verwende die Schnittstelle als Referenztyp**  
-   - Deklariere ein Array vom Typ `SmartDevice`, das Instanzen von `SmartLamp` und `SmartSpeaker` enthält.
-   - Schreibe eine Methode `activateAll(SmartDevice[] devices)`, die alle Geräte im Array einschaltet.
-
-4. **Verwende `instanceof` und Type-Casting**  
-   - Iteriere über das `SmartDevice`-Array.
-   - Verwende `instanceof` und Type-Casting, um bei Lampen `setBrightness()` und bei Lautsprechern `playMusic()` aufzurufen.
-
-5. **Erweitere die Schnittstelle durch eine weitere Schnittstelle**  
-   - Definiere eine zweite Schnittstelle `Controllable` mit der Methode `void togglePower()`.
-   - Lasse `SmartDevice` die Schnittstelle `Controllable` erweitern.
+Dieses Beispiel bildet die Grundlage für deine eigene Aufgabenstellung.
 
 ---
 
-### ✅ Lösung
+### 🎯 Schritt 2: Deine Aufgabe – Entwicklung eines generischen Sensorsystems
 
-Die Implementierung befindet sich in folgenden Dateien:
-- [Controllable.java](model/Controllable.java)
-- [SmartDevice.java](model/SmartDevice.java)
-- [SmartLamp.java](model/SmartLamp.java)
-- [SmartSpeaker.java](model/SmartSpeaker.java)
-- [InterfaceApp.java](app/InterfaceApp.java)
+Erstelle ein generisches System, das es Smart-Home-Sensoren erlaubt, Sensordaten **typsicher** und **flexibel** zu liefern und zu verarbeiten.
 
-Diese Dateien zeigen die vollständige Umsetzung der Aufgabenstellung.
+#### Zu erledigende Teilaufgaben:
+
+1. **Erstelle eine generische Klasse `Sensor<T>`**, wobei `T` den Typ des Sensorwertes beschreibt (z. B. `Double`, `Boolean`, `String`).
+   - Die Klasse soll einen Wert, eine ID und einen Zeitstempel enthalten.
+   - Getter/Setter und eine passende Ausgabe sollen implementiert werden.
+
+2. **Definiere eine generische Schnittstelle `DataProcessor<T>`** mit einer Methode `process(T value)`.
+   - Diese Schnittstelle soll die Verarbeitung von Sensordaten kapseln.
+
+3. **Implementiere mindestens zwei konkrete Klassen**, die `DataProcessor<T>` umsetzen:
+   - Eine für Temperaturdaten (`Double`)
+   - Eine für Bewegungsdaten (`Boolean`)
+
+4. **Erstelle eine generische Methode `logSensorValue<T>(Sensor<T> sensor)`**:
+   - Diese Methode soll Sensordaten formatiert ausgeben oder protokollieren.
+
+5. **Demonstriere dein System** in einer Hauptanwendung:
+   - Erstelle mindestens zwei Sensoren mit unterschiedlichen Datentypen.
+   - Wende die passenden Datenprozessoren an.
+   - Gib die Sensordaten über die generische Methode aus.
+
+Achte bei der Umsetzung auf **saubere, wiederverwendbare und typsichere** Gestaltung mit Generics. Vermeide Typumwandlungen oder den Einsatz von Raw Types.
