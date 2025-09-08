@@ -35,6 +35,18 @@ Keep the code generic and type-safe. Reuse existing classes and methods where po
 
 ---
 
+### ✅ Solution
+
+This solution extends the existing generic Smart Home sensor system by incorporating two essential Java collection types: `ArrayList` and `HashSet`.
+
+The goal was to organize sensors in a flexible and type-safe way, while avoiding duplicate sensor entries.
+
+[`app/GenericsApp.java`](app/GenericsApp.java)
+- Extended to manage a list of sensors using an `ArrayList<Sensor<?>>`.
+- A `HashSet<String>` is used to track sensor IDs and prevent duplicates.
+- The method `addSensorIfUnique(...)` checks if the sensor's ID already exists before adding it to the list.
+- The application iterates over all sensors in the list, logging their data and applying the appropriate data processor.
+
 ## 📙 Erweiterungsaufgabe: Collections im generischen Smart Home
 
 Diese Aufgabe baut auf deiner bestehenden Lösung eines generischen Sensorsystems im Smart-Home-Kontext auf.  
@@ -69,3 +81,16 @@ Erweitere die bestehende Lösung durch den Einsatz von Collection-Typen zur Verw
 Achte weiterhin auf **Generizität und Typsicherheit**. Wiederverwendung bestehender Klassen und Methoden ist ausdrücklich erwünscht.
 
 ---
+
+### ✅ Lösung
+
+Diese Lösung erweitert das bestehende generische Sensorsystem eines Smart Homes durch den Einsatz von zwei zentralen Collection-Typen in Java: `ArrayList` und `HashSet`.
+
+Ziel war es, Sensoren flexibel und typsicher zu verwalten und doppelte Einträge zu vermeiden.
+
+
+[`app/GenericsApp.java`](app/GenericsApp.java)
+- Erweiterung zur Verwaltung von Sensoren über eine `ArrayList<Sensor<?>>`.
+- Ein `HashSet<String>` dient zur Speicherung bereits vergebener Sensor-IDs und verhindert doppelte Einträge.
+- Die Methode `addSensorIfUnique(...)` prüft vor dem Hinzufügen, ob die ID bereits vorhanden ist.
+- Alle Sensoren in der Liste werden durchlaufen, mit der generischen Methode ausgegeben und entsprechend verarbeitet.
