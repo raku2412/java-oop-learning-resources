@@ -50,6 +50,22 @@ Focus on designing **clean, reusable, and type-safe** code using generics. Avoid
 
 ---
 
+### ✅ Solution
+
+The implementation can be found in the following files:
+- [GenericsApp.java](app/GenericsApp.java)
+- [DataProcessor.java](model/DataProcessor.java)
+- [MotionProcessor.java](model/MotionProcessor.java)
+- [Sensor.java](model/Sensor.java)
+- [TemperatureProcessor.java](model/TemperatureProcessor.java)
+- [SensorUtil.java](util/SensorUtil.java)
+
+
+These files show the complete implementation of the tasks.
+
+---
+
+
 ## 📙 Aufgabenbeschreibung (Deutsch)
 
 In dieser Aufgabe sollst du die Konzepte der **generischen Programmierung in Java** im Kontext eines **Smart Home Systems** anwenden. Dabei liegt der Fokus auf:
@@ -97,3 +113,18 @@ Erstelle ein generisches System, das es Smart-Home-Sensoren erlaubt, Sensordaten
    - Gib die Sensordaten über die generische Methode aus.
 
 Achte bei der Umsetzung auf **saubere, wiederverwendbare und typsichere** Gestaltung mit Generics. Vermeide Typumwandlungen oder den Einsatz von Raw Types.
+
+---
+
+### ✅ Lösung
+
+Die Implementierung kann in den folgenden Dateien gefunden werden:
+- [GenericsApp.java](app/GenericsApp.java)
+- [DataProcessor.java](model/DataProcessor.java)
+- [MotionProcessor.java](model/MotionProcessor.java)
+- [Sensor.java](model/Sensor.java)
+- [TemperatureProcessor.java](model/TemperatureProcessor.java)
+- [SensorUtil.java](util/SensorUtil.java)
+
+
+Diese Dateien zeigen die vollständige Implementierung, der Lösung der Aufgabe.
