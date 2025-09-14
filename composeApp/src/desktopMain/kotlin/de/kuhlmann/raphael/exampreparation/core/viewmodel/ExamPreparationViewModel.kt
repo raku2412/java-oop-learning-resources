@@ -19,6 +19,7 @@ class ExamPreparationViewModel : ViewModel() {
     private val mode = MutableStateFlow(Mode.SETUP)
     private val selectedCategories = MutableStateFlow<List<Category>>(Category.entries)
     private val isSolutionAvailable = MutableStateFlow(false)
+    private val isSubsetOfQuestions = MutableStateFlow(true)
     private val isSolutionVisible = MutableStateFlow(false)
     private val isEvaluated = MutableStateFlow(false)
     private val seedSet = MutableStateFlow<List<Long>>(emptyList())
@@ -30,6 +31,7 @@ class ExamPreparationViewModel : ViewModel() {
         mode,
         selectedCategories,
         isSolutionAvailable,
+        isSubsetOfQuestions,
         isSolutionVisible,
         isEvaluated,
         seedSet,
@@ -40,11 +42,12 @@ class ExamPreparationViewModel : ViewModel() {
         val mode = values[0] as Mode
         val selectedCategories = values[1] as List<Category>
         val isSolutionAvailable = values[2] as Boolean
-        val isSolutionVisible = values[3] as Boolean
-        val isEvaluated = values[4] as Boolean
-        val seedSet = values[5] as List<Long>
-        val taskSet = values[6] as List<TaskDefinition>
-        val pageIndex = values[7] as Int
+        val isSubsetOfQuestions = values[3] as Boolean
+        val isSolutionVisible = values[4] as Boolean
+        val isEvaluated = values[5] as Boolean
+        val seedSet = values[6] as List<Long>
+        val taskSet = values[7] as List<TaskDefinition>
+        val pageIndex = values[8] as Int
 
         when (mode) {
             Mode.SETUP -> ExamPreparationUiState.Setup(
@@ -53,6 +56,8 @@ class ExamPreparationViewModel : ViewModel() {
                 onDeselectAllCategoriesClick = ::onDeselectAllCategoriesClick,
                 isSolutionAvailable = isSolutionAvailable,
                 onSolutionAvailabilityChangeClick = ::onSolutionAvailabilityChangeClick,
+                isSubsetOfQuestions = isSubsetOfQuestions,
+                onSubsetOfQuestionsChangeClick = ::onSubsetOfQuestionsChangeClick,
                 canBeStarted = selectedCategories.isNotEmpty(),
                 onStartClick = ::startExam
             )
@@ -145,6 +150,10 @@ class ExamPreparationViewModel : ViewModel() {
         isSolutionAvailable.value = !isSolutionAvailable.value
     }
 
+    private fun onSubsetOfQuestionsChangeClick() {
+        isSubsetOfQuestions.value = !isSubsetOfQuestions.value
+    }
+
     private fun startExam() {
         pageIndex.value = 0
         isEvaluated.value = false
@@ -162,8 +171,7 @@ class ExamPreparationViewModel : ViewModel() {
             .filter {
                 it.category in selectedCategories.value
             }
-            .shuffled(Random(System.currentTimeMillis()))
-            .take(20)
+            .prepareAccordingToSubsetSelection()
             .mapIndexed { index, taskDefinition ->
                 when (taskDefinition) {
                     is TaskDefinition.SingleChoice -> taskDefinition.copy(
@@ -218,5 +226,13 @@ class ExamPreparationViewModel : ViewModel() {
                     )
                 }
             }
+
+    private fun <T> Iterable<T>.prepareAccordingToSubsetSelection() =
+        if (isSubsetOfQuestions.value) {
+            this.shuffled(Random(System.currentTimeMillis()))
+                .take(20)
+        } else {
+            this
+        }
 
 }

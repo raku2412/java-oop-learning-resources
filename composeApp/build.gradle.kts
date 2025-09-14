@@ -41,9 +41,9 @@ compose.desktop {
         mainClass = "de.kuhlmann.raphael.exampreparation.MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Exe)
             packageName = "de.kuhlmann.raphael.exampreparation"
-            packageVersion = "1.0.0"
+            packageVersion = "1.0.4"
         }
     }
 }

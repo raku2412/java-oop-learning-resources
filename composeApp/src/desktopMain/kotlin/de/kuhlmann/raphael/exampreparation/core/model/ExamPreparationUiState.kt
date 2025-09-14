@@ -11,6 +11,8 @@ sealed interface ExamPreparationUiState {
         val onDeselectAllCategoriesClick: () -> Unit,
         val isSolutionAvailable: Boolean,
         val onSolutionAvailabilityChangeClick: () -> Unit,
+        val isSubsetOfQuestions: Boolean,
+        val onSubsetOfQuestionsChangeClick: () -> Unit,
         val canBeStarted: Boolean,
         val onStartClick: () -> Unit
     ) : ExamPreparationUiState

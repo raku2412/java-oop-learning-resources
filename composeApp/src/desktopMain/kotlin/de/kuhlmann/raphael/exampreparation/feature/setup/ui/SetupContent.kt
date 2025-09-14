@@ -14,6 +14,9 @@ import androidx.compose.material.Button
 import androidx.compose.material.Checkbox
 import androidx.compose.material.Text
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -32,8 +35,10 @@ import exampreparation.composeapp.generated.resources.categories_title
 import exampreparation.composeapp.generated.resources.setup_category_selection_title
 import exampreparation.composeapp.generated.resources.setup_deselect_all_categories_button_title
 import exampreparation.composeapp.generated.resources.setup_select_all_categories_button_title
+import exampreparation.composeapp.generated.resources.setup_test_all_questions_option
 import exampreparation.composeapp.generated.resources.setup_test_solutions_available_description
 import exampreparation.composeapp.generated.resources.setup_test_solutions_available_title
+import exampreparation.composeapp.generated.resources.setup_test_subset_of_questions_option
 import exampreparation.composeapp.generated.resources.setup_title
 import exampreparation.composeapp.generated.resources.start
 import org.jetbrains.compose.resources.stringResource
@@ -67,6 +72,10 @@ fun SetupContent(state: ExamPreparationUiState.Setup) {
             SolutionAvailability(
                 state.isSolutionAvailable,
                 state.onSolutionAvailabilityChangeClick
+            )
+            SubsetOfQuestionsSelection(
+                state.isSubsetOfQuestions,
+                state.onSubsetOfQuestionsChangeClick
             )
             Button(
                 enabled = state.canBeStarted,
@@ -187,5 +196,46 @@ private fun SolutionAvailability(
                 style = MaterialTheme.typography.bodyMedium
             )
         }
+    }
+}
+
+@Composable
+private fun SubsetOfQuestionsSelection(
+    isSubsetOfQuestions: Boolean,
+    onSubsetOfQuestionsChangeClick: () -> Unit
+) {
+    SingleChoiceSegmentedButtonRow {
+        SegmentedButton(
+            selected = isSubsetOfQuestions,
+            onClick = {
+                if (!isSubsetOfQuestions) {
+                    onSubsetOfQuestionsChangeClick()
+                }
+            },
+            label = {
+                Text(
+                    stringResource(
+                        Res.string.setup_test_subset_of_questions_option
+                    )
+                )
+            },
+            shape = SegmentedButtonDefaults.baseShape
+        )
+        SegmentedButton(
+            selected = !isSubsetOfQuestions,
+            onClick = {
+                if (isSubsetOfQuestions) {
+                    onSubsetOfQuestionsChangeClick()
+                }
+            },
+            label = {
+                Text(
+                    stringResource(
+                        Res.string.setup_test_all_questions_option
+                    )
+                )
+            },
+            shape = SegmentedButtonDefaults.baseShape
+        )
     }
 }

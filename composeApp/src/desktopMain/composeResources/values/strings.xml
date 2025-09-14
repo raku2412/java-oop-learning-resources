@@ -28,6 +28,8 @@
     <string name="setup_deselect_all_categories_button_title">Alle abwählen</string>
     <string name="setup_test_solutions_available_title">Lösungen verfügbar</string>
     <string name="setup_test_solutions_available_description">Zum Lernen können die Lösungen auch während der Probeklausur angezeigt werden. Wenn diese Option deaktiviert ist, werden die Lösungen erst beim Beenden der Probeklausur angezeigt.</string>
+    <string name="setup_test_subset_of_questions_option">Klausur-Umfang</string>
+    <string name="setup_test_all_questions_option">Alle Aufgaben</string>
     <string name="setup_start_disabled_hint">Es muss mindestens eine Kategorie ausgewählt sein, um eine Probeklausur zu starten.</string>
 
     <!-- Examination -->
